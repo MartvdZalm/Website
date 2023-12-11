@@ -2,17 +2,17 @@ import { createApp } from 'vue';
 import { createRouter, createWebHistory } from 'vue-router';
 
 import App from './App.vue';
-import Boot from './components/Boot.vue';
 import Terminal from './components/Terminal.vue';
+import About from './components/About.vue';
 
 const routes = [
   {
     path: '/',
-    component: Boot,
+    component: Terminal,
   },
   {
-    path: '/terminal',
-    component: Terminal,
+    path: '/about',
+    component: About,
   },
 ];
 
