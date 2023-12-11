@@ -6,6 +6,6 @@ Route::get('/', function () {
     return view('index');
 });
 
-Route::get('/terminal', function () {
+Route::get('/about', function () {
     return view('index');
 });
