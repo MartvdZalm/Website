@@ -2,7 +2,7 @@ import { createApp } from 'vue';
 import { createRouter, createWebHistory } from 'vue-router';
 
 import App from './App.vue';
-import Terminal from './components/Terminal.vue';
+import Terminal from './components/Terminal/Terminal.vue';
 import About from './components/About.vue';
 
 const routes = [
