@@ -5,7 +5,7 @@
     height: 100vh;
     border: none;
     box-shadow: none;
-    transition: width 0.5s ease, height 0.5s ease, border-radius 0.5s ease, box-shadow 0.5s ease; /* Same transitions */
+    transition: width 0.5s ease, height 0.5s ease, border-radius 0.5s ease, box-shadow 0.5s ease;
 }
 
 .ibm-screen.fullscreen {
@@ -13,7 +13,7 @@
     margin: 20px 20px 0 20px;
     border-radius: 15px;
     box-shadow: inset 0px 0px 10px 5px #000;
-    transition: height 0.5s ease, margin 0.5s ease, border-radius 0.5s ease, box-shadow 0.5s ease; /* Same transitions */
+    transition: height 0.5s ease, margin 0.5s ease, border-radius 0.5s ease, box-shadow 0.5s ease;
 }
 
 .ibm-frame {
@@ -26,7 +26,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    transition: width 0.5s ease, height 0.5s ease, border-radius 0.5s ease, box-shadow 0.5s ease; /* Add transitions */
+    transition: width 0.5s ease, height 0.5s ease, border-radius 0.5s ease, box-shadow 0.5s ease;
 }
 
 .ibm-screen {
@@ -35,7 +35,7 @@
     border: 3px solid #222121;
     border-radius: 20px;
     box-shadow: inset 0px 0px 10px 10px #000;
-    transition: height 0.5s ease, margin 0.5s ease, border-radius 0.5s ease, box-shadow 0.5s ease; /* Add transitions */
+    transition: height 0.5s ease, margin 0.5s ease, border-radius 0.5s ease, box-shadow 0.5s ease;
 }
 
 .ibm-frame-lower {
