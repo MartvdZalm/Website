@@ -1,0 +1,14 @@
+/* Color variables */
+:root {
+/*    --primary-color: #3498db;*/
+/*    --secondary-color: #2ecc71;*/
+    --background-color: #000000;
+    --text-color: #FFFFFF;
+    --red-color: #d20404;
+}
+
+/* Other global variables */
+:root {
+    --font-family: 'MS PGothic', 'ＭＳ Ｐゴシック', Georgia, Arial, Helvetica, sans-serif;
+    --font-size: 16px;
+}
