@@ -7,11 +7,15 @@
         <!-- <link rel="manifest" href="manifest.json" /> -->
         <link rel="stylesheet" href="assets/css/style.css" type="text/css">
         <link rel="stylesheet" href="assets/css/computer.css" type="text/css">
+        <link rel="stylesheet" href="assets/css/windows.css" type="text/css">
     </head>
     <body>
-        <div class="ibm-frame">
-            <div class="ibm-screen">
-                <output></output>
+        <div class="ibm-frame fullscreen">
+            <div class="ibm-screen fullscreen">
+                <div id="terminal-container" class="off">
+                    
+                    
+                </div>
             </div>
             <div class="ibm-frame-lower">
                 <p style="height: 100%;">|||||||||</p>
@@ -19,7 +23,7 @@
                     <img src="assets/images/ibm-logo.png" height="35px">
                 </div>
                 <div class="ibm-frame-on-off-button">
-                    <div class="ibm-frame-on-off-button-circle" onclick="toggleFullScreen()"></div>
+                    <div class="ibm-frame-on-off-button-circle" id="power-button"></div>
                 </div>
             </div> 
         </div>
