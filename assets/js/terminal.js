@@ -33,7 +33,7 @@ const fileSystem = {
 
 // SOUNDS
 const windows95StartupSound = new Audio('assets/sounds/microsoft-windows-95-startup-sound.mp3');
-
+// const typingSound = new Audio('assets/sounds/keyboard-sound.mp3');
 
 let terminalOn = false;
 let rootDir = 'C:\\';
@@ -159,7 +159,7 @@ function handleCommand(command)
         case 'help':
             addTerminalLine("Commands: ls, cat <file>, cd <directory>, help");
             break;
-        case 'clear':
+        case 'cls':
             terminalContainer.innerHTML = '';
             break;
         case 'config':
@@ -282,19 +282,33 @@ function startWindows()
 
 function loadPage(page)
 {
-    fetch(`pages/${page}`)
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('Network response was not ok');
-            }
-            return response.text();
-        })
-        .then(html => {
-            terminalContainer.innerHTML = html;
-        })
-        .catch(error => {
-            addTerminalLine('Error loading page: ' + error.message);
-        });
+    window.location.href = "pages/" + page;
+    // fetch(`pages/${page}`)
+    //     .then(response => {
+    //         if (!response.ok) {
+    //             throw new Error('Network response was not ok');
+    //         }
+    //         return response.text();
+    //     })
+    //     .then(html => {
+    //         terminalContainer.innerHTML = html;
+
+    //         const tempDiv = document.createElement('div');
+    //         const scripts = tempDiv.querySelectorAll('script');
+            
+    //         scripts.forEach(script => {
+    //             const newScript = document.createElement('script');
+    //             if (script.src) {
+    //                 newScript.src = script.src;
+    //             } else {
+    //                 newScript.textContent = script.textContent;
+    //             }
+    //             document.body.appendChild(newScript);
+    //         });
+    //     })
+    //     .catch(error => {
+    //         addTerminalLine('Error loading page: ' + error.message);
+    //     });
 }
 
 initializeTerminal();

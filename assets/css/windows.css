@@ -8,6 +8,7 @@ body {
     position: relative;
 	background-color: #008080;
 	width: 100%;
+    height: 100%;
 	height: 100vh;
 	display: flex;
 	justify-content: space-between;
@@ -263,5 +264,73 @@ body {
 
 .menu-open {
     display: flex;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.window {
+    position: absolute;
+    width: 300px;
+    border: 2px solid #000; /* Outer border, black */
+    border-top-color: #FFF; /* Top border shadow */
+    border-left-color: #FFF; /* Left border shadow */
+    border-right-color: #808080; /* Right border highlight */
+    border-bottom-color: #808080; /* Bottom border highlight */
+    box-shadow: 2px 2px #000; /* Shadow to create the inset effect */
+    background-color: #C0C0C0; /* Classic grey background */
+}
+
+.window-header {
+    background-color: #000080;
+    color: white;
+    padding: 5px;
+    position: relative;
+    font-family: 'Tahoma', sans-serif;
+    cursor: default;
+}
+
+.window-content {
+    padding: 10px;
+}
+
+.window .close-button {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    cursor: pointer;
+    background-color: #c0c0c0; /* Grey background */
+    border: 1px solid #000;
+    padding: 0 5px;
+    font-weight: bold;
+    color: black;
+}
+
+
+.close-button:active {
+    background-color: #A0A0A0; /* Darker grey on press */
 }
 

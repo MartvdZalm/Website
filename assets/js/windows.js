@@ -44,3 +44,45 @@ function updateTime()
     timeBox.innerHTML = time;
 }
 setInterval(updateTime, 1000);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+const settingsItem = document.getElementById("settings");
+const settingsWindow = document.getElementById("welcome-window");
+const settingsHeader = document.getElementById("welcome-header");
+
+settingsItem.addEventListener("click", function() {
+    settingsWindow.style.display = "block"; // Show the settings window
+});
+
+// Drag functionality
+let isDragging = false;
+let offsetX, offsetY;
+
+settingsHeader.addEventListener("mousedown", function(e) {
+    isDragging = true;
+    offsetX = e.clientX - settingsWindow.getBoundingClientRect().left;
+    offsetY = e.clientY - settingsWindow.getBoundingClientRect().top;
+});
+
+document.addEventListener("mousemove", function(e) {
+    if (isDragging) {
+        settingsWindow.style.left = e.clientX - offsetX + 'px';
+        settingsWindow.style.top = e.clientY - offsetY + 'px';
+    }
+});
+
+document.addEventListener("mouseup", function() {
+    isDragging = false;
+});
