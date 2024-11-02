@@ -33,8 +33,48 @@ main {
 }
 
 .taskbar {
-	height: #{variables.$taskbar-height};
+    display: flex;
+    align-items: center;
+    height: #{variables.$taskbar-height};
     background-color: #{variables.$windows95-gray-color};
     border-top: 2px solid #fff;
     box-shadow: #{variables.$box-shadow};
+    padding: 0 10px;
+
+    .taskbar__start {
+        display: flex;
+        align-items: center;
+    }
+
+    .taskbar__btn {
+        background: none;
+        border: none;
+        cursor: pointer;
+    }
+
+    .taskbar__btn__img {
+        height: 40px;
+        width: 80px;
+    }
+
+    .taskbar__search {
+        margin-left: 10px;
+        flex-shrink: 0;
+        
+        .taskbar__input {
+            width: 150px;
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            background-color: #fff;
+        }
+    }
+
+    .taskbar__clock {
+        margin-left: auto;
+        
+        p {
+            margin: 0;
+        }
+    }
 }

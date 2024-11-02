@@ -33,10 +33,43 @@ main {
 }
 
 .taskbar {
+  display: flex;
+  align-items: center;
   height: 60px;
   background-color: #c0c0c0;
   border-top: 2px solid #fff;
   box-shadow: 0 -1px 0 #7f7f7f inset;
+  padding: 0 10px;
+}
+.taskbar .taskbar__start {
+  display: flex;
+  align-items: center;
+}
+.taskbar .taskbar__btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.taskbar .taskbar__btn__img {
+  height: 40px;
+  width: 80px;
+}
+.taskbar .taskbar__search {
+  margin-left: 10px;
+  flex-shrink: 0;
+}
+.taskbar .taskbar__search .taskbar__input {
+  width: 150px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  background-color: #fff;
+}
+.taskbar .taskbar__clock {
+  margin-left: auto;
+}
+.taskbar .taskbar__clock p {
+  margin: 0;
 }
 
 *, *:before, *:after {
