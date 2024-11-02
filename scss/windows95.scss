@@ -1,0 +1,40 @@
+@use "variables";
+
+main {
+	width: 100vw;
+	height: 100vh;
+	background: #{variables.$windows95-desktop-background-color};
+}
+
+.desktop {
+	height: calc(100vh - #{variables.$taskbar-height});
+
+	.desktop__shortcut {
+		width: 90px;
+		height: 90px;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		align-items: center;
+		text-align: center;
+		margin: #{variables.$margin-medium};
+		cursor: pointer;
+
+		.desktop__shortcut__icon {
+			height: 70%;
+			cursor: pointer;
+
+		}
+
+		.desktop__shortcut__name {
+			cursor: pointer;
+		}
+	}
+}
+
+.taskbar {
+	height: #{variables.$taskbar-height};
+    background-color: #{variables.$windows95-gray-color};
+    border-top: 2px solid #fff;
+    box-shadow: #{variables.$box-shadow};
+}

@@ -10,42 +10,24 @@ main {
   background: #008080;
 }
 
-.desktop {
-  height: calc(100vh - 60px);
-}
 .desktop .desktop__shortcut {
-  width: 90px;
-  height: 90px;
+  width: 100px;
+  height: 100px;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
   text-align: center;
-  margin: 10px;
-  cursor: pointer;
 }
 .desktop .desktop__shortcut .desktop__shortcut__icon {
-  height: 70%;
-  cursor: pointer;
+  height: 50%;
+  border: 1px solid purple;
 }
-.desktop .desktop__shortcut .desktop__shortcut__name {
-  cursor: pointer;
-}
-
-.taskbar {
-  height: 60px;
-  background-color: #c0c0c0;
-  border-top: 2px solid #fff;
-  box-shadow: 0 -1px 0 #7f7f7f inset;
-}
-
 *, *:before, *:after {
   cursor: default;
   image-rendering: pixelated;
-  box-sizing: border-box;
   font-family: MS Sans Serif, Tahoma, Helvetica, Arial, sans-serif;
   font-size: 16px;
   color: #FFFFFF;
   margin: 0;
-  overflow: hidden;
 }
+
+/*# sourceMappingURL=main.css.map */

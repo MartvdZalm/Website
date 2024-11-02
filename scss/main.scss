@@ -1,0 +1,18 @@
+@use "variables";
+@use "mixins";
+@use "fonts";
+
+@use "windows95";
+
+
+
+*, *:before, *:after {
+	cursor: default;
+	image-rendering: pixelated;
+	box-sizing: border-box;
+	font-family: #{variables.$font-family};
+	font-size: #{variables.$font-size-base};
+	color: #{variables.$text-color};
+	margin: 0;
+	overflow: hidden;
+}

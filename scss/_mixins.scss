@@ -1,0 +1,20 @@
+@use "variables";
+
+
+@mixin button-style($bg-color, $color) {
+  background-color: $bg-color;
+  color: $color;
+  padding: $padding;
+  border: none;
+  border-radius: $border-radius;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: $hover-color;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
