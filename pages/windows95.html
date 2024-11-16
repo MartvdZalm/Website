@@ -24,26 +24,87 @@
 					<img class="desktop__shortcut__icon" src="../assets/images/windows95/windows95-recycle-bin-empty.ico" alt="Recycle Bin">
 					<span class="desktop__shortcut__name">Recycle Bin</span>
 				</div>
-
 			</section>
+
 			<section class="taskbar">
+				<div class="taskbar__item taskbar--start">
 
-				<div class="taskbar__start">
-					<button class="taskbar__btn">
+					<button class="taskbar__btn taskbar__btn--start">
 						<img class="taskbar__btn__img" src="../assets/images/windows95/windows95-start.ico" alt="Start">
+						<p class="taskbar__btn__text">Start</p>
 					</button>
+
+					<div class="taskbar__menu">
+						<div class="taskbar__menu__side">
+							<p class="taskbar__side__text taskbar__side__ninefive">95</p>
+    						<p class="taskbar__side__text taskbar__side__windows">Windows</p>	
+						</div>
+						<ul class="taskbar__menu__list">
+
+	                        <li class="taskbar__menu__item">
+	                            <img class="taskbar__menu__icon" src="../assets/images/windows95/windows95-programs.ico" alt="Programs"/>
+	                            <p class="taskbar__menu__title">
+	                            	<span class="taskbar__menu__underline">P</span>rograms
+	                            </p>
+	                            <div class="taskbar__menu__arrowright"></div>
+	                        </li>
+
+
+	                        <li class="taskbar__menu__item">
+	                            <img class="taskbar__menu__icon" src="../assets/images/windows95/windows95-documents.ico" alt="Documents"/>
+	                            <p class="taskbar__menu__title">
+	                            	<span class="taskbar__menu__underline">D</span>ocuments
+	                            </p>
+	                            <div class="taskbar__menu__arrowright"></div>          
+	                        </li>
+
+		                    <li class="taskbar__menu__item" id="settings">
+	                            <img class="taskbar__menu__icon" src="../assets/images/windows95/windows95-settings.ico" alt="Settings"/>
+	                            <p class="taskbar__menu__title">
+	                            	<span class="taskbar__menu__underline">S</span>ettings
+	                            </p>
+	                            <div class="taskbar__menu__arrowright"></div>     
+	                        </li>
+	                        
+	                        <li class="taskbar__menu__item">
+	                            <img class="taskbar__menu__icon" src="../assets/images/windows95/windows95-find.ico" alt="Find"/>
+	                            <p class="taskbar__menu__title">
+	                            	<span class="taskbar__menu__underline">F</span>ind
+	                            </p>
+	                            <div class="taskbar__menu__arrowright"></div> 
+	                        </li>
+
+	                        <li class="taskbar__menu__item">
+	                            <img class="taskbar__menu__icon" src="../assets/images/windows95/windows95-help.ico" alt="Help"/>
+	                            <p class="taskbar__menu__title">
+	                            	<span class="taskbar__menu__underline">H</span>elp
+	                            </p>
+	                        </li>
+	                        
+	                        <li class="taskbar__menu__item">
+	                        	<img class="taskbar__menu__icon" src="../assets/images/windows95/windows95-run.ico" alt="Run"/>
+	                            <p class="taskbar__menu__title">
+	                            	<span class="taskbar__menu__underline">R</span>un...
+	                            </p>
+	                        </li>
+
+	                        <li class="taskbar__menu__item">
+	                        	<img class="taskbar__menu__icon" src="../assets/images/windows95/windows95-shutdown.ico" alt="Run"/>
+	                            <p class="taskbar__menu__title">
+	                            	Sh<span class="taskbar__menu__underline">u</span>t Down...
+	                            </p>
+	                        </li>
+		                </ul>
+
+					</div>
+
 				</div>
 
-				<div class="taskbar__search">
-					<input class="taskbar__input">
+				<div class="taskbar__item taskbar--clock">
+					<p class="taskbar__time"></p>
 				</div>
-
-
-				<div class="taskbar__clock">
-					<p>10:46</p>
-				</div>
-
 			</section>
 		</main>
 	</body>
+	<script src="../assets/js/windows95.js" type="text/javascript"></script>
 </html>

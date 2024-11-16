@@ -34,51 +34,145 @@ main {
 
 .taskbar {
   display: flex;
-  align-items: center;
   height: 60px;
   background-color: #c0c0c0;
-  border-top: 2px solid #fff;
-  box-shadow: 0 -1px 0 #7f7f7f inset;
-  padding: 0 10px;
+  border-top: 2px solid white;
 }
-.taskbar .taskbar__start {
+.taskbar .taskbar__item {
   display: flex;
   align-items: center;
+  height: 100%;
+}
+.taskbar .taskbar--start {
+  margin-left: 5px;
+}
+.taskbar .taskbar--start .checked {
+  border-top: 3px solid black;
+  border-left: 3px solid black;
+  border-bottom: 2px solid white;
+  border-right: 2px solid white;
+}
+.taskbar .taskbar--clock {
+  margin-left: auto;
+  margin-right: 5px;
+}
+.taskbar .taskbar--clock .taskbar__time {
+  padding: 8px;
+  font-size: 1.3em;
+  color: black;
+  border-top: 3px solid gray;
+  border-left: 3px solid gray;
+  border-bottom: 2px solid white;
+  border-right: 2px solid white;
 }
 .taskbar .taskbar__btn {
+  display: flex;
+  align-items: center;
   background: none;
   border: none;
   cursor: pointer;
+  height: 80%;
+  border-top: 2px solid white;
+  border-left: 2px solid white;
+  border-bottom: 3px solid black;
+  border-right: 3px solid black;
 }
-.taskbar .taskbar__btn__img {
-  height: 40px;
-  width: 80px;
+.taskbar .taskbar__btn .taskbar__btn__text {
+  color: black;
+  font-size: 1.5em;
+  font-weight: bold;
+  cursor: pointer;
 }
-.taskbar .taskbar__search {
-  margin-left: 10px;
-  flex-shrink: 0;
+.taskbar .taskbar__btn .taskbar__btn__img {
+  height: 45px;
+  width: 45px;
+  cursor: pointer;
 }
-.taskbar .taskbar__search .taskbar__input {
-  width: 150px;
-  padding: 5px;
-  border: 1px solid #ccc;
-  border-radius: 3px;
-  background-color: #fff;
+.taskbar .taskbar__menu {
+  position: absolute;
+  background: #c3c6cd;
+  width: 275px;
+  bottom: 60px;
+  height: 400px;
+  border-top: 2px solid #deebf3;
+  border-left: 2px solid #deebf3;
+  border-right: 2px solid black;
+  border-bottom: 2px solid black;
+  display: none;
+  flex-direction: row;
 }
-.taskbar .taskbar__clock {
+.taskbar .taskbar__menu .taskbar__menu__side {
+  background: #85888f;
+  width: 15%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+}
+.taskbar .taskbar__menu .taskbar__menu__side .taskbar__side__text {
+  transform: rotate(-90deg);
+  font-size: 27px;
+}
+.taskbar .taskbar__menu .taskbar__menu__side .taskbar__side__windows {
+  font-weight: bold;
+  color: #c3c6cd;
+  margin-bottom: 55px;
+}
+.taskbar .taskbar__menu .taskbar__menu__side .taskbar__side__ninefive {
+  font-weight: normal;
+  color: white;
+  margin-bottom: 45px;
+}
+.taskbar .taskbar__menu .taskbar__menu__list {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 0;
+}
+.taskbar .taskbar__menu .taskbar__menu__list .taskbar__menu__item {
+  width: 100%;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.taskbar .taskbar__menu .taskbar__menu__list .taskbar__menu__item .taskbar__menu__icon {
+  width: 70px;
+  height: 60px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin-left: 2px;
+}
+.taskbar .taskbar__menu .taskbar__menu__list .taskbar__menu__item .taskbar__menu__title {
+  font-size: 18px;
+  color: black;
+}
+.taskbar .taskbar__menu .taskbar__menu__list .taskbar__menu__item .taskbar__menu__underline {
+  text-decoration: underline;
+  color: black;
+}
+.taskbar .taskbar__menu .taskbar__menu__list .taskbar__menu__item .taskbar__menu__arrowright {
+  border-top: 7px solid transparent;
+  border-bottom: 7px solid transparent;
+  border-left: 7px solid black;
   margin-left: auto;
+  margin-right: 15px;
 }
-.taskbar .taskbar__clock p {
-  margin: 0;
+.taskbar .taskbar__menu--open {
+  display: flex;
 }
 
 *, *:before, *:after {
   cursor: default;
   image-rendering: pixelated;
   box-sizing: border-box;
-  font-family: MS Sans Serif, Tahoma, Helvetica, Arial, sans-serif;
+  font-family: "MS Sans Serif", Tahoma, Helvetica, Arial, sans-serif;
   font-size: 16px;
   color: #FFFFFF;
   margin: 0;
   overflow: hidden;
 }
+
+/*# sourceMappingURL=style.css.map */

@@ -3,11 +3,11 @@
 main {
 	width: 100vw;
 	height: 100vh;
-	background: #{variables.$windows95-desktop-background-color};
+	background: variables.$windows95-desktop-background-color;
 }
 
 .desktop {
-	height: calc(100vh - #{variables.$taskbar-height});
+	height: calc(100vh - variables.$taskbar-height);
 
 	.desktop__shortcut {
 		width: 90px;
@@ -17,7 +17,7 @@ main {
 		justify-content: space-around;
 		align-items: center;
 		text-align: center;
-		margin: #{variables.$margin-medium};
+		margin: variables.$margin-medium;
 		cursor: pointer;
 
 		.desktop__shortcut__icon {
@@ -34,47 +34,154 @@ main {
 
 .taskbar {
     display: flex;
-    align-items: center;
-    height: #{variables.$taskbar-height};
-    background-color: #{variables.$windows95-gray-color};
-    border-top: 2px solid #fff;
-    box-shadow: #{variables.$box-shadow};
-    padding: 0 10px;
+    height: variables.$taskbar-height;
+    background-color: variables.$windows95-gray-color;
+    border-top: 2px solid white;
 
-    .taskbar__start {
+    .taskbar__item {
         display: flex;
         align-items: center;
+        height: 100%;
+    }
+
+    .taskbar--start {
+        margin-left: 5px;
+
+        .checked {
+            border-top: 3px solid black;
+            border-left: 3px solid black;
+            border-bottom: 2px solid white;
+            border-right: 2px solid white;
+        }
+    }
+
+    .taskbar--clock {
+        margin-left: auto;
+        margin-right: 5px;
+
+        .taskbar__time {
+            padding: 8px;
+            font-size: 1.3em;
+            color: black;
+            border-top: 3px solid gray;
+            border-left: 3px solid gray;
+            border-bottom: 2px solid white;
+            border-right: 2px solid white; 
+        }
     }
 
     .taskbar__btn {
-        background: none;
-        border: none;
-        cursor: pointer;
-    }
+            display: flex;
+            align-items: center;
+            background: none;
+            border: none;
+            cursor: pointer;
+            height: 80%;
 
-    .taskbar__btn__img {
-        height: 40px;
-        width: 80px;
-    }
+            border-top: 2px solid white;
+            border-left: 2px solid white;
+            border-bottom: 3px solid black;
+            border-right: 3px solid black;
 
-    .taskbar__search {
-        margin-left: 10px;
-        flex-shrink: 0;
-        
-        .taskbar__input {
-            width: 150px;
-            padding: 5px;
-            border: 1px solid #ccc;
-            border-radius: 3px;
-            background-color: #fff;
+            .taskbar__btn__text {
+                color: black;
+                font-size: 1.5em;
+                font-weight: bold;
+                cursor: pointer;
+            }
+
+            .taskbar__btn__img {
+                height: 45px;
+                width: 45px;
+                cursor: pointer;
+            }
         }
+
+    .taskbar__menu {
+        position: absolute;
+        background: #c3c6cd;
+        width: 275px;
+        bottom: variables.$taskbar-height;
+        height: 400px;
+        border-top: 2px solid #deebf3;
+        border-left: 2px solid #deebf3;
+        border-right: 2px solid black;
+        border-bottom: 2px solid black;
+        display: none;
+        flex-direction: row;
+
+        .taskbar__menu__side {
+            background: #85888f;
+            width: 15%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: end;
+            align-items: center;
+
+            .taskbar__side__text {
+                transform: rotate(-90deg);
+                font-size: 27px;
+            }
+
+            .taskbar__side__windows {
+                font-weight: bold;
+                color: #c3c6cd;
+                margin-bottom: 55px;
+            }
+
+            .taskbar__side__ninefive {
+                font-weight: normal;
+                color: white;
+                margin-bottom: 45px;
+            }
+        }
+
+        .taskbar__menu__list {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            padding: 0;
+
+            .taskbar__menu__item {
+                width: 100%;
+                padding-top: 7px;
+                padding-bottom: 7px;
+                display: flex;
+                align-items: center;
+                cursor: pointer;
+
+                .taskbar__menu__icon {
+                    width: 70px;
+                    height: 60px;
+                    padding-left: 5px;
+                    padding-right: 5px;
+                    margin-left: 2px;
+                }
+
+                .taskbar__menu__title {
+                    font-size: 18px;
+                    color: black;
+                }
+
+                .taskbar__menu__underline {
+                    text-decoration: underline;
+                    color: black;
+                }
+
+                .taskbar__menu__arrowright {
+                    border-top: 7px solid transparent;
+                    border-bottom: 7px solid transparent;
+                    border-left: 7px solid black;
+                    margin-left: auto;
+                    margin-right: 15px;
+                }
+            }
+        }
+        
     }
 
-    .taskbar__clock {
-        margin-left: auto;
-        
-        p {
-            margin: 0;
-        }
+    .taskbar__menu--open {
+        display: flex;
     }
 }

@@ -97,8 +97,8 @@ body {
     height: 45%;
     border-top: 2px solid #deebf3;
     border-left: 2px solid #deebf3;
-    border-right: 2px solid black;
-    border-bottom: 2px solid black;
+    border-right: 3px solid black;
+    border-bottom: 3px solid black;
     display: none;
     flex-direction: row;
 }
