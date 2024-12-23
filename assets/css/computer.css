@@ -81,3 +81,134 @@
 .ibm-frame-on-off-button-circle:hover {
     background: var(--red-color);
 }
+
+
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+
+/*@keyframes scan {
+    0% { background-position: 0 -100vh; }
+    35%, 100% { background-position: 0 100vh; }
+}*/
+
+html {
+    background-color: black;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#terminal-container {
+    background-color: #131;
+    background-image: radial-gradient(ellipse 500% 100% at 50% 90%, transparent, #121);
+    background-position: center;
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    font-family: monospace;
+    font-size: 17px;
+    color: rgba(128, 255, 128, 0.8);
+    position: relative;
+    overflow-y: auto;
+}
+
+#terminal-container::before {
+ /*   position: absolute;
+    content: "";
+    display: block;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;*/
+/*    background-image: linear-gradient(0deg, transparent 0%, rgba(32, 128, 32, 0.2) 2%, rgba(32, 128, 32, 0.8) 3%, rgba(32, 128, 32, 0.2) 3%, transparent 100%);*/
+/*    background-repeat: no-repeat;*/
+/*    animation: scan 7.5s linear 0s infinite;*/
+/*    border-radius: 15px;*/
+}
+
+#terminal-container::after {
+    position: absolute;
+    content: "";
+    display: block;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+    background-image: radial-gradient(ellipse 50% 15% at 50% 15%, rgba(255, 255, 255, 0.05), transparent), 
+                    radial-gradient(ellipse 50% 10% at 50% 12%, rgba(255, 255, 255, 0.1), transparent),
+                    radial-gradient(ellipse 50% 5% at 50% 10%, rgba(255, 255, 255, 0.1), transparent),
+                    radial-gradient(ellipse 50% 3% at 50% 9%, rgba(255, 255, 255, 0.1), transparent),
+                    radial-gradient(ellipse 200% 20% at 50% 0%, rgba(0, 0, 0, 0.5), transparent),
+                    linear-gradient(0deg, rgba(0, 0, 0, 0.2) 50%, transparent 50%);
+    background-size: 100%, 100%, 100%, 100%, 100%, 100% 0.25ch;
+    border-radius: 15px;
+}
+
+.cursor {
+    display: inline-block;
+    width: 12px;
+    background: rgba(128,255,128,0.8);
+    vertical-align: bottom;
+    background: pink;
+    height: 1em;
+    animation: blink 1s linear 0s infinite;
+}
+
+.prompt-line {
+    margin-left: 10px;
+    text-shadow: 0 0 1ex #3f3, 0 0 2px rgba(255, 255, 255, 0.8);
+}
+
+.terminal-text {
+    margin: 0;
+    text-shadow: 0 0 1ex #3f3, 0 0 2px rgba(255, 255, 255, 0.8);
+    margin-left: 6px;
+    margin-top: 2px;
+}
+
+/* Additional CSS for "off" state and boot-up animation */
+#terminal-container.off {
+    background-color: black; /* Screen off - pure black */
+    background-image: none;
+    color: black; /* Text color matches background for "off" effect */
+}
+
+/* Boot up animation */
+/*@keyframes bootUp {
+    0% {
+        opacity: 0;
+        transform: scaleY(0);
+    }
+    20% {
+        opacity: 1;
+        transform: scaleY(1);
+    }
+    100% {
+        opacity: 1;
+    }
+}*/
+
+/*.boot-up {
+    animation: bootUp 2s ease-out;
+}
+*/
+/* Additional CSS for the startup screen */
+#terminal-container img.startup-image {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    display: none; /* Hidden by default */
+}

@@ -177,8 +177,12 @@ main {
                     margin-right: 15px;
                 }
             }
+
+            .taskbar__menu__sub {
+               display: none; 
+
+            }
         }
-        
     }
 
     .taskbar__menu--open {
