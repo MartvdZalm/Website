@@ -6,12 +6,38 @@ main {
 	background: variables.$windows95-desktop-background-color;
 }
 
+.text__underline {
+    text-decoration: underline;
+    color: black;
+}
+
+.window__x__btn {
+    cursor: pointer;
+    background-color: variables.$windows95-gray-color;
+    border-top: 2px solid #deebf3;
+    border-left: 2px solid #deebf3;
+    border-right: 2px solid black;
+    border-bottom: 2px solid black;
+    color: black;
+    position: relative;
+    transition: top 0.1s ease, left 0.1s ease;
+
+    &:active {
+        border-top: 3px solid black;
+        border-left: 3px solid black;
+        border-bottom: 2px solid white;
+        border-right: 2px solid white;
+    }
+}
+
 .desktop {
+        position: relative;
+
 	height: calc(100vh - variables.$taskbar-height);
 
 	.desktop__shortcut {
-		width: 90px;
-		height: 90px;
+		width: 80px;
+		height: 80px;
 		display: flex;
 		flex-direction: column;
 		justify-content: space-around;
@@ -28,6 +54,7 @@ main {
 
 		.desktop__shortcut__name {
 			cursor: pointer;
+            font-size: 0.9rem;
 		}
 	}
 }
@@ -164,11 +191,6 @@ main {
                     color: black;
                 }
 
-                .taskbar__menu__underline {
-                    text-decoration: underline;
-                    color: black;
-                }
-
                 .taskbar__menu__arrowright {
                     border-top: 7px solid transparent;
                     border-bottom: 7px solid transparent;
@@ -179,13 +201,115 @@ main {
             }
 
             .taskbar__menu__sub {
-               display: none; 
+                position: absolute;
 
+                width: 200px;
+                height: 200px;
+                background-color: blue;
+                top: 0px;
+                left: 250px;
+                // background: #c3c6cd;
+                // border-top: 2px solid #deebf3;
+                // border-left: 2px solid #deebf3;
+                // border-right: 2px solid black;
+                // border-bottom: 2px solid black;
+                // flex-direction: column;
+                // width: 180px;
+                // // left: 2s50px;
+                // left: 150px;
+                // padding: 0;
+                // top: 0;
+                // // display: none;  
+                // bottom: 230px;
+                // position: absolute;
+
+                // .taskbar__menu__sub__item {
+                //     display: flex;
+                //     align-items: center;
+                // }
+            }
+
+            .taskbar__menu__sub--open {
+                display: flex;
             }
         }
     }
 
     .taskbar__menu--open {
         display: flex;
+    }
+}
+
+
+.window {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    background-color: variables.$windows95-gray-color;
+    width: 40%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-top: 2px solid white;
+    border-left: 2px solid white;
+    border-bottom: 3px solid black;
+    border-right: 3px solid black;
+
+    .window__header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        background-color: #000082;
+        height: 7%;
+
+        .window__header__item {
+
+        }
+    }
+
+    .window__section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+
+        .window__welcome {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            margin: 15px;
+
+            > div {
+                display: flex;
+                height: 100%;
+            }
+
+            > h2 {
+                height: 15%;
+                align-content: center;
+                color: black;
+                font-size: 1.5rem;
+                font-family: 'Times Ten', 'Times New Roman', serif;
+            }
+
+            .window__welcome__message {
+                background-color: #ffffbd;
+                padding: 25px;
+                p {
+                    color: black;
+                }
+            }
+
+            .window__welcome__btns {
+
+                button {
+                    color: black;
+                }
+            }
+        }
     }
 }

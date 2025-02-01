@@ -146,7 +146,7 @@ function handleCommand(command)
     const [cmd, ...args] = command.trim().split(' ');
 
     switch (cmd.toLowerCase()) {
-        case 'ls':
+        case 'dir':
             listDirectory(args[0] || currentDir);
             break;
         case 'cd':
@@ -274,7 +274,7 @@ function startWindows()
         
         setTimeout(() => {
             startupImage.style.display = 'none';
-            loadPage('windows.html');
+            loadPage('windows95.html');
         }, 7000);
 
     }, 3000);
@@ -312,3 +312,13 @@ function loadPage(page)
 }
 
 initializeTerminal();
+
+
+function main()
+{
+    
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+    main();
+});
