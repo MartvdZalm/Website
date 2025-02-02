@@ -32,8 +32,7 @@ main {
 }
 
 .desktop {
-        position: relative;
-
+    position: relative;
 	height: calc(100vh - variables.$taskbar-height);
 
 	.desktop__shortcut {
@@ -50,7 +49,6 @@ main {
 		.desktop__shortcut__icon {
 			height: 70%;
 			cursor: pointer;
-
 		}
 
 		.desktop__shortcut__name {
@@ -65,11 +63,31 @@ main {
     height: variables.$taskbar-height;
     background-color: variables.$windows95-gray-color;
     border-top: 2px solid white;
+    align-items: center;
 
     .taskbar__item {
         display: flex;
         align-items: center;
         height: 100%;
+    }
+
+    .taskbar__item--window {
+        height: 40px;
+        margin-left: 5px;
+        border-top: 2px solid white;
+        border-left: 2px solid white;
+        border-bottom: 3px solid black;
+        border-right: 3px solid black;
+        padding: 0 5px;
+        color: black;
+        cursor: pointer;
+
+        &.active {
+            border-top: 3px solid black;
+            border-left: 3px solid black;
+            border-bottom: 2px solid white;
+            border-right: 2px solid white;
+        }
     }
 
     .taskbar--start {
@@ -99,31 +117,31 @@ main {
     }
 
     .taskbar__btn {
-            display: flex;
-            align-items: center;
-            background: none;
-            border: none;
+        display: flex;
+        align-items: center;
+        background: none;
+        border: none;
+        cursor: pointer;
+        height: 80%;
+
+        border-top: 2px solid white;
+        border-left: 2px solid white;
+        border-bottom: 3px solid black;
+        border-right: 3px solid black;
+
+        .taskbar__btn__text {
+            color: black;
+            font-size: 1.5em;
+            font-weight: bold;
             cursor: pointer;
-            height: 80%;
-
-            border-top: 2px solid white;
-            border-left: 2px solid white;
-            border-bottom: 3px solid black;
-            border-right: 3px solid black;
-
-            .taskbar__btn__text {
-                color: black;
-                font-size: 1.5em;
-                font-weight: bold;
-                cursor: pointer;
-            }
-
-            .taskbar__btn__img {
-                height: 45px;
-                width: 45px;
-                cursor: pointer;
-            }
         }
+
+        .taskbar__btn__img {
+            height: 45px;
+            width: 45px;
+            cursor: pointer;
+        }
+    }
 
     .taskbar__menu {
         position: absolute;

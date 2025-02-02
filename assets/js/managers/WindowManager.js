@@ -1,7 +1,8 @@
 class WindowManager
 {
-	constructor()
+	constructor(taskbarManager)
 	{
+		this.taskbarManager = taskbarManager;
 		this.setupWindows();
 	}
 
@@ -13,6 +14,7 @@ class WindowManager
 		for (let windowElement of allWindows) {
 			this.makeDraggable(windowElement);
 			this.makeResizable(windowElement);
+			this.makeClosable(windowElement);
 			windowElement.addEventListener("mousedown", () => this.bringToFront(windowElement));
 		}
 
@@ -88,6 +90,18 @@ class WindowManager
 		this.addResizeListener(resizeHandleBR, "br", windowElement);
 		this.addResizeListener(resizeHandleB, "b", windowElement);
 		this.addResizeListener(resizeHandleR, "r", windowElement);
+	}
+
+	makeClosable(windowElement)
+	{
+		const closeButton = windowElement.querySelector(".window__x__btn");
+
+        if (closeButton) {
+            closeButton.addEventListener("click", () => {
+                windowElement.style.display = "none";
+                this.taskbarManager.removeFromTaskbar(windowElement);
+            });
+        }
 	}
 
 	addResizeListener(handle, direction, windowElement)

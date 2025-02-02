@@ -62,11 +62,29 @@ main {
   height: 50px;
   background-color: #c0c0c0;
   border-top: 2px solid white;
+  align-items: center;
 }
 .taskbar .taskbar__item {
   display: flex;
   align-items: center;
   height: 100%;
+}
+.taskbar .taskbar__item--window {
+  height: 40px;
+  margin-left: 5px;
+  border-top: 2px solid white;
+  border-left: 2px solid white;
+  border-bottom: 3px solid black;
+  border-right: 3px solid black;
+  padding: 0 5px;
+  color: black;
+  cursor: pointer;
+}
+.taskbar .taskbar__item--window.active {
+  border-top: 3px solid black;
+  border-left: 3px solid black;
+  border-bottom: 2px solid white;
+  border-right: 2px solid white;
 }
 .taskbar .taskbar--start {
   margin-left: 5px;
@@ -206,6 +224,8 @@ main {
   left: 200px;
   height: 500px;
   width: 650px;
+  resize: none;
+  overflow: hidden;
   border-top: 2px solid white;
   border-left: 2px solid white;
   border-bottom: 3px solid black;
