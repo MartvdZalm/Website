@@ -10,7 +10,7 @@
 		<main>
 			<section class="desktop">
 
-				<div class="desktop__shortcut">
+				<div class="desktop__shortcut" data-window="window-welcome">
 					<img class="desktop__shortcut__icon" src="../assets/images/windows95/windows95-my-computer.ico" alt="My Computer">
 					<span class="desktop__shortcut__name">My Computer</span>
 				</div>
@@ -49,6 +49,23 @@
 									<button>Close</button>
 								</div>
 							</div>
+						</div>
+					</section>
+				</section>
+
+				<section id="window-internet-explorer" class="window">
+					<header class="window__header">
+						<span class="window__header__item">
+							About Internet Explorer
+						</span>
+						<span class="window__header__item">
+							<button class="window__x__btn">X</button>
+						</span>
+					</header>
+					<section class="window__section">
+						<div class="window__internet__explorer">
+							<img src="../assets/images/windows95/windows95-ie-4-about.png">
+							<button>OK</button>
 						</div>
 					</section>
 				</section>
@@ -150,5 +167,10 @@
 			</section>
 		</main>
 	</body>
-	<script src="../assets/js/windows95.js" type="text/javascript"></script>
+	<script src="../assets/js/managers/WindowManager.js"></script>
+	<script src="../assets/js/managers/TaskbarManager.js"></script>
+	<script src="../assets/js/managers/StartMenuManager.js"></script>
+	<script src="../assets/js/managers/DesktopManager.js"></script>
+	<script src="../assets/js/managers/DateTimeManager.js"></script>
+	<script src="../assets/js/main.js"></script>
 </html>
