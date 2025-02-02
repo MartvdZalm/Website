@@ -252,9 +252,8 @@ main {
     left: 200px;
     height: 500px;
     width: 650px;
-    // top: 50%;
-    // left: 50%;
-    // transform: translate(-50%, -50%);
+    resize: none;
+    overflow: hidden;
     border-top: 2px solid white;
     border-left: 2px solid white;
     border-bottom: 3px solid black;

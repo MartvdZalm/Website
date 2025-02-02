@@ -12,6 +12,7 @@ class WindowManager
 
 		for (let windowElement of allWindows) {
 			this.makeDraggable(windowElement);
+			this.makeResizable(windowElement);
 			windowElement.addEventListener("mousedown", () => this.bringToFront(windowElement));
 		}
 
@@ -49,7 +50,76 @@ class WindowManager
 
 	makeResizable(windowElement)
 	{
+	    const resizeHandleSize = 10; // Size of the resize handle (in pixels)
 
+	    // Bottom-right corner
+	    const resizeHandleBR = document.createElement("div");
+	    resizeHandleBR.style.position = "absolute";
+	    resizeHandleBR.style.right = "0";
+	    resizeHandleBR.style.bottom = "0";
+	    resizeHandleBR.style.width = `${resizeHandleSize}px`;
+	    resizeHandleBR.style.height = `${resizeHandleSize}px`;
+	    resizeHandleBR.style.cursor = "se-resize";
+	    resizeHandleBR.style.backgroundColor = "transparent";
+	    windowElement.appendChild(resizeHandleBR);
+
+	    // Bottom edge
+	    const resizeHandleB = document.createElement("div");
+	    resizeHandleB.style.position = "absolute";
+	    resizeHandleB.style.left = "0";
+	    resizeHandleB.style.right = "0";
+	    resizeHandleB.style.bottom = "0";
+	    resizeHandleB.style.height = `${resizeHandleSize}px`;
+	    resizeHandleB.style.cursor = "s-resize";
+	    resizeHandleB.style.backgroundColor = "transparent";
+	    windowElement.appendChild(resizeHandleB);
+
+	    // Right edge
+	    const resizeHandleR = document.createElement("div");
+	    resizeHandleR.style.position = "absolute";
+	    resizeHandleR.style.right = "0";
+	    resizeHandleR.style.top = "0";
+	    resizeHandleR.style.bottom = "0";
+	    resizeHandleR.style.width = `${resizeHandleSize}px`;
+	    resizeHandleR.style.cursor = "e-resize";
+	    resizeHandleR.style.backgroundColor = "transparent";
+	    windowElement.appendChild(resizeHandleR);
+
+		this.addResizeListener(resizeHandleBR, "br", windowElement);
+		this.addResizeListener(resizeHandleB, "b", windowElement);
+		this.addResizeListener(resizeHandleR, "r", windowElement);
+	}
+
+	addResizeListener(handle, direction, windowElement)
+	{
+		let isResizing = false;
+		let startX, startY, startWidth, startHeight;
+
+		handle.addEventListener("mousedown", (event) => {
+			isResizing = true;
+			startX = event.clientX;
+			startY = event.clientY;
+			startWidth = parseInt(windowElement.style.width || windowElement.offsetWidth, 10);
+			startHeight = parseInt(windowElement.style.height || windowElement.offsetHeight, 10);
+			event.preventDefault();
+		});
+
+		document.addEventListener("mousemove", (event) => {
+			if (isResizing) {
+				if (direction === "br" || direction === "b") {
+					const newHeight = startHeight + (event.clientY - startY);
+					windowElement.style.height = `${Math.max(newHeight, 500)}px`;
+				}
+				if (direction === "br" || direction === "r") {
+					const newWidth = startWidth + (event.clientX - startX);
+					windowElement.style.width = `${Math.max(newWidth, 650)}px`;
+				}
+			}
+		});
+
+		document.addEventListener("mouseup", () => {
+			isResizing = false;
+		});
 	}
 
 	bringToFront(windowElement)
