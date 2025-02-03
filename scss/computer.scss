@@ -1,22 +1,22 @@
-@import url('root.css');
+@use "variables";
 
-.ibm-frame.fullscreen {
-    width: calc(min(100vw, 100vh) - 50px);
-    height: calc(min(100vw, 100vh) - 50px);
-    border: none;
-    box-shadow: none;
-    transition: width 0.5s ease, height 0.5s ease, border-radius 0.5s ease, box-shadow 0.5s ease;
+@font-face {
+  font-family: "MS Sans Serif";
+  src: url("/assets/fonts/ms-sans-serif.woff2") format("woff2");
+  font-weight: normal;
+  font-display: swap;
 }
 
-.ibm-screen.fullscreen {
-    height: calc(100% - 150px);
-    margin: 20px 20px 0 20px;
-    border-radius: 15px;
-    box-shadow: inset 0px 0px 10px 5px #000;
-    transition: height 0.5s ease, margin 0.5s ease, border-radius 0.5s ease, box-shadow 0.5s ease;
+#ibm {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    background-color: black;
 }
 
-.ibm-frame {
+.ibm__frame {
     background: #D3D3D3;
     width: 700px;
     height: 650px;
@@ -29,7 +29,23 @@
     transition: width 0.5s ease, height 0.5s ease, border-radius 0.5s ease, box-shadow 0.5s ease;
 }
 
-.ibm-screen {
+.ibm__frame.ibm__frame--fullscreen {
+    width: calc(min(100vw, 100vh) - 50px);
+    height: calc(min(100vw, 100vh) - 50px);
+    border: none;
+    box-shadow: none;
+    transition: width 0.5s ease, height 0.5s ease, border-radius 0.5s ease, box-shadow 0.5s ease;
+}
+
+.ibm__frame__screen.ibm__frame__screen--fullscreen {
+    height: calc(100% - 150px);
+    margin: 20px 20px 0 20px;
+    border-radius: 15px;
+    box-shadow: inset 0px 0px 10px 5px #000;
+    transition: height 0.5s ease, margin 0.5s ease, border-radius 0.5s ease, box-shadow 0.5s ease;
+}
+
+.ibm__frame__screen {
     height: 450px;
     margin: 35px 35px 0px 35px;
     border: 3px solid #222121;
@@ -38,7 +54,7 @@
     transition: height 0.5s ease, margin 0.5s ease, border-radius 0.5s ease, box-shadow 0.5s ease;
 }
 
-.ibm-frame-lower {
+.ibm__frame--lower {
     height: 80px;
     border-top: 5px solid #3d3b3b;
     font-size: 62px;
@@ -47,9 +63,14 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    p {
+        font-size: 50px;
+        color: #3d3b3b;
+    }
 }
 
-.ibm-frame-logo {
+.ibm__frame--logo {
     display: flex;
     align-items: center;
     font-size: 35px;
@@ -70,8 +91,8 @@
 
 .ibm-frame-on-off-button-circle {
     background-color: gray;
-    width: 50%;
-    height: 50%;
+    width: 80%;
+    height: 80%;
     margin: auto;
     border: 5px solid black;
     border-radius: 50%;
@@ -79,36 +100,15 @@
 }
 
 .ibm-frame-on-off-button-circle:hover {
-    background: var(--red-color);
+    background: variables.$red-color;
 }
-
 
 @keyframes blink {
   0%, 50% { opacity: 1; }
   51%, 100% { opacity: 0; }
 }
 
-/*@keyframes scan {
-    0% { background-position: 0 -100vh; }
-    35%, 100% { background-position: 0 100vh; }
-}*/
-
-html {
-    background-color: black;
-    margin: 0;
-    padding: 0;
-}
-
-body {
-    margin: 0;
-    padding: 0;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#terminal-container {
+#ibm__frame__terminal {
     background-color: #131;
     background-image: radial-gradient(ellipse 500% 100% at 50% 90%, transparent, #121);
     background-position: center;
@@ -123,22 +123,7 @@ body {
     overflow-y: auto;
 }
 
-#terminal-container::before {
- /*   position: absolute;
-    content: "";
-    display: block;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    pointer-events: none;*/
-/*    background-image: linear-gradient(0deg, transparent 0%, rgba(32, 128, 32, 0.2) 2%, rgba(32, 128, 32, 0.8) 3%, rgba(32, 128, 32, 0.2) 3%, transparent 100%);*/
-/*    background-repeat: no-repeat;*/
-/*    animation: scan 7.5s linear 0s infinite;*/
-/*    border-radius: 15px;*/
-}
-
-#terminal-container::after {
+#ibm__frame__terminal::after {
     position: absolute;
     content: "";
     display: block;
@@ -167,48 +152,36 @@ body {
     animation: blink 1s linear 0s infinite;
 }
 
-.prompt-line {
+.terminal__text {
+    text-shadow: 0 0 1ex #131, 0 0 2px #00DC16;
     margin-left: 10px;
-    text-shadow: 0 0 1ex #3f3, 0 0 2px rgba(255, 255, 255, 0.8);
+    margin-top: 5px;
+    color: #00DC16;
 }
 
-.terminal-text {
-    margin: 0;
-    text-shadow: 0 0 1ex #3f3, 0 0 2px rgba(255, 255, 255, 0.8);
-    margin-left: 6px;
-    margin-top: 2px;
+.terminal__user__input {
+    margin-left: 3px;
 }
 
-/* Additional CSS for "off" state and boot-up animation */
-#terminal-container.off {
-    background-color: black; /* Screen off - pure black */
+.prompt__line span {
+    text-shadow: 0 0 1ex #131, 0 0 2px #00DC16;
+    color: #00DC16;
+}
+
+.prompt__line {
+    margin-top: 5px;
+    margin-left: 10px;
+}
+
+#ibm__frame__terminal.off {
+    background-color: black;
     background-image: none;
-    color: black; /* Text color matches background for "off" effect */
+    color: black;
 }
 
-/* Boot up animation */
-/*@keyframes bootUp {
-    0% {
-        opacity: 0;
-        transform: scaleY(0);
-    }
-    20% {
-        opacity: 1;
-        transform: scaleY(1);
-    }
-    100% {
-        opacity: 1;
-    }
-}*/
-
-/*.boot-up {
-    animation: bootUp 2s ease-out;
-}
-*/
-/* Additional CSS for the startup screen */
-#terminal-container img.startup-image {
+#ibm__frame__terminal img.startup-image {
     width: 100%;
     height: 100%;
     object-fit: fill;
-    display: none; /* Hidden by default */
+    display: none;
 }

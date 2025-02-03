@@ -1,10 +1,4 @@
-@font-face {
-  font-family: "MS Sans Serif";
-  src: url("../../assets/fonts/ms-sans-serif.woff2") format("woff2");
-  font-weight: normal;
-  font-display: swap;
-}
-main {
+#windows95 {
   width: 100vw;
   height: 100vh;
   background: #008080;
@@ -316,6 +310,188 @@ main {
 }
 .window .window__section .window__internet__explorer button:focus {
   outline: 1px dotted #000;
+}
+
+@font-face {
+  font-family: "MS Sans Serif";
+  src: url("/assets/fonts/ms-sans-serif.woff2") format("woff2");
+  font-weight: normal;
+  font-display: swap;
+}
+#ibm {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  background-color: black;
+}
+
+.ibm__frame {
+  background: #D3D3D3;
+  width: 700px;
+  height: 650px;
+  border: 5px solid #3d3b3b;
+  box-shadow: 0px 0px 0px 10px #b6b6b6;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: width 0.5s ease, height 0.5s ease, border-radius 0.5s ease, box-shadow 0.5s ease;
+}
+
+.ibm__frame.ibm__frame--fullscreen {
+  width: calc(min(100vw, 100vh) - 50px);
+  height: calc(min(100vw, 100vh) - 50px);
+  border: none;
+  box-shadow: none;
+  transition: width 0.5s ease, height 0.5s ease, border-radius 0.5s ease, box-shadow 0.5s ease;
+}
+
+.ibm__frame__screen.ibm__frame__screen--fullscreen {
+  height: calc(100% - 150px);
+  margin: 20px 20px 0 20px;
+  border-radius: 15px;
+  box-shadow: inset 0px 0px 10px 5px #000;
+  transition: height 0.5s ease, margin 0.5s ease, border-radius 0.5s ease, box-shadow 0.5s ease;
+}
+
+.ibm__frame__screen {
+  height: 450px;
+  margin: 35px 35px 0px 35px;
+  border: 3px solid #222121;
+  border-radius: 20px;
+  box-shadow: inset 0px 0px 10px 10px #000;
+  transition: height 0.5s ease, margin 0.5s ease, border-radius 0.5s ease, box-shadow 0.5s ease;
+}
+
+.ibm__frame--lower {
+  height: 80px;
+  border-top: 5px solid #3d3b3b;
+  font-size: 62px;
+  font-weight: normal;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.ibm__frame--lower p {
+  font-size: 50px;
+  color: #3d3b3b;
+}
+
+.ibm__frame--logo {
+  display: flex;
+  align-items: center;
+  font-size: 35px;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.ibm-frame-on-off-button {
+  width: 50px;
+  height: 50px;
+  border: 3px solid black;
+  border-radius: 5px;
+  margin-right: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ibm-frame-on-off-button-circle {
+  background-color: gray;
+  width: 80%;
+  height: 80%;
+  margin: auto;
+  border: 5px solid black;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.ibm-frame-on-off-button-circle:hover {
+  background: #d20404;
+}
+
+@keyframes blink {
+  0%, 50% {
+    opacity: 1;
+  }
+  51%, 100% {
+    opacity: 0;
+  }
+}
+#ibm__frame__terminal {
+  background-color: #131;
+  background-image: radial-gradient(ellipse 500% 100% at 50% 90%, transparent, #121);
+  background-position: center;
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  font-family: monospace;
+  font-size: 17px;
+  color: rgba(128, 255, 128, 0.8);
+  position: relative;
+  overflow-y: auto;
+}
+
+#ibm__frame__terminal::after {
+  position: absolute;
+  content: "";
+  display: block;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  background-image: radial-gradient(ellipse 50% 15% at 50% 15%, rgba(255, 255, 255, 0.05), transparent), radial-gradient(ellipse 50% 10% at 50% 12%, rgba(255, 255, 255, 0.1), transparent), radial-gradient(ellipse 50% 5% at 50% 10%, rgba(255, 255, 255, 0.1), transparent), radial-gradient(ellipse 50% 3% at 50% 9%, rgba(255, 255, 255, 0.1), transparent), radial-gradient(ellipse 200% 20% at 50% 0%, rgba(0, 0, 0, 0.5), transparent), linear-gradient(0deg, rgba(0, 0, 0, 0.2) 50%, transparent 50%);
+  background-size: 100%, 100%, 100%, 100%, 100%, 100% 0.25ch;
+  border-radius: 15px;
+}
+
+.cursor {
+  display: inline-block;
+  width: 12px;
+  background: rgba(128, 255, 128, 0.8);
+  vertical-align: bottom;
+  background: pink;
+  height: 1em;
+  animation: blink 1s linear 0s infinite;
+}
+
+.terminal__text {
+  text-shadow: 0 0 1ex #131, 0 0 2px #00DC16;
+  margin-left: 10px;
+  margin-top: 5px;
+  color: #00DC16;
+}
+
+.terminal__user__input {
+  margin-left: 3px;
+}
+
+.prompt__line span {
+  text-shadow: 0 0 1ex #131, 0 0 2px #00DC16;
+  color: #00DC16;
+}
+
+.prompt__line {
+  margin-top: 5px;
+  margin-left: 10px;
+}
+
+#ibm__frame__terminal.off {
+  background-color: black;
+  background-image: none;
+  color: black;
+}
+
+#ibm__frame__terminal img.startup-image {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  display: none;
 }
 
 *, *:before, *:after {

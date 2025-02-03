@@ -4,7 +4,7 @@ const path = require('path');
 
 // Define the SCSS and output CSS paths
 const scssFile = path.join(__dirname, 'scss', 'main.scss');
-const cssFile = path.join(__dirname, 'assets', 'css', 'style.css');
+const cssFile = path.join(__dirname, 'css', 'style.css');
 
 // Compile the SCSS
 sass.render({

@@ -1,7 +1,7 @@
 @use "variables";
 @use "mixins";
 
-main {
+#windows95 {
 	width: 100vw;
 	height: 100vh;
 	background: variables.$windows95-desktop-background-color;

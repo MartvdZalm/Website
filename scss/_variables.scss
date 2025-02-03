@@ -2,11 +2,16 @@
 $text-color: #FFFFFF;
 $windows95-desktop-background-color: #008080;
 $windows95-gray-color: #c0c0c0;
+$background-color: #000000;
+$text-color: #FFFFFF;
+$red-color: #d20404;
 
 // Font
 $font-family: "MS Sans Serif", Tahoma, Helvetica, Arial, sans-serif;
 $font-size-base: 16px;
-$font-path: "../../assets/fonts/";
+$font-path: "/assets/fonts/";
+
+$font-family-terminal: 'MS PGothic', 'ＭＳ Ｐゴシック', Georgia, Arial, Helvetica, sans-serif;
 
 // Spacing
 $padding-small: 5px;

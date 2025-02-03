@@ -1,0 +1,1898 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"Poiesz",
+				"PoieszPageTypes"
+			],
+			[
+				"cate",
+				"categoryIds"
+			],
+			[
+				"prod",
+				"$productUrl"
+			],
+			[
+				"Poi",
+				"PoieszPageTypes"
+			],
+			[
+				"ca",
+				"$categoryCrumb"
+			],
+			[
+				"Require",
+				"RequiredException"
+			],
+			[
+				"nam",
+				"namespace"
+			],
+			[
+				"RootCate",
+				"RootCategoryExtracterChain"
+			],
+			[
+				"root",
+				"$rootCategoryResult"
+			],
+			[
+				"Poies",
+				"PoieszConfig"
+			],
+			[
+				"roo",
+				"$rootCategoryResult"
+			],
+			[
+				"ro",
+				"$rootCategoryResult"
+			],
+			[
+				"RootCategoryExtracterChain",
+				"RootCategoryExtracterChain [App\\Crawler\\Retailer\\Poiesz\\ExtracterChains]"
+			],
+			[
+				"RequiredExcet",
+				"RequiredException"
+			],
+			[
+				"margin",
+				"margin-left"
+			],
+			[
+				"get",
+				"getAttribute"
+			],
+			[
+				"data",
+				"data-window-id"
+			],
+			[
+				"all",
+				"allTaskbarItems"
+			],
+			[
+				"client",
+				"clientX"
+			],
+			[
+				"start",
+				"startHeight"
+			],
+			[
+				"cle",
+				"clientY"
+			],
+			[
+				"resizeHandle",
+				"resizeHandleBR"
+			],
+			[
+				"resizeHan",
+				"resizeHandleR"
+			],
+			[
+				"resize",
+				"resizeHandleB"
+			],
+			[
+				"resze",
+				"resizeHandleB"
+			],
+			[
+				"clien",
+				"clientY"
+			],
+			[
+				"ma",
+				"maxZIndex"
+			],
+			[
+				"getElemen",
+				"getElementsByClassName"
+			],
+			[
+				"targe",
+				"targetWindowId"
+			],
+			[
+				"startM",
+				"startMenuButton"
+			],
+			[
+				"of",
+				"offsetY"
+			],
+			[
+				"margi",
+				"margin-bottom"
+			],
+			[
+				"flex-",
+				"flex-end"
+			],
+			[
+				"ali",
+				"align-content"
+			],
+			[
+				"text",
+				"text-align"
+			],
+			[
+				"win",
+				"window__x__btn"
+			],
+			[
+				"back",
+				"background-color"
+			],
+			[
+				"spa",
+				"space-between"
+			],
+			[
+				"bac",
+				"background-color"
+			],
+			[
+				"re",
+				"relative"
+			],
+			[
+				"backgr",
+				"background-color"
+			],
+			[
+				"font",
+				"font-family"
+			],
+			[
+				"getEl",
+				"getElementsByClassName"
+			],
+			[
+				"startMen",
+				"startMenuSubItems"
+			],
+			[
+				"startMenu",
+				"startMenuPrograms"
+			],
+			[
+				"algin-",
+				"align-content"
+			],
+			[
+				"--fon",
+				"--font-family-1"
+			],
+			[
+				"font-",
+				"font-family"
+			],
+			[
+				"max",
+				"max-height"
+			],
+			[
+				"border",
+				"border"
+			],
+			[
+				"sc",
+				"scrolling-icon"
+			],
+			[
+				"col",
+				"column-reverse"
+			],
+			[
+				"puz",
+				"puzzle__container"
+			],
+			[
+				"bor",
+				"border"
+			],
+			[
+				"erro",
+				"errors"
+			],
+			[
+				"web",
+				"websiteCodes"
+			],
+			[
+				"borde",
+				"border-radius"
+			],
+			[
+				"tran",
+				"transition"
+			],
+			[
+				"setReurn",
+				"setReturnSingleKey"
+			],
+			[
+				"file_",
+				"file_put_contents"
+			],
+			[
+				"min",
+				"min-width"
+			],
+			[
+				"time",
+				"timeline__item"
+			],
+			[
+				"timeline__item",
+				"timeline__item--right"
+			],
+			[
+				"self-",
+				"self-end"
+			],
+			[
+				"timelin",
+				"timeline__container"
+			],
+			[
+				"colu",
+				"column-reverse"
+			],
+			[
+				"trans",
+				"transition"
+			],
+			[
+				"update",
+				"updateBlogProgressBar"
+			],
+			[
+				"code",
+				"codeEntryForm"
+			],
+			[
+				"codeEn",
+				"codeEntryInput"
+			],
+			[
+				"acces",
+				"access-code"
+			],
+			[
+				"prox",
+				"proxyUrl"
+			],
+			[
+				"proxy",
+				"proxyUrl"
+			],
+			[
+				"un",
+				"underline"
+			],
+			[
+				"tra",
+				"transition"
+			],
+			[
+				"space",
+				"space-evenly"
+			],
+			[
+				"cast",
+				"castSrc"
+			],
+			[
+				"dis",
+				"distance"
+			],
+			[
+				"fq",
+				"faqQuestionChildren"
+			],
+			[
+				"faq",
+				"faqQuestions"
+			],
+			[
+				"f",
+				"faqQuestions"
+			],
+			[
+				"cst",
+				"cstdlib"
+			],
+			[
+				"extract",
+				"extractTypedResult"
+			],
+			[
+				"ProductExtracterChain",
+				"ProductExtracterChain [App\\Crawler\\Retailer\\MitraNL\\ExtracterChains]"
+			],
+			[
+				"Stati",
+				"Statistics"
+			],
+			[
+				"SaleStringExtrat",
+				"SaleStringExtracterChain [App\\Crawler\\Retailer\\MitraNL\\ExtracterChains]"
+			],
+			[
+				"Stat",
+				"Statistics"
+			],
+			[
+				"categ",
+				"$categoryProductResult"
+			],
+			[
+				"unique",
+				"unique_id"
+			],
+			[
+				"REGEX",
+				"REGEX_UNIQUE_ID"
+			],
+			[
+				"unqie",
+				"unique-id"
+			],
+			[
+				"RootExtrac",
+				"RootExtracterChain [App\\Crawler\\Retailer\\MitraNL\\ExtracterChains]"
+			],
+			[
+				"atr",
+				"attribute"
+			],
+			[
+				"rel",
+				"$relatedProductResult"
+			],
+			[
+				"MitraN",
+				"MitraNLConfig"
+			],
+			[
+				"Trans",
+				"TransformerChain"
+			],
+			[
+				"uni",
+				"unique_id"
+			],
+			[
+				"unqi",
+				"unique-id"
+			],
+			[
+				"relate",
+				"related_block"
+			],
+			[
+				"Prefi",
+				"PrefilterRegex"
+			],
+			[
+				"relat",
+				"related_block"
+			],
+			[
+				"Regex",
+				"Regex [App\\Crawler\\Extracter\\Prefilter]"
+			],
+			[
+				"setReturn",
+				"setReturnMultipleKeys"
+			],
+			[
+				"item",
+				"$itemData"
+			],
+			[
+				"regex",
+				"$regexAmountForPriceSale"
+			],
+			[
+				"SaleCond",
+				"SaleCondition [App\\Crawler\\Loader\\Models]"
+			],
+			[
+				"SEARC",
+				"SEARCH_METHOD_UNIQUE_ID"
+			],
+			[
+				"StringToFl",
+				"SetTypeStringToFloat"
+			],
+			[
+				"setRetu",
+				"setReturnSingleKey"
+			],
+			[
+				"MitraNL",
+				"MitraNLConfig"
+			],
+			[
+				"Relative",
+				"RelativeUrl"
+			],
+			[
+				"uniq",
+				"unique_id"
+			],
+			[
+				"Item",
+				"ItemData"
+			],
+			[
+				"Mitra",
+				"MitraNLPageTypes"
+			],
+			[
+				"getRoot",
+				"getRootTransformerChain"
+			],
+			[
+				"Trim",
+				"Trim [App\\Crawler\\Transformer]"
+			],
+			[
+				"setRet",
+				"setReturnMultipleKeys"
+			],
+			[
+				"product",
+				"$productUrl"
+			],
+			[
+				"steAl",
+				"setAlternateUniqueId"
+			],
+			[
+				"SEAR",
+				"SEARCH_METHOD_ALTERNATE_UNIQUE_ID"
+			],
+			[
+				"pro",
+				"$productItem"
+			],
+			[
+				"SEARCH",
+				"SEARCH_METHOD_UNIQUE_ID"
+			],
+			[
+				"setUn",
+				"setUniqueId"
+			],
+			[
+				"displ",
+				"displayHistory"
+			],
+			[
+				"margin-",
+				"margin-right"
+			],
+			[
+				"Makro",
+				"MakroConfig"
+			],
+			[
+				"setAl",
+				"setAlternateUniqueId"
+			],
+			[
+				"setUni",
+				"setUniqueId"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"refresh folders",
+				"Project: Refresh Folders"
+			],
+			[
+				"scheme",
+				"UI: Select Theme"
+			],
+			[
+				"pre",
+				"Preferences: Settings"
+			],
+			[
+				"prefer",
+				"Preferences: Settings"
+			],
+			[
+				"prefe",
+				"Preferences: Key Bindings"
+			],
+			[
+				"theme",
+				"UI: Select Color Scheme"
+			],
+			[
+				"use n",
+				"PHPCompanion:Find Use"
+			],
+			[
+				"refresh",
+				"Project: Refresh Folders"
+			],
+			[
+				"refres",
+				"Project: Refresh Folders"
+			],
+			[
+				"use",
+				"PHPCompanion:Find Use"
+			],
+			[
+				"usen",
+				"Snippet: #!/usr/bin/env"
+			],
+			[
+				"refes",
+				"Project: Refresh Folders"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"preferences",
+				"Preferences: Settings"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"pref",
+				"Preferences: Settings"
+			],
+			[
+				"setting",
+				"Preferences: Settings"
+			],
+			[
+				"use ",
+				"PHPCompanion:Find Use"
+			],
+			[
+				"json",
+				"Pretty JSON: Format JSON"
+			],
+			[
+				"refre",
+				"Project: Refresh Folders"
+			],
+			[
+				"refrs",
+				"Project: Refresh Folders"
+			],
+			[
+				"set syntax p",
+				"Set Syntax: Python"
+			],
+			[
+				"set python ",
+				"Set Syntax: Python"
+			],
+			[
+				"reffre",
+				"Project: Refresh Folders"
+			],
+			[
+				"copy j",
+				"JSONPath: Copy"
+			],
+			[
+				"settings",
+				"Preferences: Settings"
+			],
+			[
+				"cus",
+				"UI: Customize Theme"
+			],
+			[
+				"select th",
+				"UI: Select Theme"
+			],
+			[
+				"cuso",
+				"UI: Customize Theme"
+			],
+			[
+				"select",
+				"UI: Select Theme"
+			],
+			[
+				"remve",
+				"Package Control: Remove Package"
+			],
+			[
+				"schem",
+				"UI: Select Color Scheme"
+			],
+			[
+				"cusom",
+				"UI: Customize Theme"
+			],
+			[
+				"them",
+				"UI: Customize Color Scheme"
+			],
+			[
+				"git blam",
+				"Git Blame: Show All"
+			],
+			[
+				"git b",
+				"Git Blame: Show All"
+			],
+			[
+				"refe",
+				"Project: Refresh Folders"
+			],
+			[
+				"git bam",
+				"Git Blame: Show All"
+			],
+			[
+				"dist",
+				"View: Toggle Distraction Free"
+			],
+			[
+				"distr",
+				"View: Toggle Distraction Free"
+			],
+			[
+				"refresh folder",
+				"Project: Refresh Folders"
+			],
+			[
+				"us en",
+				"Preferences: LSP Utils Settings"
+			],
+			[
+				"refresh fol",
+				"Project: Refresh Folders"
+			],
+			[
+				"dis",
+				"View: Toggle Distraction Free"
+			],
+			[
+				"distraction",
+				"View: Toggle Distraction Free"
+			],
+			[
+				"remove ",
+				"Package Control: Remove Package"
+			],
+			[
+				"set syntax html",
+				"Set Syntax: HTML"
+			],
+			[
+				"set syntax C++",
+				"Set Syntax: C++"
+			],
+			[
+				"Project: re",
+				"Project: Refresh Folders"
+			],
+			[
+				"set syntax json",
+				"Set Syntax: JSON"
+			],
+			[
+				"set syntax js",
+				"Set Syntax: JSON"
+			],
+			[
+				"sey stnax json",
+				"Set Syntax: JSON"
+			],
+			[
+				"git ",
+				"Git Blame: Show All"
+			],
+			[
+				"set them",
+				"UI: Select Theme"
+			],
+			[
+				"set color",
+				"UI: Select Color Scheme"
+			],
+			[
+				"set theme",
+				"UI: Select Theme"
+			],
+			[
+				"set syntax php",
+				"Set Syntax: PHP"
+			],
+			[
+				"rrefr",
+				"Project: Refresh Folders"
+			],
+			[
+				"r",
+				"Package Control: Remove Repository"
+			],
+			[
+				"jso",
+				"Pretty JSON: Format JSON"
+			],
+			[
+				"git bl",
+				"Git Blame: Show All"
+			],
+			[
+				"refress",
+				"Project: Refresh Folders"
+			],
+			[
+				"cusomi",
+				"UI: Customize Theme"
+			],
+			[
+				"cu",
+				"UI: Customize Theme"
+			],
+			[
+				"customize ",
+				"UI: Customize Theme"
+			],
+			[
+				"custom",
+				"UI: Customize Theme"
+			],
+			[
+				"customize",
+				"UI: Customize Theme"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"theme ",
+				"UI: Customize Theme"
+			],
+			[
+				"set styntax c++",
+				"Set Syntax: C++"
+			],
+			[
+				"color",
+				"UI: Customize Color Scheme"
+			],
+			[
+				"color sh",
+				"UI: Select Color Scheme"
+			],
+			[
+				"colo",
+				"UI: Customize Color Scheme"
+			],
+			[
+				"set syntax sql",
+				"Set Syntax: SQL"
+			],
+			[
+				"set syntsx sq",
+				"Set Syntax: SQL"
+			],
+			[
+				"set syntax sq",
+				"Set Syntax: SQL"
+			],
+			[
+				"SET SYNTAX SQ",
+				"Set Syntax: SQL"
+			],
+			[
+				"set syntax",
+				"Set Syntax: HTML"
+			],
+			[
+				"set sql",
+				"Set Syntax: SQL"
+			],
+			[
+				"bea",
+				"HTMLBeautify"
+			],
+			[
+				"beaut",
+				"HTMLBeautify"
+			],
+			[
+				"set ",
+				"Set Syntax: HTML"
+			],
+			[
+				"html ",
+				"HTMLBeautify"
+			],
+			[
+				"select them",
+				"UI: Select Color Scheme"
+			],
+			[
+				"html be",
+				"HTMLBeautify"
+			],
+			[
+				"set syntax py",
+				"Set Syntax: Python"
+			],
+			[
+				"sey syntax p",
+				"Set Syntax: Python"
+			],
+			[
+				"set syntax pyth",
+				"Set Syntax: Python"
+			],
+			[
+				"set synta",
+				"Set Syntax: HTML"
+			],
+			[
+				"set syn",
+				"Set Syntax: HTML"
+			],
+			[
+				"set syntax scss",
+				"Set Syntax: SCSS"
+			],
+			[
+				"set sy",
+				"Set Syntax: HTML"
+			],
+			[
+				"refesh",
+				"Project: Refresh Folders"
+			],
+			[
+				"set",
+				"Set Syntax: HTML"
+			],
+			[
+				"set syntax ",
+				"Set Syntax: HTML"
+			],
+			[
+				"json for",
+				"Pretty JSON: Format JSON"
+			],
+			[
+				"json ",
+				"JSONPath: Copy"
+			],
+			[
+				"set color sh",
+				"UI: Select Color Scheme"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"html",
+				"HTMLBeautify"
+			],
+			[
+				"jsosn ",
+				"Pretty JSON: Format and Sort JSON"
+			],
+			[
+				"packa",
+				"Package Control: Install Package"
+			],
+			[
+				"us",
+				"PHPCompanion:Find Use"
+			],
+			[
+				"use na",
+				"Package Control: User CA bundle"
+			],
+			[
+				"refr",
+				"Preferences: Copy Relative Command Settings"
+			],
+			[
+				"ref",
+				"Preferences: Copy Relative Command Settings"
+			],
+			[
+				"select color",
+				"UI: Select Color Scheme"
+			],
+			[
+				"select the",
+				"UI: Select Theme"
+			],
+			[
+				"set syntax htm",
+				"Set Syntax: HTML"
+			],
+			[
+				"refrf",
+				"Project: Refresh Folders"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"copy",
+				"JSONPath: Copy"
+			],
+			[
+				"cop",
+				"JSONPath: Copy"
+			],
+			[
+				"co",
+				"JSONPath: Copy"
+			],
+			[
+				"js",
+				"Pretty JSON: Format JSON"
+			],
+			[
+				"word",
+				"Word Wrap: Toggle"
+			],
+			[
+				"set syntax hmtl",
+				"Set Syntax: HTML"
+			],
+			[
+				"set sheme",
+				"UI: Select Theme"
+			],
+			[
+				"set color ",
+				"UI: Select Color Scheme"
+			],
+			[
+				"set theme olor",
+				"UI: Select Color Scheme"
+			],
+			[
+				"set theme ",
+				"UI: Select Theme"
+			],
+			[
+				"rer",
+				"Package Control: Remove Repository"
+			],
+			[
+				"keybin",
+				"Preferences: Key Bindings"
+			],
+			[
+				"rfr",
+				"Filter Lines: Fold With Regex"
+			],
+			[
+				"re",
+				"Package Control: Remove Repository"
+			],
+			[
+				"key",
+				"Preferences: Key Bindings"
+			],
+			[
+				"open re",
+				"PackageResourceViewer: Open Resource"
+			],
+			[
+				"set sytnax html",
+				"Set Syntax: HTML"
+			]
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 328.0,
+		"history":
+		[
+			"print(\"Hello\")",
+			"pwd",
+			"ls -al",
+			"ls",
+			"clear",
+			"cycle",
+			" knightc example.knight -s",
+			"clear",
+			"os.system(\"cls\")",
+			"os.system(\"clear\")",
+			"c",
+			"clear",
+			"print(\"Hello World\")",
+			"print('\\x1bc')",
+			"clear",
+			"xl",
+			"ls",
+			"clear",
+			"clean"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": true,
+		"side_bar_visible": true,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/?wsl.localhost/Ubuntu-22.04/home/mart/projects/Website/assets/js/Terminal_new.js",
+		"/?wsl.localhost/Ubuntu-22.04/home/mart/projects/Website/assets/js/terminal.js",
+		"/?wsl.localhost/Ubuntu-22.04/home/mart/projects/Website/assets/js/managers/WindowManager.js",
+		"/?wsl.localhost/Ubuntu-22.04/home/mart/projects/Website/assets/js/managers/TaskbarManager.js",
+		"/?wsl.localhost/Ubuntu-22.04/home/mart/projects/Website/assets/js/managers/StartMenuManager.js",
+		"/?wsl.localhost/Ubuntu-22.04/home/mart/projects/Website/assets/js/managers/DesktopManager.js",
+		"/?wsl.localhost/Ubuntu-22.04/home/mart/projects/Website/assets/js/managers/DateTimeManager.js",
+		"/?wsl.localhost/Ubuntu-22.04/home/mart/projects/Website/assets/js/main.js",
+		"/?wsl.localhost/Ubuntu-22.04/home/mart/projects/Website/assets/js/computer.js",
+		"/?wsl.localhost/Ubuntu-22.04/home/mart/projects/Website/assets/js/Terminal.js",
+		"/?wsl.localhost/Ubuntu-22.04/home/mart/projects/superscanner/app/Crawler/Retailer/GroupdealNL/Config/GroupdealNLConfig.php",
+		"/?wsl.localhost/Ubuntu-22.04/home/mart/projects/superscanner/app/Crawler/Retailer/CarrefourES/Handlers/RootTypeHandler.php",
+		"/?wsl.localhost/Ubuntu-22.04/home/mart/projects/superscanner/app/Crawler/Retailer/Poiesz/Config/PoieszConfig.php",
+		"/?wsl.localhost/Ubuntu-22.04/home/mart/projects/superscanner/app/Crawler/Retailer/Makro/Config/MakroConfig.php",
+		"/?wsl.localhost/Ubuntu-22.04/home/mart/projects/superscanner/app/Crawler/Poiesz.php",
+		"/?wsl.localhost/Ubuntu-22.04/home/mart/projects/superscanner/app/Crawler/Retailer/Poiesz/Handlers/ProductTypeHandler.php",
+		"/?wsl.localhost/Ubuntu-22.04/home/mart/projects/superscanner/app/Crawler/Retailer/Poiesz/ExtracterChains/CategoryExtracterChain.php",
+		"/?wsl.localhost/Ubuntu-22.04/home/mart/projects/superscanner/app/Crawler/Retailer/Poiesz/ExtracterChains/CategoryProductExtracterChain.php",
+		"/?wsl.localhost/Ubuntu-22.04/home/mart/projects/superscanner/app/Crawler/Retailer/Poiesz/Handlers/CategoryTypeHandler.php",
+		"/?wsl.localhost/Ubuntu-22.04/home/mart/projects/superscanner/app/Crawler/Retailer/Poiesz/Handlers/RootTypeHandler.php",
+		"/?wsl.localhost/Ubuntu-22.04/home/mart/projects/superscanner/app/Crawler/Retailer/Bol/Handlers/ProductTypeHandler.php",
+		"/?wsl.localhost/Ubuntu-22.04/home/mart/projects/superscanner/storage/logs/crawl-poiesz.log",
+		"/?wsl.localhost/Ubuntu-22.04/home/mart/projects/superscanner/app/Crawler/Retailer/RetailerConfigProvider.php",
+		"/?wsl.localhost/Ubuntu-22.04/home/mart/projects/superscanner/app/Crawler/Retailer/AldiSuedDE/Handlers/CategoryTypeHandler.php",
+		"/?wsl.localhost/Ubuntu-22.04/home/mart/projects/superscanner/app/Crawler/Gall.php",
+		"/?wsl.localhost/Ubuntu-22.04/home/mart/projects/superscanner/app/Crawler/LeClercFRNew.php",
+		"/?wsl.localhost/Ubuntu-22.04/home/mart/projects/superscanner/app/Crawler/Retailer/Poiesz/ExtracterChains/RootCategoryExtracterChain.php",
+		"/?wsl.localhost/Ubuntu-22.04/home/mart/projects/superscanner/app/Crawler/Retailer/Poiesz/ExtracterChains/RootExtracterChain.php",
+		"/?wsl.localhost/Ubuntu-22.04/home/mart/projects/superscanner/development/AppGenerator/Crawler/TypedResult/TypedResultGenerator.php",
+		"/?wsl.localhost/Ubuntu-22.04/home/mart/projects/superscanner/app/Crawler/Retailer/KnusprDE/ExtracterChains/RootExtracterChain.php",
+		"/?wsl.localhost/Ubuntu-22.04/home/mart/projects/superscanner/app/Console/Commands/Crawl.php",
+		"/?wsl.localhost/Ubuntu-22.04/home/mart/projects/superscanner/app/Crawler/Retailer/ActionBase/ExtracterChains/CategoryCrumbExtracterChain.php",
+		"/?wsl.localhost/Ubuntu-22.04/home/mart/projects/superscanner/app/Logger/Logger.php",
+		"/?wsl.localhost/Ubuntu-22.04/home/mart/projects/Website/scss/windows95.scss",
+		"/?wsl.localhost/Ubuntu-22.04/home/mart/projects/Website/pages/windows95.html",
+		"/?wsl.localhost/Ubuntu-22.04/home/mart/projects/Website/scss/main.scss",
+		"/?wsl.localhost/Ubuntu-22.04/home/mart/projects/Website/assets/css/windows.css",
+		"/?wsl.localhost/Ubuntu-22.04/home/mart/projects/Website/assets/js/windows95.js",
+		"/?wsl.localhost/Ubuntu-22.04/home/mart/projects/Website/scss/_mixins.scss",
+		"/?wsl.localhost/Ubuntu-22.04/home/mart/projects/Website/scss/_variables.scss",
+		"/?wsl.localhost/Ubuntu-22.04/home/mart/projects/Website/pages/windows.html",
+		"/?wsl.localhost/Ubuntu-22.04/home/mart/projects/Website/scss/_fonts.scss",
+		"/?wsl.localhost/Ubuntu-22.04/home/mart/projects/Website/package.json",
+		"/?wsl.localhost/Ubuntu-22.04/home/mart/projects/Website/compile-scss.js",
+		"/?wsl.localhost/Ubuntu-22.04/home/mart/projects/school/INPIXPE/Groepswebsite/js/victory.js",
+		"/?wsl.localhost/Ubuntu-22.04/home/mart/projects/school/INPIXPE/Groepswebsite/codes.html",
+		"/?wsl.localhost/Ubuntu-22.04/home/mart/projects/school/INPIXPE_Portfolio/opdracht2/week1.html",
+		"/?wsl.localhost/Ubuntu-22.04/home/mart/projects/school/INPIXPE_Portfolio/opdracht2/week2.html",
+		"/?wsl.localhost/Ubuntu-22.04/home/mart/projects/school/INPIXPE_Portfolio/opdracht2/css/blog.css",
+		"/?wsl.localhost/Ubuntu-22.04/home/mart/projects/school/INPIXPE_Portfolio/opdracht2/week3.html",
+		"/?wsl.localhost/Ubuntu-22.04/home/mart/projects/school/INPIXPE_Portfolio/opdracht2/week4.html",
+		"/?wsl.localhost/Ubuntu-22.04/home/mart/projects/school/INPIXPE_Portfolio/opdracht2/week5.html",
+		"/?wsl.localhost/Ubuntu-22.04/home/mart/projects/school/INPIXPE_Portfolio/opdracht2/home.html",
+		"/?wsl.localhost/Ubuntu-22.04/home/mart/projects/school/INPIXPE_Portfolio/opdracht2/css/root.css",
+		"/?wsl.localhost/Ubuntu-22.04/home/mart/projects/school/INPIXPE_Portfolio/opdracht2/css/styles.css",
+		"/?wsl.localhost/Ubuntu-22.04/home/mart/projects/school/INPIXPE_Portfolio/opdracht2/index.html",
+		"/?wsl.localhost/Ubuntu-22.04/home/mart/projects/school/INPIXPE_Portfolio/opdracht2/js/index.js",
+		"/?wsl.localhost/Ubuntu-22.04/home/mart/projects/school/INPIXPE_Portfolio/opdracht2/css/index.css",
+		"/?wsl.localhost/Ubuntu-22.04/home/mart/projects/school/INPIXPE_Portfolio/opdracht2/css/timeline.css",
+		"/?wsl.localhost/Ubuntu-22.04/home/mart/projects/school/INPIXPE/Groepswebsite/css/style.css",
+		"/?wsl.localhost/Ubuntu-22.04/home/mart/projects/school/INPIXPE/Groepswebsite/index.html",
+		"/?wsl.localhost/Ubuntu-22.04/home/mart/projects/school/INPIXPE/Groepswebsite/css/codes.css",
+		"/?wsl.localhost/Ubuntu-22.04/home/mart/projects/school/INPIXPE/Groepswebsite/js/codes.js",
+		"/?wsl.localhost/Ubuntu-22.04/home/mart/projects/school/INPIXPE/Groepswebsite/css/root.css",
+		"/?wsl.localhost/Ubuntu-22.04/home/mart/projects/school/INPIXPE/Groepswebsite/css/index.css",
+		"/?wsl.localhost/Ubuntu-22.04/home/mart/projects/school/INPIXPE/Groepswebsite/story.html",
+		"/?wsl.localhost/Ubuntu-22.04/home/mart/projects/school/INPIXPE/Groepswebsite/victory.html",
+		"/C/Users/martv/Downloads/save_puzzle.py",
+		"/C/Users/martv/Downloads/update_puzzel.py",
+		"/?wsl.localhost/Ubuntu-22.04/home/mart/projects/school/INPIXPE/Groepswebsite/js/index.js",
+		"/?wsl.localhost/Ubuntu-22.04/home/mart/projects/school/INPIXPE_Portfolio/opdracht2/about.html",
+		"/?wsl.localhost/Ubuntu-22.04/home/mart/projects/school/INPIXPE_Portfolio/opdracht2/js/code.js",
+		"/C/Users/martv/Downloads/raspberry_puzzle.py",
+		"/?wsl.localhost/Ubuntu-22.04/home/mart/projects/school/INPIXPE/Groepswebsite/css/story.css",
+		"/?wsl.localhost/Ubuntu-22.04/home/mart/projects/school/INPIXPE/Groepswebsite/css/victory.css",
+		"/?wsl.localhost/Ubuntu-22.04/home/mart/projects/Website/pages/home.html",
+		"/?wsl.localhost/Ubuntu-22.04/home/mart/projects/school/INPIXPE_Portfolio/opdracht2/aboutCopy.html",
+		"/?wsl.localhost/Ubuntu-22.04/home/mart/projects/school/INPIXPE_Portfolio/opdracht2/css/about.css",
+		"/?wsl.localhost/Ubuntu-22.04/home/mart/projects/school/INPIXPE_Portfolio/opdracht2/homeCopy.html",
+		"/?wsl.localhost/Ubuntu-22.04/home/mart/projects/school/INPIXPE_Portfolio/opdracht2/week3Copy.html",
+		"/?wsl.localhost/Ubuntu-22.04/home/mart/projects/school/INPIXPE_Portfolio/opdracht2/assets/css/styles.css",
+		"/?wsl.localhost/Ubuntu-22.04/home/mart/projects/school/INPIXPE_Portfolio/opdracht2/assets/css/root.css",
+		"/?wsl.localhost/Ubuntu-22.04/home/mart/projects/school/INPIXPE_Portfolio/opdracht9/css/style.css",
+		"/?wsl.localhost/Ubuntu-22.04/home/mart/projects/school/INPIXPE_Portfolio/opdracht9/index.html",
+		"/?wsl.localhost/Ubuntu-22.04/home/mart/projects/school/INPIXPE_Portfolio/opdracht9/css/story.css",
+		"/?wsl.localhost/Ubuntu-22.04/home/mart/projects/school/INPIXPE_Portfolio/opdracht9/story.html",
+		"/?wsl.localhost/Ubuntu-22.04/home/mart/projects/school/INPIXPE_Portfolio/opdracht2/pages/week4.html",
+		"/?wsl.localhost/Ubuntu-22.04/home/mart/projects/school/INPIXPE_Portfolio/opdracht2/pages/home.html",
+		"/?wsl.localhost/Ubuntu-22.04/home/mart/projects/superscanner/storage/logs/crawl-sligro.log",
+		"/?wsl.localhost/Ubuntu-22.04/home/mart/projects/superscanner/storage/logs/crawl-billa-oostenrijk.log.1",
+		"/?wsl.localhost/Ubuntu-22.04/home/mart/projects/superscanner/.env",
+		"/?wsl.localhost/Ubuntu-22.04/home/mart/projects/superscanner/app/Crawler/Services/NuxtDecoder.php",
+		"/?wsl.localhost/Ubuntu-22.04/home/mart/projects/superscanner/app/Crawler/Extracter/Prefilter/NuxtDecode.php",
+		"/?wsl.localhost/Ubuntu-22.04/home/mart/projects/superscanner/app/Crawler/Extracter/Nuxt.php",
+		"/?wsl.localhost/Ubuntu-22.04/home/mart/projects/superscanner/app/Crawler/Extracter/Prefilter/Nuxt.php",
+		"/?wsl.localhost/Ubuntu-22.04/home/mart/projects/superscanner/tests/Feature/Crawler/BillaAtTest.php",
+		"/?wsl.localhost/Ubuntu-22.04/home/mart/projects/superscanner/app/Crawler/BillaAt.php",
+		"/?wsl.localhost/Ubuntu-22.04/home/mart/projects/superscanner/app/Crawler/Retailer/BillaAt/TypedResults/RootResult.php",
+		"/?wsl.localhost/Ubuntu-22.04/home/mart/projects/superscanner/test.html",
+		"/?wsl.localhost/Ubuntu-22.04/home/mart/projects/superscanner/config/services.php",
+		"/?wsl.localhost/Ubuntu-22.04/home/mart/projects/superscanner/vendor/laravel/framework/src/Illuminate/Support/Facades/Config.php",
+		"/?wsl.localhost/Ubuntu-22.04/home/mart/projects/superscanner/app/Crawler/Extracter/Prefilter/Helpers/TypeHelper.php",
+		"/?wsl.localhost/Ubuntu-22.04/home/mart/projects/superscanner/tests/Unit/Crawler/XenosTest.php",
+		"/?wsl.localhost/Ubuntu-22.04/home/mart/projects/superscanner/storage/logs/crawl-xenos.log.1",
+		"/?wsl.localhost/Ubuntu-22.04/home/mart/projects/superscanner/app/Crawler/Xenos.php",
+		"/?wsl.localhost/Ubuntu-22.04/home/mart/projects/superscanner/storage/logs/crawl-plus.log",
+		"/?wsl.localhost/Ubuntu-22.04/home/mart/projects/superscanner/app/Crawler/Retailer/Plus/Handlers/StorageProductsTypeHandler.php",
+		"/?wsl.localhost/Ubuntu-22.04/home/mart/projects/superscanner/app/Crawler/Retailer/Plus/Handlers/StorageCategoriesTypeHandler.php",
+		"/?wsl.localhost/Ubuntu-22.04/home/mart/projects/superscanner/app/Crawler/Retailer/Plus/Helpers/StorageHelper.php",
+		"/?wsl.localhost/Ubuntu-22.04/home/mart/projects/superscanner/app/Crawler/Loader/Models/Product.php",
+		"/?wsl.localhost/Ubuntu-22.04/home/mart/projects/superscanner/app/Crawler/AH.php",
+		"/?wsl.localhost/Ubuntu-22.04/home/mart/projects/superscanner/app/Crawler/Retailer/Plus/Handlers/CategoriesTypeHandler.php",
+		"/?wsl.localhost/Ubuntu-22.04/home/mart/projects/superscanner/app/Crawler/Retailer/Plus/Config/PlusConfig.php",
+		"/C/Users/martv/Downloads/ah.csv",
+		"/?wsl.localhost/Ubuntu-22.04/home/mart/projects/superscanner/app/Console/Commands/Insights/Exports/Plus.php",
+		"/?wsl.localhost/Ubuntu-22.04/home/mart/projects/superscanner/app/Maintenance/Cleaner/CrawlProductRankingCleaner.php",
+		"/?wsl.localhost/Ubuntu-22.04/home/mart/projects/superscanner/app/Crawler/Retailer/MitraNL/Handlers/ProductTypeHandler.php",
+		"/?wsl.localhost/Ubuntu-22.04/home/mart/projects/superscanner/app/Crawler/MitraNL.php",
+		"/?wsl.localhost/Ubuntu-22.04/home/mart/projects/school/INPIXPE_Portfolio/opdracht2/pages/week3.html",
+		"/?wsl.localhost/Ubuntu-22.04/home/mart/projects/school/INPIXPE_Portfolio/opdracht2/assets/js/index.js",
+		"/?wsl.localhost/Ubuntu-22.04/home/mart/projects/school/INPIXPE_Portfolio/opdracht2/pages/about.html",
+		"/?wsl.localhost/Ubuntu-22.04/home/mart/projects/school/INPIXPE_Portfolio/opdracht2/assets/css/timeline.css",
+		"/?wsl.localhost/Ubuntu-22.04/home/mart/projects/school/INPIXPE_Portfolio/opdracht2/pages/week1.html",
+		"/?wsl.localhost/Ubuntu-22.04/home/mart/projects/school/INPIXPE_Portfolio/opdracht2/assets/css/blog.css",
+		"/?wsl.localhost/Ubuntu-22.04/home/mart/projects/school/INPIXPE_Portfolio/opdracht2/pages/week2.html",
+		"/?wsl.localhost/Ubuntu-22.04/home/mart/projects/school/INPIXPE_Portfolio/opdracht2/assets/css/index.css",
+		"/?wsl.localhost/Ubuntu-22.04/home/mart/projects/school/INPIXPE_Portfolio/opdracht2/assets/js/scripts.js",
+		"/?wsl.localhost/Ubuntu-22.04/home/mart/projects/ShadowNet/src/main.cpp"
+	],
+	"find":
+	{
+		"height": 58.0
+	},
+	"find_in_files":
+	{
+		"height": 203.6,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"scrollbar_highlights": true,
+		"show_context": true,
+		"use_buffer2": true,
+		"use_gitignore": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 36.0
+	},
+	"input":
+	{
+		"height": 211.2
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.LSP Log Panel":
+	{
+		"height": 0.0
+	},
+	"output.SublimeLinter":
+	{
+		"height": 0.0
+	},
+	"output.diagnostics":
+	{
+		"height": 0.0
+	},
+	"output.diff_views":
+	{
+		"height": 621.0
+	},
+	"output.find_results":
+	{
+		"height": 209.6
+	},
+	"output.mdpopups":
+	{
+		"height": 0.0
+	},
+	"output.unsaved_changes":
+	{
+		"height": 33.2
+	},
+	"pinned_build_system": "",
+	"project": "website.sublime-workspace",
+	"replace":
+	{
+		"height": 69.6
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"makroConfi",
+				"app\\Crawler\\Retailer\\Makro\\Config\\MakroConfig.php"
+			],
+			[
+				"crawl-poiesz.log ",
+				"storage\\logs\\crawl-poiesz.log"
+			],
+			[
+				"poiesz",
+				"app\\Crawler\\Poiesz.php"
+			],
+			[
+				"rootextrac",
+				"app\\Crawler\\Retailer\\KnusprDE\\ExtracterChains\\RootExtracterChain.php"
+			],
+			[
+				"logger ",
+				"app\\Logger\\Logger.php"
+			],
+			[
+				"console crawl",
+				"app\\Console\\Commands\\Crawl.php"
+			],
+			[
+				"poi",
+				"app\\Crawler\\Poiesz.php"
+			],
+			[
+				"windowman",
+				"assets\\js\\managers\\WindowManager.js"
+			],
+			[
+				"task",
+				"assets\\js\\managers\\TaskbarManager.js"
+			],
+			[
+				"window",
+				"scss\\windows95.scss"
+			],
+			[
+				"desktopm",
+				"assets\\js\\managers\\DesktopManager.js"
+			],
+			[
+				"main.js",
+				"assets\\js\\main.js"
+			],
+			[
+				"home.",
+				"home.html"
+			],
+			[
+				"week5",
+				"week5.html"
+			],
+			[
+				"week4.html",
+				"week4.html"
+			],
+			[
+				"week3",
+				"week3.html"
+			],
+			[
+				"week2",
+				"week2.html"
+			],
+			[
+				"week3.",
+				"week3.html"
+			],
+			[
+				"week1",
+				"week1.html"
+			],
+			[
+				"style.c",
+				"css\\style.css"
+			],
+			[
+				"style.",
+				"css\\style.css"
+			],
+			[
+				"root.",
+				"css\\root.css"
+			],
+			[
+				"crawl-sligro.log",
+				"storage\\logs\\crawl-sligro.log"
+			],
+			[
+				"billaat roo",
+				"app\\Crawler\\Retailer\\BillaAt\\TypedResults\\RootResult.php"
+			],
+			[
+				"billaatt",
+				"tests\\Feature\\Crawler\\BillaAtTest.php"
+			],
+			[
+				"test.html",
+				"test.html"
+			],
+			[
+				"test",
+				"test.html"
+			],
+			[
+				"Extracter\\Prefilter\\Nux",
+				"app\\Crawler\\Extracter\\Prefilter\\Nuxt.php"
+			],
+			[
+				"Extracter\\Prefilter\\Nuxt",
+				"app\\Crawler\\Extracter\\Prefilter\\NuxtDecode.php"
+			],
+			[
+				"Extracter\\Prefilter\\NuxtDecode",
+				"app\\Crawler\\Extracter\\Prefilter\\NuxtDecode.php"
+			],
+			[
+				".env",
+				".env"
+			],
+			[
+				"crawl-billa-",
+				"storage\\logs\\crawl-billa-oostenrijk.log.1"
+			],
+			[
+				"billaat",
+				"app\\Crawler\\BillaAt.php"
+			],
+			[
+				"xenos",
+				"tests\\Unit\\Crawler\\XenosTest.php"
+			],
+			[
+				"billa",
+				"app\\Crawler\\BillaAt.php"
+			],
+			[
+				"crawl-billa-oostenrijk.log.1",
+				"storage\\logs\\crawl-billa-oostenrijk.log.1"
+			],
+			[
+				"xenos.php",
+				"app\\Crawler\\Xenos.php"
+			],
+			[
+				"xenos t",
+				"tests\\Unit\\Crawler\\XenosTest.php"
+			],
+			[
+				"xeno",
+				"app\\Crawler\\Xenos.php"
+			],
+			[
+				"crawl-xenos.log.1",
+				"storage\\logs\\crawl-xenos.log.1"
+			],
+			[
+				"pluscon",
+				"app\\Crawler\\Retailer\\Plus\\Config\\PlusConfig.php"
+			],
+			[
+				"loader product",
+				"app\\Crawler\\Loader\\Models\\Product.php"
+			],
+			[
+				"ah.php",
+				"app\\Crawler\\AH.php"
+			],
+			[
+				"crawl-plus.log",
+				"storage\\logs\\crawl-plus.log"
+			],
+			[
+				"plusconfig",
+				"app\\Crawler\\Retailer\\Plus\\Config\\PlusConfig.php"
+			],
+			[
+				"plus.php",
+				"app\\Console\\Commands\\Insights\\Exports\\Plus.php"
+			],
+			[
+				"mitrank",
+				"app\\Maintenance\\Cleaner\\CrawlProductRankingCleaner.php"
+			],
+			[
+				"mitranl",
+				"app\\Crawler\\MitraNL.php"
+			],
+			[
+				"mitracon",
+				"app\\Crawler\\Retailer\\MitraNL\\Config\\MitraNLConfig.php"
+			],
+			[
+				"ProductTransformerChain",
+				"app\\Crawler\\Retailer\\MitraNL\\TransformerChains\\ProductTransformerChain.php"
+			],
+			[
+				"Extracterchains\\",
+				"app\\Crawler\\Retailer\\Odin\\ExtracterChains\\CategoryPaginationExtracterChain.php"
+			],
+			[
+				"TypedExtracterChain",
+				"app\\Crawler\\Extracter\\TypedExtracterChain.php"
+			],
+			[
+				"crawler",
+				"app\\Crawler\\Crawler.php"
+			],
+			[
+				"crawl-mercadona-spanje.log.1 ",
+				"storage\\logs\\crawl-mercadona-spanje.log.1"
+			],
+			[
+				"mercad",
+				"app\\Crawler\\MercadonaEs.php"
+			],
+			[
+				"makroco",
+				"app\\Crawler\\Retailer\\Makro\\Config\\MakroConfig.php"
+			],
+			[
+				"crawl-makro.log ",
+				"storage\\logs\\crawl-makro.log"
+			],
+			[
+				"mitranlcon",
+				"app\\Crawler\\Retailer\\MitraNL\\Config\\MitraNLConfig.php"
+			],
+			[
+				"crawl-mitra",
+				"storage\\logs\\crawl-mitra-nederland.log"
+			],
+			[
+				"mitran",
+				"app\\Crawler\\MitraNL.php"
+			],
+			[
+				"mitr",
+				"app\\Crawler\\MitraNL.php"
+			],
+			[
+				"crawl-mitra-",
+				"storage\\logs\\crawl-mitra-nederland.log"
+			],
+			[
+				"DutchOpeningHoursDefinition",
+				"app\\Crawler\\Language\\Dutch\\DutchOpeningHoursDefinition.php"
+			],
+			[
+				"crawl-mitra-n",
+				"storage\\logs\\crawl-mitra-nederland.log"
+			],
+			[
+				"mitraNL",
+				"app\\Crawler\\MitraNL.php"
+			],
+			[
+				"type-handler-",
+				"resources\\views\\development\\test-generator\\unit\\type-handler-test-function.blade.php"
+			],
+			[
+				"test generat",
+				"app\\Console\\Commands\\Crawler\\GenerateTypeHandlerTest.php"
+			],
+			[
+				"populators product",
+				"app\\Crawler\\Loader\\Models\\Populators\\Product.php"
+			],
+			[
+				"Product loader model",
+				"app\\Crawler\\Loader\\Models\\Product.php"
+			],
+			[
+				"NormalPercentageSale",
+				"app\\Crawler\\Parser\\SaleDataParser\\Extracter\\Sales\\NormalPercentageSale.php"
+			],
+			[
+				"mitranl prod",
+				"app\\Crawler\\Retailer\\MitraNL\\Handlers\\ProductTypeHandler.php"
+			],
+			[
+				"itemData",
+				"app\\Crawler\\Queue\\ItemData.php"
+			],
+			[
+				"groupdeal",
+				"app\\Crawler\\Retailer\\GroupdealNL\\Config\\GroupdealNLConfig.php"
+			],
+			[
+				"crawl-makro",
+				"storage\\logs\\crawl-makro.log"
+			],
+			[
+				"app/Crawler/Retailer/Makro/Config/MakroConfig.php",
+				"app\\Crawler\\Retailer\\Makro\\Config\\MakroConfig.php"
+			],
+			[
+				"output",
+				"output.txt"
+			],
+			[
+				"budni",
+				"app\\Crawler\\Retailer\\BudniDE\\Config\\BudniDEConfig.php"
+			],
+			[
+				"colruytL",
+				"app\\Crawler\\ColruytLU.php"
+			],
+			[
+				"crawl-colruyt-luxemburg.log",
+				"storage\\logs\\crawl-colruyt-luxemburg.log"
+			],
+			[
+				"item",
+				"app\\Crawler\\Queue\\Item.php"
+			],
+			[
+				"crawl-cora-frankrijk.log",
+				"storage\\logs\\crawl-cora-frankrijk.log"
+			],
+			[
+				"cora",
+				"app\\Crawler\\CoraFR.php"
+			],
+			[
+				"Crawler/AH.php",
+				"app\\Crawler\\AH.php"
+			],
+			[
+				"crawler.php",
+				"app\\Crawler\\Crawler.php"
+			],
+			[
+				"crawl-makr",
+				"storage\\logs\\crawl-makro.log"
+			],
+			[
+				"crawl-makro.lo",
+				"storage\\logs\\crawl-makro.log"
+			],
+			[
+				"crawl-albert-heijn.log ",
+				"storage\\logs\\crawl-albert-heijn.log"
+			],
+			[
+				"crawl-mak",
+				"storage\\logs\\crawl-makro.log"
+			],
+			[
+				"app/Crawler/Retailer/Makro/Handlers/SearchTypeHandler.php",
+				"app\\Crawler\\Retailer\\Makro\\Handlers\\SearchTypeHandler.php"
+			],
+			[
+				"Mitranl",
+				"app\\Crawler\\MitraNL.php"
+			],
+			[
+				"poies",
+				"app\\Crawler\\Poiesz.php"
+			],
+			[
+				"gallCon",
+				"app\\Crawler\\Retailer\\Gall\\Config\\GallConfig.php"
+			],
+			[
+				"gall",
+				"app\\Crawler\\Gall.php"
+			],
+			[
+				"migrations crawlerrunner",
+				"database\\migrations\\2023_02_06_194732_set_lidl_nl_crawler_to_crawlerrunner.php"
+			],
+			[
+				"migrations crawlerRunner",
+				"database\\migrations\\2023_02_06_194732_set_lidl_nl_crawler_to_crawlerrunner.php"
+			],
+			[
+				"makro.php",
+				"app\\Crawler\\Makro.php"
+			],
+			[
+				"makrocon",
+				"app\\Crawler\\Retailer\\Makro\\Config\\MakroConfig.php"
+			],
+			[
+				"base",
+				"phpstan-baseline.php"
+			],
+			[
+				"sparconfig",
+				"app\\Crawler\\Retailer\\Spar\\Config\\SparConfig.php"
+			],
+			[
+				"Item.php",
+				"app\\Crawler\\Queue\\Item.php"
+			],
+			[
+				"makro",
+				"makro.json"
+			],
+			[
+				"makro.",
+				"makro.json"
+			],
+			[
+				"maroconf",
+				"app\\Crawler\\Retailer\\Makro\\Config\\MakroConfig.php"
+			],
+			[
+				"crawlerRunner",
+				"app\\Crawler\\CrawlerRunner.php"
+			],
+			[
+				"TypeHandler",
+				"app\\Crawler\\TypeHandlerFactory.php"
+			],
+			[
+				"GenericHeaderManager",
+				"app\\Crawler\\Retailer\\HeaderManagers\\GenericHeaderManager.php"
+			],
+			[
+				"makroc",
+				"app\\Crawler\\Retailer\\Makro\\Config\\MakroConfig.php"
+			],
+			[
+				"Itemdata",
+				"app\\Crawler\\Queue\\ItemData.php"
+			],
+			[
+				"drankgigant category",
+				"app\\Crawler\\Retailer\\Drankgigant\\Handlers\\CategoryTypeHandler.php"
+			],
+			[
+				"spar categoryty",
+				"app\\Crawler\\Retailer\\Spar\\Handlers\\CategoryTypeHandler.php"
+			],
+			[
+				"crawlerrunner",
+				"app\\Crawler\\CrawlerRunner.php"
+			],
+			[
+				"product.php",
+				"app\\Crawler\\Loader\\Models\\Product.php"
+			],
+			[
+				"spar SearchTy",
+				"app\\Crawler\\Retailer\\Spar\\Handlers\\SearchTypeHandler.php"
+			],
+			[
+				"searchtype",
+				"app\\Crawler\\Retailer\\Drankdozijn\\Handlers\\SearchTypeHandler.php"
+			],
+			[
+				"Item.",
+				"app\\Crawler\\Queue\\Item.php"
+			],
+			[
+				"test stokomani",
+				"tests\\Unit\\Crawler\\Retailer\\StokomaniFR\\Config\\StokomaniFRConfigTest.php"
+			],
+			[
+				"stoko",
+				"app\\Crawler\\Retailer\\StokomaniFR\\Config\\StokomaniFRConfig.php"
+			],
+			[
+				"crawl-stokomani-frankrijk.log.1",
+				"storage\\logs\\crawl-stokomani-frankrijk.log.1"
+			],
+			[
+				"stokoman",
+				"app\\Crawler\\Retailer\\StokomaniFR\\Config\\StokomaniFRConfig.php"
+			],
+			[
+				"SaleData",
+				"app\\Crawler\\Parser\\SaleDataParser\\SaleData.php"
+			],
+			[
+				"SearchRank",
+				"app\\Crawler\\Loader\\Models\\SearchRank.php"
+			],
+			[
+				"Makro",
+				"app\\Crawler\\Makro.php"
+			],
+			[
+				"test spar productTypeH",
+				"tests\\Unit\\Crawler\\Retailer\\Spar\\Handlers\\ProductTypeHandlerTest.php"
+			],
+			[
+				"sparconf",
+				"app\\Crawler\\Retailer\\Spar\\Config\\SparConfig.php"
+			],
+			[
+				"Pluscon",
+				"app\\Crawler\\Retailer\\Plus\\Config\\PlusConfig.php"
+			],
+			[
+				"Ean.php",
+				"app\\Crawler\\Loader\\Models\\Ean.php"
+			],
+			[
+				"SaleDat",
+				"app\\Crawler\\Parser\\SaleDataParser\\SaleData.php"
+			],
+			[
+				"loader product.php",
+				"app\\Crawler\\Loader\\Models\\Product.php"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 499.8,
+		"last_filter": "we",
+		"selected_items":
+		[
+			[
+				"we",
+				"\\\\wsl.localhost\\Ubuntu-22.04\\home\\mart\\projects\\Website\\website.sublime-workspace"
+			],
+			[
+				"",
+				"\\\\wsl.localhost\\Ubuntu-22.04\\home\\mart\\projects\\Knight\\Knight.sublime-project"
+			],
+			[
+				"su",
+				"\\\\wsl.localhost\\Ubuntu-22.04\\home\\mart\\projects\\superscanner\\superscanner.sublime-project"
+			],
+			[
+				"sc",
+				"\\\\wsl.localhost\\Ubuntu-22.04\\home\\mart\\projects\\Scribe\\Scribe.sublime-project"
+			],
+			[
+				"scribe",
+				"\\\\wsl.localhost\\Ubuntu-22.04\\home\\mart\\projects\\Scribe\\Scribe.sublime-project"
+			]
+		],
+		"width": 379.6
+	},
+	"select_symbol":
+	{
+		"height": 307.0,
+		"last_filter": "refr",
+		"selected_items":
+		[
+			[
+				"refr",
+				"refresh"
+			]
+		],
+		"width": 580.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+		"lsp_show_inlay_hints": false
+	},
+	"show_minimap": false,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 390.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

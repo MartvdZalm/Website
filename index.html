@@ -3,31 +3,28 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Welcome</title>
-        <!-- <link rel="manifest" href="manifest.json" /> -->
-        <!-- <link rel="stylesheet" href="assets/css/style.css" type="text/css"> -->
-        <link rel="stylesheet" href="assets/css/computer.css" type="text/css">
-        <!-- <link rel="stylesheet" href="assets/css/windows.css" type="text/css"> -->
+        <title>IBM</title>
+        <link rel="stylesheet" href="/css/style.css">
     </head>
     <body>
-        <div class="ibm-frame fullscreen">
-            <div class="ibm-screen fullscreen">
-                <div id="terminal-container" class="off">
-                    
-                    
+        <main id="ibm">
+            <div class="ibm__frame ibm__frame--fullscreen">
+                <div class="ibm__frame__screen ibm__frame__screen--fullscreen">
+                    <div id="ibm__frame__terminal" class="off"></div>
                 </div>
+                <div class="ibm__frame--lower">
+                    <p>|||||||||</p>
+                    <div class="ibm__frame--logo">
+                        <img src="assets/images/ibm-logo.png" height="35px">
+                    </div>
+                    <div class="ibm-frame-on-off-button">
+                        <div class="ibm-frame-on-off-button-circle" id="power-button"></div>
+                    </div>
+                </div> 
             </div>
-            <div class="ibm-frame-lower">
-                <p style="height: 100%;">|||||||||</p>
-                <div class="ibm-frame-logo">
-                    <img src="assets/images/ibm-logo.png" height="35px">
-                </div>
-                <div class="ibm-frame-on-off-button">
-                    <div class="ibm-frame-on-off-button-circle" id="power-button"></div>
-                </div>
-            </div> 
-        </div>
+        </main>
     </body>
-    <script src="assets/js/terminal.js" type="text/javascript"></script>
-    <script src="assets/js/computer.js" type="text/javascript"></script>
+    <script src="/js/computer/FileSystem.js" type="text/javascript"></script>
+    <script src="/js/computer/Terminal.js" type="text/javascript"></script>
+    <script src="/js/computer/main.js" type="text/javascript"></script>
 </html>

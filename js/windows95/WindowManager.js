@@ -17,13 +17,6 @@ class WindowManager
 			this.makeClosable(windowElement);
 			windowElement.addEventListener("mousedown", () => this.bringToFront(windowElement));
 		}
-
-		for (let button of closeButtons) {
-			button.addEventListener("click", () => {
-				const windowElement = button.closest(".window");
-				windowElement.style.display = "none";
-			});
-		}
 	}
 
 	makeDraggable(windowElement)
