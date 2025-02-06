@@ -1,2 +1,4 @@
 node_modules
 assets/css/*.map
+website.sublime-project
+website.sublime-workspace
