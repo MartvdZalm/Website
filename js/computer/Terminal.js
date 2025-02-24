@@ -236,7 +236,7 @@ class Terminal
     }
 
     loadPage(page) {
-        window.location.href = "views/" + page;
+        window.location.href = page;
     }
 }
 
