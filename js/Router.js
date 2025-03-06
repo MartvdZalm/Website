@@ -24,8 +24,7 @@ class Router
     }
 }
 
-
-const filePath = "/views/window/";
+const filePath = window.location.origin + "/views/window/";
 
 Router.registerRoute('windows95', 'index.html');
 Router.registerRoute('terminal', 'terminal.html');
