@@ -24,11 +24,11 @@ class Router
     }
 }
 
-const filePath = window.location.origin + "/views/window/";
+const filePath = window.location.hostname === "martvdzalm.github.io" ? "/Website/views/window/" : "/views/window/";
 
 Router.registerRoute('windows95', 'index.html');
 Router.registerRoute('terminal', 'terminal.html');
 
-// Windows95 
+// Windows95
 Router.registerRoute('welcome', filePath + "welcome.html");
 Router.registerRoute('internet-explorer', filePath + "internet-explorer.html");
