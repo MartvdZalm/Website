@@ -1,16 +1,6 @@
 class TaskbarManager
 {
-	constructor()
-	{
-		this.setupTaskbar();
-	}
-
-	setupTaskbar()
-	{
-
-	}
-
-	addToTaskbar(windowElement)
+	static addToTaskbar(windowElement)
 	{
 	    const taskbar = document.querySelector(".taskbar");
 	    const taskbarItem = document.createElement("div");
@@ -31,7 +21,7 @@ class TaskbarManager
 	    taskbar.insertBefore(taskbarItem, document.querySelector(".taskbar--clock"));
 	}
 
-	removeFromTaskbar(windowElement)
+	static removeFromTaskbar(windowElement)
 	{
 		const allTaskbarItems = document.querySelectorAll(".taskbar__item--window");
 

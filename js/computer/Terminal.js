@@ -229,7 +229,7 @@ class Terminal
             
             setTimeout(() => {
                 startupImage.style.display = 'none';
-                this.loadPage('windows95.html');
+                this.loadPage('index.html');
             }, 7000);
 
         }, 3000);

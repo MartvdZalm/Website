@@ -3,6 +3,7 @@ class StartMenuManager
 	constructor()
 	{
 		this.setupStartMenu();
+		this.setupStartMenuItems();
 	}
 
 	setupStartMenu()
@@ -21,5 +22,20 @@ class StartMenuManager
 	            startMenuButton.classList.remove("checked");
 	        }
 	    });	
+	}
+
+	setupStartMenuItems()
+	{
+		const startMenuItems = document.querySelectorAll(".taskbar__menu__item");
+		startMenuItems.forEach((item) => {
+			item.addEventListener("click", () => {
+				const itemId = item.getAttribute("data-start-menu");
+				
+				if (itemId === "shutdown") {
+					Router.navigateTo("terminal");
+				}
+
+			});
+		});
 	}
 }
