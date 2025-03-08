@@ -1,12 +1,13 @@
 class Window
 {
-    constructor(title, contentUrl)
+    constructor(title, icon, contentUrl)
     {
         const uniqueId = crypto.randomUUID();
         this.id = title + "-" + uniqueId;
         this.title = title;
+        this.icon = icon;
         this.contentUrl = contentUrl;
-        this.windowElement = null;
+        this.element = null;
     }
 
     async createWindow()
@@ -20,7 +21,10 @@ class Window
 
         window.innerHTML = `
             <header class="window__header">
-                <span class="window__header__item">${this.title}</span>
+                <span class="window__header__item">
+                    <img class="window__header__icon" src="assets/images/windows95/${this.icon}"> - 
+                    ${this.title}
+                </span>
                 <span class="window__header__item">
                     <button class="window__x__btn">X</button>
                 </span>
@@ -28,30 +32,30 @@ class Window
             <section class="window__section">${content}</section>
         `;
 
-        this.windowElement = window;
+        this.element = window;
     }
 
     setZIndex(zIndex)
     {
-        this.windowElement.style.zIndex = zIndex;
+        this.element.style.zIndex = zIndex;
     }
 
     getZIndex()
     {
-        return this.windowElement.style.zIndex;
+        return this.element.style.zIndex;
     }
 
     getWindow()
     {
-        return this.windowElement;
+        return this.element;
     }
 
     async open()
     {
         const mainElement = document.getElementById("windows95");
         await this.createWindow();
-        mainElement.appendChild(this.windowElement);
-        TaskbarManager.addToTaskbar(this.windowElement);
+        mainElement.appendChild(this.element);
+        TaskbarManager.addToTaskbar(this);
         WindowManager.bringToFront(this);
         this.setupWindow();
     }
@@ -61,35 +65,35 @@ class Window
         this.makeDraggable();
         this.makeResizable();
 
-        this.windowElement.querySelector('.window__x__btn').addEventListener('click', () => {
+        this.element.querySelector('.window__x__btn').addEventListener('click', () => {
             this.close();
-            TaskbarManager.removeFromTaskbar(this.windowElement);
+            TaskbarManager.removeFromTaskbar(this);
         });
         
-        this.windowElement.addEventListener("mousedown", () => WindowManager.bringToFront(this));
+        this.element.addEventListener("mousedown", () => WindowManager.bringToFront(this));
     }
 
     close()
     {
-        this.windowElement.remove();
+        this.element.remove();
     }
 
     makeDraggable()
     {
-        const header = this.windowElement.querySelector(".window__header");
+        const header = this.element.querySelector(".window__header");
         let isDragging = false;
         let offsetX, offsetY;
 
         header.addEventListener("mousedown", (e) => {
             isDragging = true;
-            offsetX = e.clientX - this.windowElement.getBoundingClientRect().left;
-            offsetY = e.clientY - this.windowElement.getBoundingClientRect().top;
+            offsetX = e.clientX - this.element.getBoundingClientRect().left;
+            offsetY = e.clientY - this.element.getBoundingClientRect().top;
         });
 
         document.addEventListener("mousemove", (e) => {
             if (isDragging) {
-                this.windowElement.style.left = `${e.clientX - offsetX}px`;
-                this.windowElement.style.top = `${e.clientY - offsetY}px`;
+                this.element.style.left = `${e.clientX - offsetX}px`;
+                this.element.style.top = `${e.clientY - offsetY}px`;
             }
         });
 
@@ -111,7 +115,7 @@ class Window
         resizeHandleBR.style.height = `${resizeHandleSize}px`;
         resizeHandleBR.style.cursor = "se-resize";
         resizeHandleBR.style.backgroundColor = "transparent";
-        this.windowElement.appendChild(resizeHandleBR);
+        this.element.appendChild(resizeHandleBR);
 
         // Bottom edge
         const resizeHandleB = document.createElement("div");
@@ -122,7 +126,7 @@ class Window
         resizeHandleB.style.height = `${resizeHandleSize}px`;
         resizeHandleB.style.cursor = "s-resize";
         resizeHandleB.style.backgroundColor = "transparent";
-        this.windowElement.appendChild(resizeHandleB);
+        this.element.appendChild(resizeHandleB);
 
         // Right edge
         const resizeHandleR = document.createElement("div");
@@ -133,7 +137,7 @@ class Window
         resizeHandleR.style.width = `${resizeHandleSize}px`;
         resizeHandleR.style.cursor = "e-resize";
         resizeHandleR.style.backgroundColor = "transparent";
-        this.windowElement.appendChild(resizeHandleR);
+        this.element.appendChild(resizeHandleR);
 
         this.addResizeListener(resizeHandleBR, "br");
         this.addResizeListener(resizeHandleB, "b");
@@ -149,8 +153,8 @@ class Window
             isResizing = true;
             startX = event.clientX;
             startY = event.clientY;
-            startWidth = parseInt(this.windowElement.style.width || this.windowElement.offsetWidth, 10);
-            startHeight = parseInt(this.windowElement.style.height || this.windowElement.offsetHeight, 10);
+            startWidth = parseInt(this.element.style.width || this.element.offsetWidth, 10);
+            startHeight = parseInt(this.element.style.height || this.element.offsetHeight, 10);
             event.preventDefault();
         });
 
@@ -158,11 +162,11 @@ class Window
             if (isResizing) {
                 if (direction === "br" || direction === "b") {
                     const newHeight = startHeight + (event.clientY - startY);
-                    this.windowElement.style.height = `${Math.max(newHeight, 500)}px`;
+                    this.element.style.height = `${Math.max(newHeight, 500)}px`;
                 }
                 if (direction === "br" || direction === "r") {
                     const newWidth = startWidth + (event.clientX - startX);
-                    this.windowElement.style.width = `${Math.max(newWidth, 650)}px`;
+                    this.element.style.width = `${Math.max(newWidth, 650)}px`;
                 }
             }
         });

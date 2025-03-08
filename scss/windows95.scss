@@ -221,12 +221,12 @@
 
             .taskbar__menu__sub {
                 position: absolute;
-
-                width: 200px;
-                height: 200px;
-                background-color: blue;
-                top: 0px;
-                left: 250px;
+                display: none; // this need to be fixed
+                // width: 200px;
+                // height: 200px;
+                // background-color: blue;
+                // top: 0px;
+                // left: 250px;
                 // background: #c3c6cd;
                 // border-top: 2px solid #deebf3;
                 // border-left: 2px solid #deebf3;
@@ -286,8 +286,14 @@
         background-color: #000082;
         height: 7%;
 
-        .window__header__item {
+        .window__header__icon {
+            height: 20px;
+            margin: 0 5px;
+        }
 
+        .window__header__item {
+            display: flex;
+            align-items: center;
         }
     }
 
@@ -334,7 +340,7 @@
             }
         }
 
-        .window__internet__explorer {
+        .window__about__internet__explorer {
             display: flex;
             flex-direction: column;
             align-items: flex-end;

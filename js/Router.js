@@ -1,10 +1,16 @@
 class Router
 {
     static routes = {};
+    static windows = {};
 
     static registerRoute(name, url)
     {
         Router.routes[name] = url;
+    }
+
+    static registerWindow(windowClass)
+    {
+        Router.windows[windowClass.title] = windowClass;
     }
 
     static navigateTo(name)
@@ -18,9 +24,9 @@ class Router
         }
     }
 
-    static url(name)
+    static getWindowByTitle(title)
     {
-        return Router.routes[name];
+        return Router.windows[title];
     }
 }
 
@@ -29,6 +35,21 @@ const filePath = window.location.hostname === "martvdzalm.github.io" ? "/Website
 Router.registerRoute('windows95', 'index.html');
 Router.registerRoute('terminal', 'terminal.html');
 
-// Windows95
-Router.registerRoute('welcome', filePath + "welcome.html");
-Router.registerRoute('internet-explorer', filePath + "internet-explorer.html");
+Router.registerWindow(new Window(
+    Application.WELCOME, 
+    '',
+    filePath + "welcome.html"
+    )
+);
+Router.registerWindow(new Window(
+    Application.MICROSOFT_INTERNET_EXPLORER,
+    'windows95-ie-5.ico',
+    filePath + "microsoft-internet-explorer.html"
+    )
+);
+Router.registerWindow(new Window(
+    Application.ABOUT_INTERNET_EXPLORER,
+    'windows95-ie-5.ico',
+    filePath + "about-internet-explorer.html"
+    )
+);

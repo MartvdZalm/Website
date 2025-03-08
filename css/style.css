@@ -201,11 +201,7 @@
 }
 .taskbar .taskbar__menu .taskbar__menu__list .taskbar__menu__sub {
   position: absolute;
-  width: 200px;
-  height: 200px;
-  background-color: blue;
-  top: 0px;
-  left: 250px;
+  display: none;
 }
 .taskbar .taskbar__menu .taskbar__menu__list .taskbar__menu__sub--open {
   display: flex;
@@ -239,6 +235,14 @@
   width: 100%;
   background-color: #000082;
   height: 7%;
+}
+.window .window__header .window__header__icon {
+  height: 20px;
+  margin: 0 5px;
+}
+.window .window__header .window__header__item {
+  display: flex;
+  align-items: center;
 }
 .window .window__section {
   display: flex;
@@ -275,15 +279,15 @@
 .window .window__section .window__welcome .window__welcome__btns button {
   color: black;
 }
-.window .window__section .window__internet__explorer {
+.window .window__section .window__about__internet__explorer {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
 }
-.window .window__section .window__internet__explorer > img {
+.window .window__section .window__about__internet__explorer > img {
   width: 100%;
 }
-.window .window__section .window__internet__explorer button {
+.window .window__section .window__about__internet__explorer button {
   display: inline-block;
   padding: 4px 12px;
   font-family: "MS Sans Serif", Tahoma, sans-serif;
@@ -304,17 +308,17 @@
   margin-right: 30px;
   bottom: 10px;
 }
-.window .window__section .window__internet__explorer button:active {
+.window .window__section .window__about__internet__explorer button:active {
   border-top-color: #808080;
   border-left-color: #808080;
   border-right-color: #dfdfdf;
   border-bottom-color: #dfdfdf;
   background-color: #a0a0a0;
 }
-.window .window__section .window__internet__explorer button:hover {
+.window .window__section .window__about__internet__explorer button:hover {
   background-color: #b0b0b0;
 }
-.window .window__section .window__internet__explorer button:focus {
+.window .window__section .window__about__internet__explorer button:focus {
   outline: 1px dotted #000;
 }
 

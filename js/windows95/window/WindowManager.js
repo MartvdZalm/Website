@@ -1,19 +1,27 @@
+class Application
+{
+	static MICROSOFT_INTERNET_EXPLORER = 'Microsoft Internet Explorer';
+	static ABOUT_INTERNET_EXPLORER = 'About Internet Explorer';
+	static WELCOME = 'welcome';
+}
+
 class WindowManager
 {
 	static windows = [];
 
-	constructor(taskbarManager)
+	static openWindow(title)
 	{
-		this.taskbarManager = taskbarManager;
-	}
+		const windowClass = Router.getWindowByTitle(title);
+        
+        const newWindowClass = new Window(
+        	windowClass.title,
+        	windowClass.icon,
+        	windowClass.contentUrl
+        );
 
-	static openWindow(name)
-	{
-		const windowClass = new Window(name, Router.url(name));
-
-		if (windowClass) {
-			windowClass.open();
-			WindowManager.windows.push(windowClass);
+		if (newWindowClass) {
+			newWindowClass.open();
+			WindowManager.windows.push(newWindowClass);
 		}
 	}
 
