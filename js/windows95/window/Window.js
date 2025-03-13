@@ -22,15 +22,28 @@ class Window
 
         window.innerHTML = `
             <header class="window__header">
-                <span class="window__header__item">
-                    <img class="window__header__icon" src="assets/images/windows95/${this.icon}"> - 
-                    ${this.title}
-                </span>
-                <span class="window__header__item">
-                    <button class="window__x__btn">X</button>
-                </span>
+                <div class="window__header__title">
+                    <span class="window__header__title-item">
+                        <img class="window__header__icon" src="assets/images/windows95/${this.icon}"> - 
+                        ${this.title}
+                    </span>
+                    <span>
+                        <button class="window__underline__btn">_</button>
+                        <button class="window__x__btn">X</button>
+                    </span>
+                </div>
+                <div class="window__header__menu">
+                    <span class="window__header__menu-item">File</span>
+                    <span class="window__header__menu-item">Edit</span>
+                    <span class="window__header__menu-item">View</span>
+                    <span class="window__header__menu-item">Favorites</span>
+                    <span class="window__header__menu-item">Tools</span>
+                    <span class="window__header__menu-item">Help</span>
+                </div>
             </header>
-            <section class="window__section">${content}</section>
+            <section class="window__section">
+                ${content}
+            </section>
         `;
 
         this.element = window;
@@ -78,11 +91,20 @@ class Window
             this.close();
             TaskbarManager.removeFromTaskbar(this);
         });
+
+        this.element.querySelector('.window__underline__btn').addEventListener('click', () => {
+            this.hide();
+        });
         
         this.element.addEventListener("mousedown", () => WindowManager.bringToFront(this));
         if (this.fullscreen) {
             this.setFullscreen();
         }
+    }
+
+    hide()
+    {
+        this.element.style.display = 'none';
     }
 
     close()

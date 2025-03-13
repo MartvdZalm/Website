@@ -4,6 +4,91 @@
   font-weight: bold;
   font-display: swap;
 }
+#window__microsoft__internet__explorer {
+  width: 100%;
+  height: 100%;
+  border: 2px solid #ccc;
+  background-color: #f0f0f0;
+}
+#window__microsoft__internet__explorer .window__toolbar {
+  background-color: #e0e0e0;
+  padding: 5px;
+  border-bottom: 1px solid #ccc;
+  display: flex;
+  gap: 5px;
+}
+#window__microsoft__internet__explorer .window__toolbar .window__toolbar-button {
+  padding: 3px 8px;
+  border: 1px solid #ccc;
+  background-color: #f0f0f0;
+  cursor: pointer;
+  color: black;
+  font-size: 14px;
+}
+#window__microsoft__internet__explorer .window__toolbar .window__toolbar-button:hover {
+  background-color: #ddd;
+}
+#window__microsoft__internet__explorer .window__address-bar {
+  background-color: #e0e0e0;
+  padding: 5px;
+  border-bottom: 1px solid #ccc;
+  display: flex;
+  align-items: center;
+}
+#window__microsoft__internet__explorer .window__address-bar .window__address-label {
+  margin-right: 5px;
+  color: black;
+}
+#window__microsoft__internet__explorer .window__address-bar .window__address-input {
+  flex: 1;
+  padding: 3px;
+  font-size: 12px;
+  border: 1px solid #ccc;
+}
+#window__microsoft__internet__explorer .window__address-bar .window__address-button {
+  padding: 3px 8px;
+  font-size: 12px;
+  border: 1px solid #ccc;
+  background-color: #f0f0f0;
+  cursor: pointer;
+  margin-left: 5px;
+}
+#window__microsoft__internet__explorer .window__address-bar .window__address-button:hover {
+  background-color: #ddd;
+}
+#window__microsoft__internet__explorer .window__content {
+  padding: 20px;
+}
+#window__microsoft__internet__explorer .window__content .window__search-box {
+  text-align: center;
+}
+#window__microsoft__internet__explorer .window__content .window__search__google-logo {
+  width: 500px;
+}
+#window__microsoft__internet__explorer .window__content .window__search__form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+#window__microsoft__internet__explorer .window__content .window__search-input {
+  width: 300px;
+  padding: 5px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+}
+#window__microsoft__internet__explorer .window__content .window__search-button {
+  padding: 5px 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  background-color: #f0f0f0;
+  cursor: pointer;
+  color: black;
+}
+#window__microsoft__internet__explorer .window__content .window__search-button:hover {
+  background-color: #ddd;
+}
+
 #windows95 {
   width: 100vw;
   height: 100vh;
@@ -15,7 +100,8 @@
   color: black;
 }
 
-.window__x__btn {
+.window__x__btn,
+.window__underline__btn {
   cursor: pointer;
   background-color: #c0c0c0;
   border-top: 2px solid #deebf3;
@@ -26,7 +112,8 @@
   position: relative;
   transition: top 0.1s ease, left 0.1s ease;
 }
-.window__x__btn:active {
+.window__x__btn:active,
+.window__underline__btn:active {
   border-top: 3px solid black;
   border-left: 3px solid black;
   border-bottom: 2px solid white;
@@ -229,20 +316,40 @@
 }
 .window .window__header {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
   align-items: center;
   width: 100%;
   background-color: #000082;
+  height: fit-content;
+}
+.window .window__header .window__header__title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
   height: 30px;
 }
-.window .window__header .window__header__icon {
+.window .window__header .window__header__title .window__header__icon {
   height: 20px;
   margin: 0 5px;
 }
-.window .window__header .window__header__item {
+.window .window__header .window__header__title .window__header__title-item {
   display: flex;
   align-items: center;
+}
+.window .window__header .window__header__menu {
+  width: 100%;
+  background-color: #c0c0c0;
+  padding: 5px;
+}
+.window .window__header .window__header__menu .window__header__menu-item {
+  margin-right: 10px;
+  cursor: pointer;
+  color: black;
+}
+.window .window__header .window__header__menu .window__header__menu-item:hover {
+  text-decoration: underline;
 }
 .window .window__section {
   display: flex;
@@ -320,98 +427,6 @@
 }
 .window .window__section .window__about__internet__explorer button:focus {
   outline: 1px dotted #000;
-}
-.window .window__section .window__microsoft__internet__explorer .ie-window {
-  width: 800px;
-  margin: 20px auto;
-  border: 2px solid #ccc;
-  background-color: #f0f0f0;
-  font-family: Arial, sans-serif;
-  font-size: 14px;
-}
-.window .window__section .window__microsoft__internet__explorer .ie-window__menu-bar {
-  background-color: #e0e0e0;
-  padding: 5px;
-  border-bottom: 1px solid #ccc;
-}
-.window .window__section .window__microsoft__internet__explorer .ie-window__menu-item {
-  margin-right: 10px;
-  cursor: pointer;
-}
-.window .window__section .window__microsoft__internet__explorer .ie-window__menu-item:hover {
-  text-decoration: underline;
-}
-.window .window__section .window__microsoft__internet__explorer .ie-window__toolbar {
-  background-color: #e0e0e0;
-  padding: 5px;
-  border-bottom: 1px solid #ccc;
-  display: flex;
-  gap: 5px;
-}
-.window .window__section .window__microsoft__internet__explorer .ie-window__toolbar-button {
-  padding: 3px 8px;
-  font-size: 12px;
-  border: 1px solid #ccc;
-  background-color: #f0f0f0;
-  cursor: pointer;
-}
-.window .window__section .window__microsoft__internet__explorer .ie-window__toolbar-button:hover {
-  background-color: #ddd;
-}
-.window .window__section .window__microsoft__internet__explorer .ie-window__address-bar {
-  background-color: #e0e0e0;
-  padding: 5px;
-  border-bottom: 1px solid #ccc;
-  display: flex;
-  align-items: center;
-}
-.window .window__section .window__microsoft__internet__explorer .ie-window__address-label {
-  margin-right: 5px;
-}
-.window .window__section .window__microsoft__internet__explorer .ie-window__address-input {
-  flex: 1;
-  padding: 3px;
-  font-size: 12px;
-  border: 1px solid #ccc;
-}
-.window .window__section .window__microsoft__internet__explorer .ie-window__address-button {
-  padding: 3px 8px;
-  font-size: 12px;
-  border: 1px solid #ccc;
-  background-color: #f0f0f0;
-  cursor: pointer;
-  margin-left: 5px;
-}
-.window .window__section .window__microsoft__internet__explorer .ie-window__address-button:hover {
-  background-color: #ddd;
-}
-.window .window__section .window__microsoft__internet__explorer .ie-window__content {
-  padding: 20px;
-}
-.window .window__section .window__microsoft__internet__explorer .ie-window__search-box {
-  text-align: center;
-}
-.window .window__section .window__microsoft__internet__explorer .ie-window__search-form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
-}
-.window .window__section .window__microsoft__internet__explorer .ie-window__search-input {
-  width: 300px;
-  padding: 5px;
-  font-size: 14px;
-  border: 1px solid #ccc;
-}
-.window .window__section .window__microsoft__internet__explorer .ie-window__search-button {
-  padding: 5px 10px;
-  font-size: 14px;
-  border: 1px solid #ccc;
-  background-color: #f0f0f0;
-  cursor: pointer;
-}
-.window .window__section .window__microsoft__internet__explorer .ie-window__search-button:hover {
-  background-color: #ddd;
 }
 
 #ibm {

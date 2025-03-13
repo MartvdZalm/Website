@@ -1,46 +1,31 @@
-<div class="window__microsoft__internet__explorer">
-    <div class="ie-window">
-        <!-- Menu Bar -->
-        <div class="ie-window__menu-bar">
-            <span class="ie-window__menu-item">File</span>
-            <span class="ie-window__menu-item">Edit</span>
-            <span class="ie-window__menu-item">View</span>
-            <span class="ie-window__menu-item">Favorites</span>
-            <span class="ie-window__menu-item">Tools</span>
-            <span class="ie-window__menu-item">Help</span>
-        </div>
+<div id="window__microsoft__internet__explorer">
+    <div class="window__toolbar">
+        <button class="window__toolbar-button">Back</button>
+        <button class="window__toolbar-button">Forward</button>
+        <button class="window__toolbar-button">Stop</button>
+        <button class="window__toolbar-button">Refresh</button>
+        <button class="window__toolbar-button">Home</button>
+        <button class="window__toolbar-button">Search</button>
+        <button class="window__toolbar-button">Favorites</button>
+        <button class="window__toolbar-button">History</button>
+        <button class="window__toolbar-button">Mail</button>
+        <button class="window__toolbar-button">Print</button>
+    </div>
 
-        <!-- Toolbar -->
-        <div class="ie-window__toolbar">
-            <button class="ie-window__toolbar-button">Back</button>
-            <button class="ie-window__toolbar-button">Forward</button>
-            <button class="ie-window__toolbar-button">Stop</button>
-            <button class="ie-window__toolbar-button">Refresh</button>
-            <button class="ie-window__toolbar-button">Home</button>
-            <button class="ie-window__toolbar-button">Search</button>
-            <button class="ie-window__toolbar-button">Favorites</button>
-            <button class="ie-window__toolbar-button">History</button>
-            <button class="ie-window__toolbar-button">Mail</button>
-            <button class="ie-window__toolbar-button">Print</button>
-        </div>
+    <div class="window__address-bar">
+        <span class="window__address-label">Address:</span>
+        <input type="text" class="window__address-input" placeholder="http://www.google.com/">
+        <button class="window__address-button">Go</button>
+    </div>
 
-        <!-- Address Bar -->
-        <div class="ie-window__address-bar">
-            <span class="ie-window__address-label">Address:</span>
-            <input type="text" class="ie-window__address-input" value="http://www.example.com">
-            <button class="ie-window__address-button">Go</button>
-        </div>
-
-        <!-- Content Area -->
-        <div class="ie-window__content">
-            <!-- Google Search Box -->
-            <div class="ie-window__search-box">
-                <form class="ie-window__search-form">
-                    <input type="text" class="ie-window__search-input" placeholder="Search Google...">
-                    <button type="submit" class="ie-window__search-button">Google Search</button>
-                    <button type="submit" class="ie-window__search-button">I'm Feeling Lucky</button>
-                </form>
-            </div>
+    <div class="window__content">
+        <div class="window__search-box">
+        	<img class="window__search__google-logo" src="../../assets/images/windows95/windows95-ie-5-google-logo.png">
+            <form class="window__search__form">
+                <input type="text" class="window__search-input" placeholder="Search Google...">
+                <button type="submit" class="window__search-button">Google Search</button>
+                <button type="submit" class="window__search-button">I'm Feeling Lucky</button>
+            </form>
         </div>
     </div>
 </div>
