@@ -284,7 +284,7 @@
         align-items: center;
         width: 100%;
         background-color: #000082;
-        height: 7%;
+        height: 30px;
 
         .window__header__icon {
             height: 20px;
@@ -355,6 +355,128 @@
                 position: absolute;
                 margin-right: 30px;
                 bottom: 10px;
+            }
+        }
+
+        .window__microsoft__internet__explorer {
+            // Block: ie-window
+            .ie-window {
+                width: 800px;
+                margin: 20px auto;
+                border: 2px solid #ccc;
+                background-color: #f0f0f0;
+                font-family: Arial, sans-serif;
+                font-size: 14px;
+            }
+
+            // Element: ie-window__menu-bar
+            .ie-window__menu-bar {
+                background-color: #e0e0e0;
+                padding: 5px;
+                border-bottom: 1px solid #ccc;
+            }
+
+            // Element: ie-window__menu-item
+            .ie-window__menu-item {
+                margin-right: 10px;
+                cursor: pointer;
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+
+            // Element: ie-window__toolbar
+            .ie-window__toolbar {
+                background-color: #e0e0e0;
+                padding: 5px;
+                border-bottom: 1px solid #ccc;
+                display: flex;
+                gap: 5px;
+            }
+
+            // Element: ie-window__toolbar-button
+            .ie-window__toolbar-button {
+                padding: 3px 8px;
+                font-size: 12px;
+                border: 1px solid #ccc;
+                background-color: #f0f0f0;
+                cursor: pointer;
+                &:hover {
+                    background-color: #ddd;
+                }
+            }
+
+            // Element: ie-window__address-bar
+            .ie-window__address-bar {
+                background-color: #e0e0e0;
+                padding: 5px;
+                border-bottom: 1px solid #ccc;
+                display: flex;
+                align-items: center;
+            }
+
+            // Element: ie-window__address-label
+            .ie-window__address-label {
+                margin-right: 5px;
+            }
+
+            // Element: ie-window__address-input
+            .ie-window__address-input {
+                flex: 1;
+                padding: 3px;
+                font-size: 12px;
+                border: 1px solid #ccc;
+            }
+
+            // Element: ie-window__address-button
+            .ie-window__address-button {
+                padding: 3px 8px;
+                font-size: 12px;
+                border: 1px solid #ccc;
+                background-color: #f0f0f0;
+                cursor: pointer;
+                margin-left: 5px;
+                &:hover {
+                    background-color: #ddd;
+                }
+            }
+
+            // Element: ie-window__content
+            .ie-window__content {
+                padding: 20px;
+            }
+
+            // Element: ie-window__search-box
+            .ie-window__search-box {
+                text-align: center;
+            }
+
+            // Element: ie-window__search-form
+            .ie-window__search-form {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
+            }
+
+            // Element: ie-window__search-input
+            .ie-window__search-input {
+                width: 300px;
+                padding: 5px;
+                font-size: 14px;
+                border: 1px solid #ccc;
+            }
+
+            // Element: ie-window__search-button
+            .ie-window__search-button {
+                padding: 5px 10px;
+                font-size: 14px;
+                border: 1px solid #ccc;
+                background-color: #f0f0f0;
+                cursor: pointer;
+                &:hover {
+                    background-color: #ddd;
+                }
             }
         }
     }

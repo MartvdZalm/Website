@@ -9,20 +9,23 @@ class WindowManager
 {
 	static windows = [];
 
-	static openWindow(title)
+	static openWindow(title, fullscreen = false)
 	{
 		const windowClass = Router.getWindowByTitle(title);
         
         const newWindowClass = new Window(
         	windowClass.title,
         	windowClass.icon,
-        	windowClass.contentUrl
+        	windowClass.contentUrl,
+        	fullscreen
         );
 
 		if (newWindowClass) {
 			newWindowClass.open();
 			WindowManager.windows.push(newWindowClass);
 		}
+
+		return newWindowClass;
 	}
 
 	static bringToFront(window)

@@ -4,5 +4,5 @@ document.addEventListener("DOMContentLoaded", () => {
 	const desktopManager = new DesktopManager(taskbarManager);
 	const dateTimeManager = new DateTimeManager();
 
-	WindowManager.openWindow(Application.MICROSOFT_INTERNET_EXPLORER);
+	WindowManager.openWindow(Application.MICROSOFT_INTERNET_EXPLORER, true);
 });

@@ -1,6 +1,6 @@
 class Window
 {
-    constructor(title, icon, contentUrl)
+    constructor(title, icon, contentUrl, fullscreen = false)
     {
         const uniqueId = crypto.randomUUID();
         this.id = title + "-" + uniqueId;
@@ -8,6 +8,7 @@ class Window
         this.icon = icon;
         this.contentUrl = contentUrl;
         this.element = null;
+        this.fullscreen = fullscreen;
     }
 
     async createWindow()
@@ -33,6 +34,14 @@ class Window
         `;
 
         this.element = window;
+    }
+
+    async setFullscreen()
+    {
+        this.element.style.top = "0";
+        this.element.style.left = "0";
+        this.element.style.width = "100vw";
+        this.element.style.height = "100vh";
     }
 
     setZIndex(zIndex)
@@ -71,6 +80,9 @@ class Window
         });
         
         this.element.addEventListener("mousedown", () => WindowManager.bringToFront(this));
+        if (this.fullscreen) {
+            this.setFullscreen();
+        }
     }
 
     close()
