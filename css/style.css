@@ -4,6 +4,10 @@
   font-weight: bold;
   font-display: swap;
 }
+@font-face {
+  font-family: "IBM Courier";
+  src: url("../assets/fonts/CourierPrime-Regular.woff2") format("woff2");
+}
 #window__microsoft__internet__explorer {
   width: 100%;
   height: 100%;
@@ -436,9 +440,9 @@
   height: 100vh;
   width: 100vw;
   background-color: black;
+  font-family: "IBM Courier" !important;
 }
-
-.ibm__frame {
+#ibm .ibm__frame {
   background: #D3D3D3;
   width: 700px;
   height: 650px;
@@ -450,24 +454,7 @@
   justify-content: space-between;
   transition: width 0.5s ease, height 0.5s ease, border-radius 0.5s ease, box-shadow 0.5s ease;
 }
-
-.ibm__frame.ibm__frame--fullscreen {
-  width: calc(min(100vw, 100vh) - 50px);
-  height: calc(min(100vw, 100vh) - 50px);
-  border: none;
-  box-shadow: none;
-  transition: width 0.5s ease, height 0.5s ease, border-radius 0.5s ease, box-shadow 0.5s ease;
-}
-
-.ibm__frame__screen.ibm__frame__screen--fullscreen {
-  height: calc(100% - 150px);
-  margin: 20px 20px 0 20px;
-  border-radius: 15px;
-  box-shadow: inset 0px 0px 10px 5px #000;
-  transition: height 0.5s ease, margin 0.5s ease, border-radius 0.5s ease, box-shadow 0.5s ease;
-}
-
-.ibm__frame__screen {
+#ibm .ibm__frame .ibm__frame__screen {
   height: 450px;
   margin: 35px 35px 0px 35px;
   border: 3px solid #222121;
@@ -475,55 +462,20 @@
   box-shadow: inset 0px 0px 10px 10px #000;
   transition: height 0.5s ease, margin 0.5s ease, border-radius 0.5s ease, box-shadow 0.5s ease;
 }
-
-.ibm__frame--lower {
-  height: 80px;
-  border-top: 5px solid #3d3b3b;
-  font-size: 62px;
-  font-weight: normal;
-  font-family: Arial, sans-serif;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.ibm__frame--lower p {
-  font-size: 50px;
-  color: #3d3b3b;
-}
-
-.ibm__frame--logo {
-  display: flex;
-  align-items: center;
-  font-size: 35px;
+#ibm .ibm__frame .ibm__frame__screen #ibm__frame__terminal {
+  background-color: #131;
+  background-image: radial-gradient(ellipse 500% 100% at 50% 90%, transparent, #121);
+  background-position: center;
+  display: block;
+  width: 100%;
   height: 100%;
-  margin: 0 auto;
+  border-radius: 15px;
+  font-family: "IBM Courier", monospace;
+  font-size: 17px;
+  color: rgba(128, 255, 128, 0.8);
+  position: relative;
+  overflow-y: auto;
 }
-
-.ibm-frame-on-off-button {
-  width: 50px;
-  height: 50px;
-  border: 3px solid black;
-  border-radius: 5px;
-  margin-right: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.ibm-frame-on-off-button-circle {
-  background-color: gray;
-  width: 80%;
-  height: 80%;
-  margin: auto;
-  border: 5px solid black;
-  border-radius: 50%;
-  cursor: pointer;
-}
-
-.ibm-frame-on-off-button-circle:hover {
-  background: #d20404;
-}
-
 @keyframes blink {
   0%, 50% {
     opacity: 1;
@@ -532,22 +484,41 @@
     opacity: 0;
   }
 }
-#ibm__frame__terminal {
-  background-color: #131;
-  background-image: radial-gradient(ellipse 500% 100% at 50% 90%, transparent, #121);
-  background-position: center;
-  display: block;
+#ibm .ibm__frame .ibm__frame__screen #ibm__frame__terminal .cursor {
+  display: inline-block;
+  width: 12px;
+  background: rgba(128, 255, 128, 0.8);
+  vertical-align: bottom;
+  background: pink;
+  height: 1em;
+  animation: blink 1s linear 0s infinite;
+}
+#ibm .ibm__frame .ibm__frame__screen #ibm__frame__terminal .terminal__text:first-child {
+  margin-top: 10px;
+}
+#ibm .ibm__frame .ibm__frame__screen #ibm__frame__terminal .terminal__text {
+  text-shadow: 0 0 1ex #131, 0 0 2px #00DC16;
+  margin-left: 10px;
+  color: #00DC16;
+}
+#ibm .ibm__frame .ibm__frame__screen #ibm__frame__terminal .terminal__user__input {
+  margin-left: 3px;
+}
+#ibm .ibm__frame .ibm__frame__screen #ibm__frame__terminal .prompt__line span {
+  text-shadow: 0 0 1ex #131, 0 0 2px #00DC16;
+  color: #00DC16;
+}
+#ibm .ibm__frame .ibm__frame__screen #ibm__frame__terminal .prompt__line {
+  margin-top: 5px;
+  margin-left: 10px;
+}
+#ibm .ibm__frame .ibm__frame__screen #ibm__frame__terminal img.startup-image {
   width: 100%;
   height: 100%;
-  border-radius: 15px;
-  font-family: monospace;
-  font-size: 17px;
-  color: rgba(128, 255, 128, 0.8);
-  position: relative;
-  overflow-y: auto;
+  object-fit: fill;
+  display: none;
 }
-
-#ibm__frame__terminal::after {
+#ibm .ibm__frame .ibm__frame__screen #ibm__frame__terminal::after {
   position: absolute;
   content: "";
   display: block;
@@ -560,58 +531,59 @@
   background-size: 100%, 100%, 100%, 100%, 100%, 100% 0.25ch;
   border-radius: 15px;
 }
-
-.cursor {
-  display: inline-block;
-  width: 12px;
-  background: rgba(128, 255, 128, 0.8);
-  vertical-align: bottom;
-  background: pink;
-  height: 1em;
-  animation: blink 1s linear 0s infinite;
-}
-
-.terminal__text {
-  text-shadow: 0 0 1ex #131, 0 0 2px #00DC16;
-  margin-left: 10px;
-  margin-top: 5px;
-  color: #00DC16;
-}
-
-.terminal__user__input {
-  margin-left: 3px;
-}
-
-.prompt__line span {
-  text-shadow: 0 0 1ex #131, 0 0 2px #00DC16;
-  color: #00DC16;
-}
-
-.prompt__line {
-  margin-top: 5px;
-  margin-left: 10px;
-}
-
-#ibm__frame__terminal.off {
+#ibm .ibm__frame .ibm__frame__screen #ibm__frame__terminal.off {
   background-color: black;
   background-image: none;
   color: black;
 }
-
-#ibm__frame__terminal img.startup-image {
-  width: 100%;
+#ibm .ibm__frame .ibm__frame--lower {
+  height: 80px;
+  border-top: 5px solid #3d3b3b;
+  font-size: 62px;
+  font-weight: normal;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#ibm .ibm__frame .ibm__frame--lower p {
+  font-size: 50px;
+  color: #3d3b3b;
+}
+#ibm .ibm__frame .ibm__frame--lower .ibm__frame--logo {
+  display: flex;
+  align-items: center;
+  font-size: 35px;
   height: 100%;
-  object-fit: fill;
-  display: none;
+  margin: 0 auto;
+}
+#ibm .ibm__frame .ibm__frame--lower .ibm-frame-on-off-button {
+  width: 50px;
+  height: 50px;
+  border: 3px solid black;
+  border-radius: 5px;
+  margin-right: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#ibm .ibm__frame .ibm__frame--lower .ibm-frame-on-off-button .ibm-frame-on-off-button-circle {
+  background-color: gray;
+  width: 80%;
+  height: 80%;
+  margin: auto;
+  border: 5px solid black;
+  border-radius: 50%;
+  cursor: pointer;
+}
+#ibm .ibm__frame .ibm__frame--lower .ibm-frame-on-off-button .ibm-frame-on-off-button-circle:hover {
+  background: #d20404;
 }
 
 *, *:before, *:after {
   cursor: default;
   image-rendering: pixelated;
   box-sizing: border-box;
-  font-family: "MS Sans Serif", Tahoma, Helvetica, Arial, sans-serif;
-  font-size: 16px;
-  color: #FFFFFF;
   margin: 0;
   overflow: hidden;
 }

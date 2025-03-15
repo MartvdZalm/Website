@@ -1,8 +1,13 @@
 @use "variables";
 
 @font-face {
-  font-family: "MS Sans Serif";
-  src: url("../assets/fonts/ms-sans-serif.woff2") format("woff2");
+  font-family: 'MS Sans Serif';
+  src: url('../assets/fonts/ms-sans-serif.woff2') format("woff2");
   font-weight: bold;
   font-display: swap;
+}
+
+@font-face {
+  font-family: 'IBM Courier';
+  src: url('../assets/fonts/CourierPrime-Regular.woff2') format("woff2");
 }

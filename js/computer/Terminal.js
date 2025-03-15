@@ -1,44 +1,29 @@
+
 class Terminal
 {
-    constructor(containerId, powerButtonId)
-    {
-        this.terminalContainer = document.getElementById(containerId);
-        this.powerButton = document.getElementById(powerButtonId);
-        this.fileSystem = new FileSystem();
-        this.windows95StartupSound = new Audio('assets/sounds/microsoft-windows-95-startup-sound.mp3');
-        this.terminalOn = false;
-        this.rootDir = 'C:\\';
-        this.currentDir = 'C:\\';
-        this.prompt = '>';
+	constructor()
+	{
+		this.container = document.getElementById('ibm__frame__terminal');		
+		this.windows95StartupSound = new Audio('assets/sounds/microsoft-windows-95-startup-sound.mp3');
+		this.terminalOn = false;
+        this.currentDir = 'C:';
+		this.prompt = '>';
 
-        this.initialize();
-    }
+		this.setup();
+	}
 
-    initialize()
-    {
-        this.powerButton.addEventListener('click', () => this.togglePower());
-        this.initializeTerminal();
-    }
+	setup()
+	{
+		document.getElementById('power-button').addEventListener('click', () => {
+			this.togglePower();
+		});
+	}
 
-    togglePower()
-    {
-        if (!this.terminalOn) {
-            this.terminalOn = true;
-            setTimeout(() => {
-                this.showStartupImage();
-                this.terminalContainer.classList.remove('off');
-            }, 2500);
-        } else {
-            this.terminalOn = false;
-            this.terminalContainer.classList.add('off');
-            this.terminalContainer.innerHTML = '';
-        }
-    }
-
-    initializeTerminal() {
-        if (this.terminalOn) {
-            this.terminalContainer.innerHTML = '';
-            this.addTerminalLine("IBM PC DOS 1.0");
+	start()
+	{
+		if (this.terminalOn) {
+			this.container.innerHTML = '';
+		    this.addTerminalLine("IBM PC DOS 1.0");
             this.addTerminalLine("Copyright IBM Corp 1981");
             this.addTerminalLine("All rights reserved.");
             setTimeout(() => {
@@ -48,24 +33,51 @@ class Terminal
                     this.createNewPromptLine();
                 }, 2000);
             }, 1500);
-        }
-    }
+		}
+	}
 
-    showStartupImage() {
-        this.terminalContainer.innerHTML = '';
-        const startupImage = document.createElement('img');
+	togglePower()
+	{
+		if (!this.terminalOn) {
+			this.terminalOn = true;
+			setTimeout(() => {
+				this.showStartup();
+				this.container.classList.remove('off');
+			}, 2500);
+		} else {
+			this.terminalOn = false;
+			this.container.classList.add('off');
+			this.container.innerHTML = '';
+		}
+	}
+
+    showStartup()
+    {
+    	const startupImage = document.createElement('img');
+
+        this.container.innerHTML = '';
         startupImage.src = 'assets/images/ibm-startup-screen.png';
         startupImage.classList.add('startup-image');
-        this.terminalContainer.appendChild(startupImage);
+        this.container.appendChild(startupImage);
         startupImage.style.display = 'block';
 
         setTimeout(() => {
             startupImage.style.display = 'none';
-            this.initializeTerminal();
+            this.start();
         }, 5000);
     }
 
-    createNewPromptLine() {
+    addTerminalLine(text)
+    {
+        const line = document.createElement('p');
+        line.textContent = text;
+        line.classList.add('terminal__text');
+        this.container.appendChild(line);
+        this.container.scrollTop = this.container.scrollHeight;
+    }
+
+    createNewPromptLine()
+    {
         const promptLine = document.createElement('div');
         promptLine.classList.add('prompt__line');
         
@@ -81,13 +93,14 @@ class Terminal
         cursor.classList.add('cursor');
         promptLine.appendChild(cursor);
 
-        this.terminalContainer.appendChild(promptLine);
-        this.terminalContainer.scrollTop = this.terminalContainer.scrollHeight;
+        this.container.appendChild(promptLine);
+        this.container.scrollTop = this.container.scrollHeight;
 
         this.setUpTyping(inputSpan, cursor);
     }
 
-    setUpTyping(inputSpan, cursor) {
+    setUpTyping(inputSpan, cursor)
+    {
         document.removeEventListener('keydown', this.handleKeydown);
 
         this.handleKeydown = (event) => {
@@ -109,134 +122,36 @@ class Terminal
         document.addEventListener('keydown', this.handleKeydown);
     }
 
-    addTerminalLine(text) {
-        const line = document.createElement('p');
-        line.textContent = text;
-        line.classList.add('terminal__text');
-        this.terminalContainer.appendChild(line);
-        this.terminalContainer.scrollTop = this.terminalContainer.scrollHeight;
-    }
-
-    handleCommand(command) {
+    handleCommand(command)
+    {
         const [cmd, ...args] = command.trim().split(' ');
 
         switch (cmd.toLowerCase()) {
             case 'dir':
-                this.listDirectory(args[0] || this.currentDir);
+                FileSystem.listDirectory(args[0] || this.currentDir);
                 break;
-            case 'cd':
-                if (args[0]) {
-                    this.changeDirectory(args[0]);
-                } else {
-                    this.addTerminalLine("cd <directory>");
-                }
-                break;
-            case 'help':
-                this.addTerminalLine("Commands: ls, cat <file>, cd <directory>, help");
-                break;
-            case 'cls':
-                this.terminalContainer.innerHTML = '';
-                break;
-            case 'config':
-                this.loadPage('home.html');
-                break;
-            case 'run':
-                this.runProgram(args[0]);
-                break;
-            default:
-                this.addTerminalLine("Command not recognized. Type 'help' for available commands.");
-                break;
-        }
-    }
-
-    listDirectory(path) {
-        const dir = this.fileSystem.getFileSystemPath(path);
-        if (dir) {
-            const items = Object.keys(dir);
-            let output = '';
-
-            items.forEach(item => {
-                if (typeof dir[item] === 'object') {
-                    output += `${item}/\n`;
-                } else {
-                    output += `${item}\n`;
-                }
-            });
-
-            this.addTerminalLine(output.trim());
-        } else {
-            this.addTerminalLine('Directory not found.');
-        }
-    }
-
-    changeDirectory(path) {
-        if (path === '..') {
-            const parts = this.currentDir.split('\\').filter(part => part);
-            if (parts.length > 1) {
-                parts.pop();
-                this.currentDir = parts.join('\\') + '\\';
-            } else {
-                this.currentDir = this.rootDir;
-            }
-        } else if (path.startsWith('\\')) {
-            this.currentDir = path.endsWith('\\') ? path : path;
-        } else {
-            const newDir = this.currentDir + path;
-            if (this.fileSystem.getFileSystemPath(newDir)) {
-                this.currentDir = newDir.endsWith('\\') ? newDir : newDir;
-            } else {
-                this.addTerminalLine('Directory not found.');
-                return;
-            }
-        }
-    }
-
-    runProgram(program) {
-        const path = this.fileSystem.getFileSystemPath(`${this.currentDir}\\${program}`);
-
-        if (path) {
-            switch (program.toUpperCase()) {
-                case 'WIN.COM':
-                    this.startWindows();
-                    break;
-                case 'NOTEPAD.EXE':
-                    this.addTerminalLine('Starting Notepad...');
-                    break;
-                case 'CALCULATOR.EXE':
-                    this.addTerminalLine('Starting Calculator...');
-                    break;
-                default:
-                    this.addTerminalLine(`Running ${program}...`);
-                    break;
-            }
-        } else {
-            this.addTerminalLine('Program not found.');
-        }
-    }
-
-    startWindows() {
-        this.addTerminalLine('Starting Windows 95...');
-
-        setTimeout(() => {
-            this.terminalContainer.innerHTML = '';
-            const startupImage = document.createElement('img');
-            startupImage.src = 'assets/images/microsoft-windows-95-startup-screen.jpg';
-            startupImage.classList.add('startup-image');
-            this.terminalContainer.appendChild(startupImage);
-            startupImage.style.display = 'block';
-
-            this.windows95StartupSound.play();
-            
-            setTimeout(() => {
-                startupImage.style.display = 'none';
-                this.loadPage('index.html');
-            }, 7000);
-
-        }, 3000);
-    }
-
-    loadPage(page) {
-        window.location.href = page;
+            // case 'cd':
+            //     if (args[0]) {
+            //         this.changeDirectory(args[0]);
+            //     } else {
+            //         this.addTerminalLine("cd <directory>");
+            //     }
+            //     break;
+            // case 'help':
+            //     this.addTerminalLine("Commands: ls, cat <file>, cd <directory>, help");
+            //     break;
+            // case 'cls':
+            //     this.terminalContainer.innerHTML = '';
+            //     break;
+            // case 'config':
+            //     this.loadPage('home.html');
+            //     break;
+            // case 'run':
+            //     this.runProgram(args[0]);
+            //     break;
+            // default:
+            //     this.addTerminalLine("Command not recognized. Type 'help' for available commands.");
+            //     break;
+        }       
     }
 }
-
