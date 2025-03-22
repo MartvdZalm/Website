@@ -1,14 +1,17 @@
 class Window
 {
-    constructor(title, icon, contentUrl, fullscreen = false)
+    constructor(title, type, icon, contentUrl, fullscreen = false)
     {
         const uniqueId = crypto.randomUUID();
         this.id = title + "-" + uniqueId;
+
         this.title = title;
+        this.type = type;
         this.icon = icon;
         this.contentUrl = contentUrl;
-        this.element = null;
         this.fullscreen = fullscreen;
+
+        this.element = null;
     }
 
     async createWindow()
@@ -20,31 +23,53 @@ class Window
         const response = await fetch(this.contentUrl);
         const content = await response.text();
 
-        window.innerHTML = `
-            <header class="window__header">
-                <div class="window__header__title">
-                    <span class="window__header__title-item">
-                        ${this.icon ? `<img class="window__header__icon" src="assets/images/windows95/${this.icon}"> - ` : ""}
-                        ${this.title}
-                    </span>
-                    <span>
-                        <button class="window__underline__btn">_</button>
-                        <button class="window__x__btn">X</button>
-                    </span>
-                </div>
-                <div class="window__header__menu">
-                    <span class="window__header__menu-item">File</span>
-                    <span class="window__header__menu-item">Edit</span>
-                    <span class="window__header__menu-item">View</span>
-                    <span class="window__header__menu-item">Favorites</span>
-                    <span class="window__header__menu-item">Tools</span>
-                    <span class="window__header__menu-item">Help</span>
-                </div>
-            </header>
-            <section class="window__section">
-                ${content}
-            </section>
-        `;
+        if (this.type === WindowType.APPLICATION) {
+            window.style.width = "900px";
+            window.style.height = "550px";
+            window.innerHTML = `
+                <header class="window__header">
+                    <div class="window__header__title">
+                        <span class="window__header__title-item">
+                            <img class="window__header__icon" src="assets/images/windows95/${this.icon}">
+                            ${this.title}
+                        </span>
+                        <span>
+                            <button class="window__underline__btn">_</button>
+                            <button class="window__x__btn">X</button>
+                        </span>
+                    </div>
+                    <div class="window__header__menu">
+                        <span class="window__header__menu-item">File</span>
+                        <span class="window__header__menu-item">Edit</span>
+                        <span class="window__header__menu-item">View</span>
+                        <span class="window__header__menu-item">Favorites</span>
+                        <span class="window__header__menu-item">Tools</span>
+                        <span class="window__header__menu-item">Help</span>
+                    </div>
+                </header>
+                <section class="window__section">
+                    ${content}
+                </section>
+            `;
+        } else if (this.type === WindowType.POPUP) {
+            window.style.width = "500px";
+            window.style.height = "280px";
+            window.innerHTML = `
+                <header class="window__header">
+                    <div class="window__header__title">
+                        <span class="window__header__title-item">
+                            ${this.title}
+                        </span>
+                        <span>
+                            <button class="window__x__btn">X</button>
+                        </span>
+                    </div>
+                </header>
+                <section class="window__section">
+                    ${content}
+                </section>
+            `;           
+        }
 
         this.element = window;
     }
@@ -77,7 +102,11 @@ class Window
         const mainElement = document.getElementById("windows95");
         await this.createWindow();
         mainElement.appendChild(this.element);
-        TaskbarManager.addToTaskbar(this);
+
+        if (this.type === WindowType.APPLICATION) {
+            TaskbarManager.addToTaskbar(this);
+        }
+        
         WindowManager.bringToFront(this);
         this.setupWindow();
     }
@@ -92,10 +121,12 @@ class Window
             TaskbarManager.removeFromTaskbar(this);
         });
 
-        this.element.querySelector('.window__underline__btn').addEventListener('click', () => {
-            this.hide();
-        });
-        
+        if (this.type === WindowType.APPLICATION) {
+            this.element.querySelector('.window__underline__btn').addEventListener('click', () => {
+                this.hide();
+            });
+        } 
+
         this.element.addEventListener("mousedown", () => WindowManager.bringToFront(this));
         if (this.fullscreen) {
             this.setFullscreen();

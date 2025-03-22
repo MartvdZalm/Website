@@ -5,5 +5,6 @@ document.addEventListener("DOMContentLoaded", () => {
 	const dateTimeManager = new DateTimeManager();
 
 	// WindowManager.openWindow(Application.MICROSOFT_INTERNET_EXPLORER, true);
+	WindowManager.openWindow(WindowName.SHUTDOWN);
 	WindowManager.bindWindows();
 });

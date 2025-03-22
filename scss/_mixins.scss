@@ -1,4 +1,35 @@
-@use "variables";
+@use "variables" as *;
+
+@mixin windows95-border($top-color, $left-color, $right-color, $bottom-color, $top-px: 2px, $bottom-px: 2px) {
+    border-top: $top-px solid $top-color;
+    border-left: $top-px solid $left-color;
+    border-right: $bottom-px solid $right-color;
+    border-bottom: $bottom-px solid $bottom-color;
+}
+
+@mixin windows95-button($width: 80px, $height: 20px) {
+    @include windows95-border(white, white, black, black);
+    background-color: $windows95-gray-color;
+    color: black;
+    cursor: pointer;
+    transition: top 0.1s ease, left 0.1s ease;
+    width: $width;
+    height: $height;
+    font-family: $windows95-font-family;
+    font-weight: bold;
+
+    &:active {
+        @include windows95-border(black, black, white, white);
+    }
+}
+
+@mixin windows95-menu-arrow($color) {
+    border-top: 7px solid transparent;
+    border-bottom: 7px solid transparent;
+    border-left: 7px solid $color;
+}
+
+
 
 // @mixin windows95-button($width: null) {
     // display: inline-block;
@@ -37,28 +68,3 @@
     //     outline: 1px dotted #000;
     // }
 // }
-
-@mixin windows95-border($top-color, $left-color, $right-color, $bottom-color, $top-px: 2px, $bottom-px: 2px) {
-    border-top: $top-px solid $top-color;
-    border-left: $top-px solid $left-color;
-    border-right: $bottom-px solid $right-color;
-    border-bottom: $bottom-px solid $bottom-color;
-}
-
-@mixin windows95-button($width: 80px) {
-    @include windows95-border(#deebf3, #deebf3, black, black);
-    background-color: variables.$windows95-gray-color;
-    color: black;
-    cursor: pointer;
-    transition: top 0.1s ease, left 0.1s ease;
-
-    &:active {
-        @include windows95-border(black, black, white, white);
-    }
-}
-
-@mixin windows95-menu-arrow($color) {
-    border-top: 7px solid transparent;
-    border-bottom: 7px solid transparent;
-    border-left: 7px solid $color;
-}

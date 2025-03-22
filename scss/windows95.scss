@@ -1,7 +1,8 @@
 @use "variables" as *;
 @use "mixins" as *;
-@use "windows/microsoft-internet-explorer";
 
+@use "windows/microsoft-internet-explorer";
+@use "windows/shut-down-windows";
 
 #windows95 {
     font-family: $windows95-font-family;
@@ -238,11 +239,8 @@
     display: flex;
     flex-direction: column;
     background-color: $windows95-gray-color;
-    min-width: 40%;
     top: 50px;
     left: 200px;
-    height: 500px;
-    width: 650px;
     resize: none;
     overflow: hidden;
     @include windows95-border(white, white, black, black, 2px, 3px);

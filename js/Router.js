@@ -36,27 +36,31 @@ Router.registerRoute('windows95', 'index.html');
 Router.registerRoute('terminal', 'terminal.html');
 
 Router.registerWindow(new Window(
-        Application.WELCOME, 
+        WindowName.WELCOME, 
+        WindowType.APPLICATION,
         '',
         filePath + "welcome.html"
     )
 );
 Router.registerWindow(new Window(
-        Application.MICROSOFT_INTERNET_EXPLORER,
+        WindowName.MICROSOFT_INTERNET_EXPLORER,
+        WindowType.APPLICATION,
         'windows95-ie-5.ico',
         filePath + "microsoft-internet-explorer.html"
     )
 );
 Router.registerWindow(new Window(
-        Application.ABOUT_INTERNET_EXPLORER,
+        WindowName.ABOUT_INTERNET_EXPLORER,
+        WindowType.APPLICATION,
         'windows95-ie-5.ico',
         filePath + "about-internet-explorer.html"
     )
 );
-
 Router.registerWindow(new Window(
-        Application.SHUTDOWN_POPUP,
+        WindowName.SHUTDOWN,
+        WindowType.POPUP,
         null,
-        filePath + "shutdown-pop-up.html"
+        filePath + "shut-down-windows.html"
     )
 );
+

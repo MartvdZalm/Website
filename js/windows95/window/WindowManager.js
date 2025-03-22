@@ -1,9 +1,15 @@
-class Application
+class WindowName
 {
 	static MICROSOFT_INTERNET_EXPLORER = 'Microsoft Internet Explorer';
 	static ABOUT_INTERNET_EXPLORER = 'About Internet Explorer';
 	static WELCOME = 'Welcome';
-	static SHUTDOWN_POPUP = 'Shutdown Popup';
+	static SHUTDOWN = 'Shut Down Windows';
+}
+
+class WindowType
+{
+	static APPLICATION = 'APPLICATION';
+	static POPUP = 'POPUP';
 }
 
 class WindowManager
@@ -16,6 +22,7 @@ class WindowManager
         
         const newWindowClass = new Window(
         	windowClass.title,
+					windowClass.type,
         	windowClass.icon,
         	windowClass.contentUrl,
         	fullscreen
