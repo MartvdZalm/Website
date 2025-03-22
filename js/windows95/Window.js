@@ -14,6 +14,16 @@ class Window
         this.element = null;
     }
 
+    newInstance() {
+        return new this.constructor(  // Use `this.constructor` to refer to the class constructor
+            this.title,
+            this.type,
+            this.icon,
+            this.contentUrl,
+            this.fullscreen
+        );
+    }
+
     async createWindow()
     {
         const window = document.createElement('section');

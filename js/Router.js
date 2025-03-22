@@ -13,15 +13,19 @@ class Router
         Router.windows[windowClass.title] = windowClass;
     }
 
-    static navigateTo(name)
+    static navigateTo(name, params = {})
     {
         const route = Router.routes[name];
-
-        if (route) {
-            window.location.href = route;
-        } else {
+    
+        if (!route) {
             console.error(`Route with name "${name}" not found`);
+            return;
         }
+    
+        const queryString = new URLSearchParams(params).toString();
+        const urlWithParams = queryString ? `${route}?${queryString}` : route;
+    
+        window.location.href = urlWithParams;
     }
 
     static getWindowByTitle(title)
@@ -56,7 +60,7 @@ Router.registerWindow(new Window(
         filePath + "about-internet-explorer.html"
     )
 );
-Router.registerWindow(new Window(
+Router.registerWindow(new ShutDownWindows(
         WindowName.SHUTDOWN,
         WindowType.POPUP,
         null,

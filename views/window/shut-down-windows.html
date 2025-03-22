@@ -1,7 +1,7 @@
 <div id="shut-down-windows">
   <div>
     <img src="assets/images/windows95/windows95-shutdown.ico" alt="Shut Down">
-    <form>
+    <div>
       <p>Are you sure you want to:</p>
   
       <input type="radio" id="shutdwon" name="shutdown-option" value="shutdown" checked>
@@ -12,17 +12,17 @@
   
       <input type="radio" id="ms-dos" name="shutdown-option" value="ms-dos">
       <label for="ms-dos">Restart the computer in <span class="text__underline">M</span>S-DOS mode?</label>
-    </form>
+    </div>
   </div>
 
     <span>
-      <button>
+      <button class="shutdown__yes">
         <span class="text__underline">Y</span>es
       </button>
-      <button>
+      <button class="shutdown__no">
         <span class="text__underline">N</span>o
       </button>
-      <button>
+      <button class="shutdown__help">
         <span class="text__underline">H</span>elp
       </button>
     </span>

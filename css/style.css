@@ -108,14 +108,14 @@
   height: 80px;
   margin: 20px;
 }
-#shut-down-windows > div form {
+#shut-down-windows > div div {
   margin: 20px 0;
   color: black;
 }
-#shut-down-windows > div form p {
+#shut-down-windows > div div p {
   margin-top: 20px;
 }
-#shut-down-windows > div form input {
+#shut-down-windows > div div input {
   margin-top: 15px;
 }
 #shut-down-windows > span {

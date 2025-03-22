@@ -12,59 +12,81 @@ class Terminal
 		this.setup();
 	}
 
-	setup()
-	{
-		document.getElementById('power-button').addEventListener('click', () => {
-			this.togglePower();
-		});
-	}
+    async setup() {
+        const params = new URLSearchParams(window.location.search);
+    
+        if (params.get("restart") === "yes") {
+            await this.togglePower();
+            this.startWindows();
+        }
 
-	start()
-	{
-		if (this.terminalOn) {
-			this.container.innerHTML = '';
-		    this.addTerminalLine("IBM PC DOS 1.0");
-            this.addTerminalLine("Copyright IBM Corp 1981");
-            this.addTerminalLine("All rights reserved.");
-            setTimeout(() => {
-                this.addTerminalLine("Initializing...");
-                setTimeout(() => {
-                    this.addTerminalLine("Type 'help' to see available commands.");
-                    this.createNewPromptLine();
+        if (params.get("msdos") === "yes") {
+            this.terminalOn = true;
+            this.container.classList.remove('off');
+            this.start();
+        }
+    
+        document.getElementById('power-button').addEventListener('click', async () => {
+            await this.togglePower();
+        });
+    }
+    
+
+    togglePower()
+    {
+        return new Promise(async (resolve) => {
+            if (!this.terminalOn) {
+                this.terminalOn = true;
+                setTimeout(async () => {
+                    this.container.classList.remove('off');
+                    await this.showStartup();
+                    resolve();
                 }, 2000);
-            }, 1500);
-		}
-	}
-
-	togglePower()
-	{
-		if (!this.terminalOn) {
-			this.terminalOn = true;
-			setTimeout(() => {
-				this.showStartup();
-				this.container.classList.remove('off');
-			}, 2500);
-		} else {
-			this.terminalOn = false;
-			this.container.classList.add('off');
-			this.container.innerHTML = '';
-		}
-	}
+            } else {
+                this.terminalOn = false;
+                this.container.classList.add('off');
+                this.container.innerHTML = '';
+                resolve();
+            }
+        });
+    }    
 
     showStartup()
     {
-    	const startupImage = document.createElement('img');
-
-        this.container.innerHTML = '';
-        startupImage.src = 'assets/images/ibm-startup-screen.png';
-        startupImage.classList.add('startup-image');
-        this.container.appendChild(startupImage);
-        startupImage.style.display = 'block';
-
-        setTimeout(() => {
-            startupImage.style.display = 'none';
-            this.start();
-        }, 5000);
+        return new Promise((resolve) => {
+            const startupImage = document.createElement('img');
+    
+            this.container.innerHTML = '';
+            startupImage.src = 'assets/images/ibm-startup-screen.png';
+            startupImage.classList.add('startup-image');
+            this.container.appendChild(startupImage);
+            startupImage.style.display = 'block';
+    
+            setTimeout(() => {
+                startupImage.style.display = 'none';
+                this.start().then(resolve);
+            }, 5000);
+        });
+    }
+    
+    start()
+    {
+        return new Promise((resolve) => {
+            if (this.terminalOn) {
+                this.container.innerHTML = '';
+                // this.addTerminalLine("IBM PC DOS 1.0");
+                // this.addTerminalLine("Copyright IBM Corp 1981");
+                // this.addTerminalLine("All rights reserved.");
+                this.addTerminalLine("Microsoft(R) MS-DOS 7.0");
+                this.addTerminalLine("Copyright (C) Microsoft Corp 1981-1996.");
+    
+                setTimeout(() => {
+                    this.addTerminalLine("Type 'help' to see available commands.");
+                    this.createNewPromptLine();
+                    resolve();
+                }, 2000);
+            }
+        });
     }
 
     addTerminalLine(text)
