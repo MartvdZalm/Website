@@ -1,39 +1,64 @@
 @use "variables";
 
-@mixin windows95-button($width: null) {
-    display: inline-block;
-    padding: 4px 12px;
-    font-family: 'MS Sans Serif', Tahoma, sans-serif;
-    font-size: 12px;
-    font-weight: bold;
-    color: #000;
-    text-align: center;
-    text-decoration: none;
-    cursor: pointer;
-    background-color: #c0c0c0;
-    border: 2px solid #000;
-    border-top-color: #dfdfdf;
-    border-left-color: #dfdfdf;
-    border-right-color: #808080;
-    border-bottom-color: #808080;
+// @mixin windows95-button($width: null) {
+    // display: inline-block;
+    // padding: 4px 12px;
+    // font-family: 'MS Sans Serif', Tahoma, sans-serif;
+    // font-size: 12px;
+    // font-weight: bold;
+    // color: #000;
+    // text-align: center;
+    // text-decoration: none;
+    // cursor: pointer;
+    // background-color: #c0c0c0;
+    // border: 2px solid #000;
+    // border-top-color: #dfdfdf;
+    // border-left-color: #dfdfdf;
+    // border-right-color: #808080;
+    // border-bottom-color: #808080;
 
-    @if $width {
-        width: $width;
-    }
+    // @if $width {
+    //     width: $width;
+    // }
+
+    // &:active {
+    //     border-top-color: #808080;
+    //     border-left-color: #808080;
+    //     border-right-color: #dfdfdf;
+    //     border-bottom-color: #dfdfdf;
+    //     background-color: #a0a0a0;
+    // }
+
+    // &:hover {
+    //     background-color: #b0b0b0;
+    // }
+
+    // &:focus {
+    //     outline: 1px dotted #000;
+    // }
+// }
+
+@mixin windows95-border($top-color, $left-color, $right-color, $bottom-color, $top-px: 2px, $bottom-px: 2px) {
+    border-top: $top-px solid $top-color;
+    border-left: $top-px solid $left-color;
+    border-right: $bottom-px solid $right-color;
+    border-bottom: $bottom-px solid $bottom-color;
+}
+
+@mixin windows95-button($width: 80px) {
+    @include windows95-border(#deebf3, #deebf3, black, black);
+    background-color: variables.$windows95-gray-color;
+    color: black;
+    cursor: pointer;
+    transition: top 0.1s ease, left 0.1s ease;
 
     &:active {
-        border-top-color: #808080;
-        border-left-color: #808080;
-        border-right-color: #dfdfdf;
-        border-bottom-color: #dfdfdf;
-        background-color: #a0a0a0;
+        @include windows95-border(black, black, white, white);
     }
+}
 
-    &:hover {
-        background-color: #b0b0b0;
-    }
-
-    &:focus {
-        outline: 1px dotted #000;
-    }
+@mixin windows95-menu-arrow($color) {
+    border-top: 7px solid transparent;
+    border-bottom: 7px solid transparent;
+    border-left: 7px solid $color;
 }

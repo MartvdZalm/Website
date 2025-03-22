@@ -13,7 +13,7 @@ class DesktopManager
 	        shortcut.addEventListener("dblclick", () => {
 	            const targetWindowId = shortcut.getAttribute("data-window");
 	            if (targetWindowId) {
-	                WindowManager.openWindow(targetWindowId);
+	              WindowManager.openWindow(targetWindowId);
 	            }
 	        });
 	    });

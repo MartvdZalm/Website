@@ -1,13 +1,14 @@
-@use "variables";
+@use "variables" as *;
 @use "mixins" as *;
 @use "windows/microsoft-internet-explorer";
 
+
 #windows95 {
-    font-family: 'MS Sans Serif';
+    font-family: $windows95-font-family;
     color: white;
-	width: 100vw;
-	height: 100vh;
-	background: variables.$windows95-desktop-background-color;
+    width: 100vw;
+    height: 100vh;
+    background: $windows95-desktop-background-color;
 }
 
 .text__underline {
@@ -15,57 +16,37 @@
     color: black;
 }
 
-.window__x__btn,
-.window__underline__btn {
-    cursor: pointer;
-    background-color: variables.$windows95-gray-color;
-    border-top: 2px solid #deebf3;
-    border-left: 2px solid #deebf3;
-    border-right: 2px solid black;
-    border-bottom: 2px solid black;
-    color: black;
-    position: relative;
-    transition: top 0.1s ease, left 0.1s ease;
-
-    &:active {
-        border-top: 3px solid black;
-        border-left: 3px solid black;
-        border-bottom: 2px solid white;
-        border-right: 2px solid white;
-    }
-}
-
 .desktop {
     position: relative;
-	height: calc(100vh - variables.$taskbar-height);
+    height: calc(100vh - $windows95-taskbar-height);
 
-	.desktop__shortcut {
-		width: 80px;
-		height: 80px;
-		display: flex;
-		flex-direction: column;
-		justify-content: space-around;
-		align-items: center;
-		text-align: center;
-		margin: 10px;
-		cursor: pointer;
+    .desktop__shortcut {
+        width: 80px;
+        height: 80px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        text-align: center;
+        margin: 10px;
+        cursor: pointer;
 
-		.desktop__shortcut__icon {
-			height: 70%;
-			cursor: pointer;
-		}
+        .desktop__shortcut__icon {
+            height: 70%;
+            cursor: pointer;
+        }
 
-		.desktop__shortcut__name {
-			cursor: pointer;
+        .desktop__shortcut__name {
+            cursor: pointer;
             font-size: 0.9rem;
-		}
-	}
+        }
+    }
 }
 
 .taskbar {
     display: flex;
-    height: variables.$taskbar-height;
-    background-color: variables.$windows95-gray-color;
+    height: $windows95-taskbar-height;
+    background-color: $windows95-gray-color;
     border-top: 2px solid white;
     align-items: center;
 
@@ -76,21 +57,15 @@
     }
 
     .taskbar__item--window {
+        @include windows95-border(white, white, black, black, 2px, 3px);
         height: 40px;
         margin-left: 5px;
-        border-top: 2px solid white;
-        border-left: 2px solid white;
-        border-bottom: 3px solid black;
-        border-right: 3px solid black;
         padding: 0 5px;
         color: black;
         cursor: pointer;
 
         &.active {
-            border-top: 3px solid black;
-            border-left: 3px solid black;
-            border-bottom: 2px solid white;
-            border-right: 2px solid white;
+            @include windows95-border(black, black, white, white);
         }
     }
 
@@ -98,10 +73,7 @@
         margin-left: 5px;
 
         .checked {
-            border-top: 3px solid black;
-            border-left: 3px solid black;
-            border-bottom: 2px solid white;
-            border-right: 2px solid white;
+            @include windows95-border(black, black, white, white, 3px, 2px);
         }
     }
 
@@ -113,10 +85,7 @@
             padding: 8px;
             font-size: 1.3em;
             color: black;
-            border-top: 3px solid gray;
-            border-left: 3px solid gray;
-            border-bottom: 2px solid white;
-            border-right: 2px solid white; 
+            @include windows95-border(gray, gray, white, white);
         }
     }
 
@@ -128,16 +97,14 @@
         cursor: pointer;
         height: 80%;
 
-        border-top: 2px solid white;
-        border-left: 2px solid white;
-        border-bottom: 3px solid black;
-        border-right: 3px solid black;
+        @include windows95-border(white, white, black, black, 2px, 3px);
 
         .taskbar__btn__text {
             color: black;
-            font-size: 1.5em;
+            font-size: 1.7em;
             font-weight: bold;
             cursor: pointer;
+            font-family: $windows95-font-family;
         }
 
         .taskbar__btn__img {
@@ -151,14 +118,12 @@
         position: absolute;
         background: #c3c6cd;
         width: 275px;
-        bottom: variables.$taskbar-height;
+        bottom: $windows95-taskbar-height;
         height: 400px;
-        border-top: 2px solid #deebf3;
-        border-left: 2px solid #deebf3;
-        border-right: 2px solid black;
-        border-bottom: 2px solid black;
+        @include windows95-border(white, white, black, black);
         display: none;
         flex-direction: row;
+        overflow: visible;
 
         .taskbar__menu__side {
             background: #85888f;
@@ -192,6 +157,8 @@
             flex-direction: column;
             width: 100%;
             padding: 0;
+            position: relative;
+            overflow: visible;
 
             .taskbar__menu__item {
                 width: 100%;
@@ -201,59 +168,62 @@
                 align-items: center;
                 cursor: pointer;
 
+                &:hover {
+                    background-color: $windows95-dark-blue-color;
+                    
+                    > .taskbar__menu__title,
+                    > .taskbar__menu__title .text__underline { 
+                        color: white;
+                    }
+                
+                    > .taskbar__menu__arrowright {
+                        @include windows95-menu-arrow(white);
+                    }
+                }
+
+                .text__underline {
+                    cursor: pointer;
+                }
+
                 .taskbar__menu__icon {
                     width: 70px;
                     height: 60px;
                     padding-left: 5px;
                     padding-right: 5px;
                     margin-left: 2px;
+                    cursor: pointer;
                 }
 
                 .taskbar__menu__title {
                     font-size: 18px;
                     color: black;
+                    cursor: pointer;
                 }
 
                 .taskbar__menu__arrowright {
-                    border-top: 7px solid transparent;
-                    border-bottom: 7px solid transparent;
-                    border-left: 7px solid black;
+                    @include windows95-menu-arrow(black);
                     margin-left: auto;
                     margin-right: 15px;
+                    cursor: pointer;
                 }
             }
 
             .taskbar__menu__sub {
                 position: absolute;
-                display: none; // this need to be fixed
-                // width: 200px;
-                // height: 200px;
-                // background-color: blue;
-                // top: 0px;
-                // left: 250px;
-                // background: #c3c6cd;
-                // border-top: 2px solid #deebf3;
-                // border-left: 2px solid #deebf3;
-                // border-right: 2px solid black;
-                // border-bottom: 2px solid black;
-                // flex-direction: column;
-                // width: 180px;
-                // // left: 2s50px;
-                // left: 150px;
-                // padding: 0;
-                // top: 0;
-                // // display: none;  
-                // bottom: 230px;
-                // position: absolute;
+                display: none;
+                left: 98%;
+                top: -1px;
+                background: #c3c6cd;
+                width: 200px;                
+                padding: 5px;
+                z-index: 10;
+                overflow: visible;
 
-                // .taskbar__menu__sub__item {
-                //     display: flex;
-                //     align-items: center;
-                // }
+                @include windows95-border(white, white, black, black);
             }
 
             .taskbar__menu__sub--open {
-                display: flex;
+                display: block;
             }
         }
     }
@@ -263,12 +233,11 @@
     }
 }
 
-
 .window {
     position: absolute;
     display: flex;
     flex-direction: column;
-    background-color: variables.$windows95-gray-color;
+    background-color: $windows95-gray-color;
     min-width: 40%;
     top: 50px;
     left: 200px;
@@ -276,10 +245,7 @@
     width: 650px;
     resize: none;
     overflow: hidden;
-    border-top: 2px solid white;
-    border-left: 2px solid white;
-    border-bottom: 3px solid black;
-    border-right: 3px solid black;
+    @include windows95-border(white, white, black, black, 2px, 3px);
 
     .window__header {
         display: flex;
@@ -305,6 +271,21 @@
             .window__header__title-item {
                 display: flex;
                 align-items: center;
+            }
+
+            
+            .window__x__btn,
+            .window__underline__btn {
+                cursor: pointer;
+                background-color: $windows95-gray-color;
+                @include windows95-border(white, white, black, black);
+                color: black;
+                position: relative;
+                transition: top 0.1s ease, left 0.1s ease;
+
+                &:active {
+                    @include windows95-border(white, white, black, black, 3px, 2px);
+                }
             }
         }
 

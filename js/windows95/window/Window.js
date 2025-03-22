@@ -24,7 +24,7 @@ class Window
             <header class="window__header">
                 <div class="window__header__title">
                     <span class="window__header__title-item">
-                        <img class="window__header__icon" src="assets/images/windows95/${this.icon}"> - 
+                        ${this.icon ? `<img class="window__header__icon" src="assets/images/windows95/${this.icon}"> - ` : ""}
                         ${this.title}
                     </span>
                     <span>

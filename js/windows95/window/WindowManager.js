@@ -2,7 +2,8 @@ class Application
 {
 	static MICROSOFT_INTERNET_EXPLORER = 'Microsoft Internet Explorer';
 	static ABOUT_INTERNET_EXPLORER = 'About Internet Explorer';
-	static WELCOME = 'welcome';
+	static WELCOME = 'Welcome';
+	static SHUTDOWN_POPUP = 'Shutdown Popup';
 }
 
 class WindowManager
@@ -40,5 +41,18 @@ class WindowManager
 	    }
 
 	    window.setZIndex(maxZIndex + 1);
+	}
+
+	static bindWindows()
+	{
+		const windows = document.querySelectorAll(".bind__window");
+		windows.forEach((window) => {
+				window.addEventListener("click", () => {
+						const targetWindowId = window.getAttribute("data-bind-window");
+						if (targetWindowId) {
+							WindowManager.openWindow(targetWindowId);
+						}
+				});
+		});
 	}
 }

@@ -19,13 +19,22 @@
           <span class="desktop__shortcut__name">My Computer</span>
         </div>
 
-        <div class="desktop__shortcut" data-window="internet-explorer">
+        <div class="desktop__shortcut">
           <img
             class="desktop__shortcut__icon"
             src="assets/images/windows95/windows95-mailbox.ico"
             alt="Inbox"
           />
           <span class="desktop__shortcut__name">Inbox</span>
+        </div>
+
+        <div class="desktop__shortcut" data-window="Microsoft Internet Explorer">
+          <img
+            class="desktop__shortcut__icon"
+            src="assets/images/windows95/windows95-ie-5-shortcut.ico"
+            alt="Internet Explorer 5"
+          />
+          <span class="desktop__shortcut__name">Internet Explorer</span>
         </div>
 
         <div class="desktop__shortcut">
@@ -65,26 +74,40 @@
                   alt="Programs"
                 />
                 <p class="taskbar__menu__title">
-                  <span class="taskbar__menu__underline">P</span>rograms
+                  <span class="text__underline">P</span>rograms
                 </p>
                 <div class="taskbar__menu__arrowright"></div>
 
                 <ul class="taskbar__menu__sub">
-                  <li class="taskbar__menu__sub__item">
+                  
+                  <li class="taskbar__menu__item">
                     <img
                       class="icon"
                       src="assets/images/windows95/windows95-programs.ico"
                       alt="Accessories"
                     />
-                    <p class="">Accessories</p>
+                    <p class="taskbar__menu__title">Accessories</p>
+                    <div class="taskbar__menu__arrowright"></div>
+
+                    <ul class="taskbar__menu__sub">
+                      <li class="taskbar__menu__item">
+                        <img
+                          class="icon"
+                          src="assets/images/windows95/windows95-programs.ico"
+                          alt="Accessories"
+                        />
+                        <p class="taskbar__menu__title">Accessories</p>
+                      </li>
+                    </ul>
                   </li>
+
                   <li class="taskbar__menu__item">
                     <img
                       class="icon"
                       src="assets/images/windows95/windows95-programs.ico"
                       alt="StartUp"
                     />
-                    <p class="">StartUp</p>
+                    <p class="taskbar__menu__title">StartUp</p>
                   </li>
                   <li class="taskbar__menu__item">
                     <img
@@ -92,7 +115,7 @@
                       src="assets/images/windows95/windows95-programs.ico"
                       alt="DOS"
                     />
-                    <p class="">MS-DOS Prompt</p>
+                    <p class="taskbar__menu__title">MS-DOS Prompt</p>
                   </li>
                 </ul>
               </li>
@@ -104,7 +127,7 @@
                   alt="Documents"
                 />
                 <p class="taskbar__menu__title">
-                  <span class="taskbar__menu__underline">D</span>ocuments
+                  <span class="text__underline">D</span>ocuments
                 </p>
                 <div class="taskbar__menu__arrowright"></div>
               </li>
@@ -155,7 +178,7 @@
                 </p>
               </li>
 
-              <li class="taskbar__menu__item" data-start-menu="shutdown">
+              <li class="taskbar__menu__item bind__window" data-bind-window="Shutdown Popup">
                 <img
                   class="taskbar__menu__icon"
                   src="assets/images/windows95/windows95-shutdown.ico"
