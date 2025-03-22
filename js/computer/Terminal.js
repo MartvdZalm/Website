@@ -70,7 +70,7 @@ class Terminal
     addTerminalLine(text)
     {
         const line = document.createElement('p');
-        line.textContent = text;
+        line.innerHTML = text.replace(/\n/g, '<br>');
         line.classList.add('terminal__text');
         this.container.appendChild(line);
         this.container.scrollTop = this.container.scrollHeight;
@@ -122,36 +122,72 @@ class Terminal
         document.addEventListener('keydown', this.handleKeydown);
     }
 
+    changeDirectory(path)
+    {
+        if (path === '..') {
+            const parentDir = this.currentDir.substring(0, this.currentDir.lastIndexOf('/'));
+            return parentDir || 'C:';
+        }
+    
+        const newFolder = FileSystem.getFolderFromPath(this.currentDir + '/' + path);
+    
+        if (newFolder instanceof Folder) {
+            return this.currentDir + '/' + path;
+        }
+        
+        return null;
+    }
+
     handleCommand(command)
     {
         const [cmd, ...args] = command.trim().split(' ');
 
         switch (cmd.toLowerCase()) {
             case 'dir':
-                FileSystem.listDirectory(args[0] || this.currentDir);
+                this.addTerminalLine(FileSystem.getFolderFromPath(args[0] || this.currentDir).displayContents());
                 break;
-            // case 'cd':
-            //     if (args[0]) {
-            //         this.changeDirectory(args[0]);
-            //     } else {
-            //         this.addTerminalLine("cd <directory>");
-            //     }
-            //     break;
-            // case 'help':
-            //     this.addTerminalLine("Commands: ls, cat <file>, cd <directory>, help");
-            //     break;
-            // case 'cls':
-            //     this.terminalContainer.innerHTML = '';
-            //     break;
-            // case 'config':
-            //     this.loadPage('home.html');
-            //     break;
-            // case 'run':
-            //     this.runProgram(args[0]);
-            //     break;
-            // default:
-            //     this.addTerminalLine("Command not recognized. Type 'help' for available commands.");
-            //     break;
+            case 'cd':
+                if (args[0]) {
+                    const newDir = this.changeDirectory(args[0]);
+                    if (newDir) {
+                        this.currentDir = newDir;
+                        this.addTerminalLine(`Changed directory to ${this.currentDir}`);
+                    } else {
+                        this.addTerminalLine(`Directory not found: ${args[0]}`);
+                    }
+                } else {
+                    this.addTerminalLine(`Current directory: ${this.currentDir}`);
+                }
+                break;
+            case 'cls':
+                this.container.innerHTML = '';
+                break;
+            case 'win':
+                this.startWindows();
+                break;
+            default:
+                this.addTerminalLine("Command not recognized. Type 'help' for available commands.");
+                break;
         }       
+    }
+
+    startWindows() {
+        this.addTerminalLine('Starting Windows 95...');
+        
+        setTimeout(() => {
+            this.container.innerHTML = '';
+            const startupImage = document.createElement('img');
+            startupImage.src = 'assets/images/microsoft-windows-95-startup-screen.jpg';
+            startupImage.classList.add('startup-image');
+            this.container.appendChild(startupImage);
+            startupImage.style.display = 'block';
+
+            this.windows95StartupSound.play();
+            
+            setTimeout(() => {
+                startupImage.style.display = 'none';
+                window.location.href = "index.html";
+            }, 7000);
+        }, 3000);
     }
 }

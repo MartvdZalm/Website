@@ -109,22 +109,41 @@ class Folder
 		this.dateModified = new Date();
 	}
 
-	getFolderInfo()
-	{
-		return {
-			name: this.name,
-			location: this.location,
-			dateCreated: this.dateCreated,
-			dateModified: this.dateModified,
-			dateAccessed: this.dateAccessed,
-			size: this.getFolderSize(),
-			filesCount: this.files.length,
-			subfoldersCount: this.subfolders.length,
-		};
-	}
 
 	getFolderSize()
 	{
 		return this.files.reduce((total, file) => total + file.size, 0);
+	}
+
+	displayContents()
+	{
+		let output = `Directory of ${this.name}\n`;
+		output += `Location: ${this.location}\n`;
+		output += `Date Created: ${this.dateCreated.toLocaleString()}\n`;
+		output += `Date Modified: ${this.dateModified.toLocaleString()}\n`;
+		output += `Date Accessed: ${this.dateAccessed.toLocaleString()}\n`;
+		output += '--------------------------------------------------------\n';
+
+		output += 'Files:\n';
+		if (this.files.length > 0) {
+			this.files.forEach((file) => {
+				output += `${file.name}\t${file.size} bytes\t${file.dateModified.toLocaleString()}\n`;
+			});
+		} else {
+			output += 'No files found.\n';
+		}
+
+		output += 'Subfolders:\n';
+		if (this.subfolders.length > 0) {
+			this.subfolders.forEach((subfolder) => {
+				output += `${subfolder.getName()}\tSize: ${subfolder.getFolderSize()} bytes\n`;
+			});
+		} else {
+			output += 'No subfolders found.\n';
+		}
+
+		output += '--------------------------------------------------------\n';
+
+		return output;
 	}
 }

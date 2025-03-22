@@ -70,38 +70,24 @@ class FileSystem
         const folderPath = path.split('/').filter(Boolean);
         let currentFolder = fileSystemInstance.fileSystem;
 
+        if (folderPath[0] === "C:") {
+            folderPath.shift();
+        }
+
         for (let folder of folderPath) {
-            if (folder === "C:") {
-                continue;
-            }
             currentFolder = currentFolder.getSubFolder(folder);
 
             if (!currentFolder) {
-                return `Path not found: ${path}`;
+                return null;
             }
         }
 
-        return currentFolder.getFolderInfo();
-    }
-
-    static listDirectory(path)
-    {
-            console.log("daefsnfed");
-
-        const folderContents = FileSystem.getFolderFromPath(path);
-        if (Array.isArray(folderContents)) {
-            return folderContents
-                .map((item) => `${item.name} - ${item.constructor.name}`)
-                .join('\n');
-        }
-        return folderContents;
+        return currentFolder;
     }
 }
 
 const fileSystemInstance = new FileSystem();
 
-const DIR = (path) => {
-    return FileSystem.listDirectory(path);
-};
-
-// console.log(DIR('C:/WINDOWS'));
+// const DIR = (path) => {
+//     return FileSystem.listDirectory(path);
+// };

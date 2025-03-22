@@ -94,6 +94,8 @@
 }
 
 #windows95 {
+  font-family: "MS Sans Serif";
+  color: white;
   width: 100vw;
   height: 100vh;
   background: #008080;
@@ -176,9 +178,6 @@
   border-left: 3px solid black;
   border-bottom: 2px solid white;
   border-right: 2px solid white;
-}
-.taskbar .taskbar--start {
-  margin-left: 5px;
 }
 .taskbar .taskbar--start .checked {
   border-top: 3px solid black;
