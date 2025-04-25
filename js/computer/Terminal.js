@@ -77,8 +77,8 @@ class Terminal
                 // this.addTerminalLine("IBM PC DOS 1.0");
                 // this.addTerminalLine("Copyright IBM Corp 1981");
                 // this.addTerminalLine("All rights reserved.");
-                this.addTerminalLine("Microsoft(R) MS-DOS 7.0");
-                this.addTerminalLine("Copyright (C) Microsoft Corp 1981-1996.");
+                this.addTerminalLine("Microsoft(R) Windows 95");
+                this.addTerminalLine("Copyright (C) Microsoft Corp 1981-1995.");
     
                 setTimeout(() => {
                     this.addTerminalLine("Type 'help' to see available commands.");

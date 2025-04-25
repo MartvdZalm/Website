@@ -420,10 +420,10 @@
 }
 .window .window__header .window__header__title .window__x__btn:active,
 .window .window__header .window__header__title .window__underline__btn:active {
-  border-top: 3px solid white;
-  border-left: 3px solid white;
-  border-right: 2px solid black;
-  border-bottom: 2px solid black;
+  border-top: 3px solid black;
+  border-left: 3px solid black;
+  border-right: 2px solid white;
+  border-bottom: 2px solid white;
 }
 .window .window__header .window__header__menu {
   width: 100%;

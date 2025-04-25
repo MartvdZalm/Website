@@ -15,7 +15,7 @@ class Window
     }
 
     newInstance() {
-        return new this.constructor(  // Use `this.constructor` to refer to the class constructor
+        return new this.constructor(
             this.title,
             this.type,
             this.icon,
